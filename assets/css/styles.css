@@ -1667,7 +1667,7 @@ footer {
 }
 
 .screenshot-overlay::before {
-    content: attr(data-label);
+    content: attr(data-label) " ⓘ";
     display: inline-block;
     padding: 6px 12px;
     background: rgba(0, 103, 251, 0.85);
@@ -1678,6 +1678,7 @@ footer {
     white-space: nowrap;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     pointer-events: none;
+    position: relative;
 }
 
 .screenshot-overlay::after {
@@ -1695,9 +1696,7 @@ footer {
     pointer-events: none;
 }
 
-/* Tooltip - default (appears on right) */
-.screenshot-overlay[data-tooltip]:hover::after {
-    content: attr(data-tooltip);
+.screenshot-overlay .tooltip-text {
     position: absolute;
     left: 100%;
     top: 50%;
@@ -1711,13 +1710,18 @@ footer {
     white-space: nowrap;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-    width: auto;
-    height: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
     pointer-events: none;
 }
 
-/* Tooltip for right-positioned overlays (appears on left) */
-.screenshot-overlay.tooltip-left[data-tooltip]:hover::after {
+.screenshot-overlay:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+.screenshot-overlay.tooltip-left .tooltip-text {
     left: auto;
     right: 100%;
     margin-left: 0;
