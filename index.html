@@ -587,18 +587,18 @@
                 button.style.background = 'white';
                 button.style.color = '#1a1a1a';
 
-                // Reset after 2 seconds
+                // Reset after 5 seconds
                 setTimeout(() => {
                     button.textContent = originalText;
                     button.style.background = '#000';
                     button.style.color = 'white';
-                }, 2000);
+                }, 5000);
             }).catch(err => {
                 console.error('Failed to copy:', err);
                 button.textContent = 'Failed to copy';
                 setTimeout(() => {
                     button.textContent = originalText;
-                }, 2000);
+                }, 5000);
             });
         }
 
