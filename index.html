@@ -584,12 +584,14 @@
             navigator.clipboard.writeText(code).then(() => {
                 // Show success feedback
                 button.textContent = 'Copied!';
-                button.style.background = '#059669';
+                button.style.background = 'white';
+                button.style.color = '#1a1a1a';
 
                 // Reset after 2 seconds
                 setTimeout(() => {
                     button.textContent = originalText;
                     button.style.background = '#000';
+                    button.style.color = 'white';
                 }, 2000);
             }).catch(err => {
                 console.error('Failed to copy:', err);
