@@ -1,0 +1,132 @@
+<?xml-stylesheet type="text/css" href="/static/css/bundle-main.css" ?>
+
+<!-- height="408.512" -->
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="624.046" viewBox="0 0 624.046 408.512">
+  <defs>
+    <filter id="background" x="0" y="0" width="624.046" height="408.512" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Auto_Message" data-name="Auto Message" transform="translate(26 30)">
+    <g id="Group_1" data-name="Group 1" transform="translate(4)">
+      <g transform="matrix(1, 0, 0, 1, -30, -30)" filter="url(#background)">
+        <rect id="background-2" data-name="background" width="564.046" height="348.512" transform="translate(30 30)" fill="#fff"/>
+      </g>
+      <g id="browser" transform="translate(0)">
+        <path id="bar" d="M4,0H560.046a4,4,0,0,1,4,4V16.622a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V4A4,4,0,0,1,4,0Z" fill="#f6f6f6"/>
+        <g id="button" transform="translate(5.541 5.541)">
+          <g id="circle" transform="translate(0 0)" fill="#f3605c" stroke="#d64542" stroke-width="0.5">
+            <ellipse cx="2.493" cy="2.77" rx="2.493" ry="2.77" stroke="none"/>
+            <ellipse cx="2.493" cy="2.77" rx="2.243" ry="2.52" fill="none"/>
+          </g>
+          <g id="circle-2" data-name="circle" transform="translate(9.419 0)" fill="#f8be39" stroke="#d89f2c" stroke-width="0.5">
+            <ellipse cx="2.493" cy="2.77" rx="2.493" ry="2.77" stroke="none"/>
+            <ellipse cx="2.493" cy="2.77" rx="2.243" ry="2.52" fill="none"/>
+          </g>
+          <g id="circle-3" data-name="circle" transform="translate(18.284 0)" fill="#50c845" stroke="#40ab2f" stroke-width="0.5">
+            <circle cx="2.77" cy="2.77" r="2.77" stroke="none"/>
+            <circle cx="2.77" cy="2.77" r="2.52" fill="none"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Group_2632" data-name="Group 2632" transform="translate(132.046 138.056)">
+      <g id="Group_2633" data-name="Group 2633">
+        <text id="has_any_special_needs_at_all_please_don_t_hesitate_to_contact_me._-Racheal_J_" data-name="has any special needs at all, please don’t hesitate to contact me.
+​
+-Rachel J
+" transform="translate(0 71.876)" fill="#323b6e" font-size="14" font-family="Open Sans, sans-serif"><tspan x="0" y="15">has any special needs at all, please don’t hesitate to contact me.</tspan><tspan x="0" y="34">​</tspan><tspan x="0" y="53">-Rachel J</tspan></text>
+        <text id="Hi" transform="translate(1 19)" fill="#323b6e" font-size="14" font-family="Open Sans, sans-serif"><tspan x="0" y="0">Hi</tspan></text>
+        <text id="_" data-name="," transform="translate(164 19)" fill="#323b6e" font-size="14" font-family="Open Sans, sans-serif"><tspan x="0" y="0">,</tspan></text>
+        <text id="Hope_you_re_enjoying_our_product_If_" data-name="Hope you’re enjoying our product! If " transform="translate(1 58)" fill="#323b6e" font-size="14" font-family="Open Sans, sans-serif"><tspan x="0" y="0">Hope you’re enjoying our product! If </tspan></text>
+        <text id="Can_you" data-name="Can you" transform="translate(337 58)" fill="#323b6e" font-size="14" font-family="Open Sans, sans-serif"><tspan x="0" y="0">Can you</tspan></text>
+        <g id="Chips" transform="translate(19.278 0.982)">
+          <g id="Group_1178" data-name="Group 1178" transform="translate(0 -0.982)">
+            <rect id="Rectangle_618" data-name="Rectangle 618" width="147" height="25" rx="12.5" transform="translate(0 1)" fill="#e8eef6"/>
+            <g id="Group_2237" data-name="Group 2237" transform="translate(-513 4)">
+              <g id="Close" transform="translate(636 1.982)">
+                <path id="Path_654" data-name="Path 654" d="M0,0H16V16H0Z" fill="none"/>
+                <path id="Path_655" data-name="Path 655" d="M13,5.806,12.194,5,9,8.194,5.806,5,5,5.806,8.194,9,5,12.194,5.806,13,9,9.806,12.194,13,13,12.194,9.806,9Z" transform="translate(-1 -1)" fill="#323b6e"/>
+              </g>
+              <g id="Group_1120" data-name="Group 1120" transform="translate(-171 0.982)">
+                <text id="_First_Name_there_" data-name="#First Name (there)" transform="translate(692 13)" fill="#0067fb" font-size="12" font-family="Open Sans, sans-serif" font-weight="600"><tspan x="0" y="0">#First Name (there)</tspan></text>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="Chips-2" data-name="Chips" transform="translate(241.738 40.254)">
+          <g id="Group_1178-2" data-name="Group 1178" transform="translate(0 -1)">
+            <rect id="Rectangle_618-2" data-name="Rectangle 618" width="185" height="25" rx="12.5" transform="translate(0 1)" fill="#e8eef6"/>
+            <g id="Group_2237-2" data-name="Group 2237" transform="translate(-513 4)">
+              <g id="Close-2" data-name="Close" transform="translate(674 2)">
+                <path id="Path_654-2" data-name="Path 654" d="M0,0H16V16H0Z" fill="none"/>
+                <path id="Path_655-2" data-name="Path 655" d="M13,5.806,12.194,5,9,8.194,5.806,5,5,5.806,8.194,9,5,12.194,5.806,13,9,9.806,12.194,13,13,12.194,9.806,9Z" transform="translate(-1 -1)" fill="#323b6e"/>
+              </g>
+              <g id="Group_1120-2" data-name="Group 1120" transform="translate(-171 1)">
+                <text id="_company_your_company_" data-name="#company(your company)" transform="translate(692 13)" fill="#0067fb" font-size="12" font-family="Open Sans, sans-serif" font-weight="600"><tspan x="0" y="0">#company(your company)</tspan></text>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Group_2640" data-name="Group 2640" transform="translate(-12 -5)">
+      <text id="_To:_" data-name=" To: " transform="translate(144.046 59.056)" fill="#7f848d" font-size="12" font-family="Open Sans, sans-serif"><tspan x="0" y="0" xml:space="preserve"> To:</tspan><tspan y="0" fill="#323b6e"> </tspan></text>
+      <line id="Line_116" data-name="Line 116" x2="391" transform="translate(144.546 78.556)" fill="none" stroke="#e8eef6" stroke-width="1"/>
+      <g id="Chips-3" data-name="Chips" transform="translate(171.324 42.056)">
+        <g id="Group_1178-3" data-name="Group 1178">
+          <g id="Rectangle_618-3" data-name="Rectangle 618" fill="#e8eef6" stroke="#e8eef6" stroke-width="1">
+            <rect width="311" height="26" rx="13" stroke="none"/>
+            <rect x="0.5" y="0.5" width="310" height="25" rx="12.5" fill="none"/>
+          </g>
+          <g id="Group_2237-3" data-name="Group 2237" transform="translate(-513 4)">
+            <g id="Close-3" data-name="Close" transform="translate(798)">
+              <path id="Path_654-3" data-name="Path 654" d="M0,0H18V18H0Z" fill="none"/>
+              <path id="Path_655-3" data-name="Path 655" d="M15,6.007,13.993,5,10,8.993,6.007,5,5,6.007,8.993,10,5,13.993,6.007,15,10,11.007,13.993,15,15,13.993,11.007,10Z" transform="translate(-1 -1)" fill="#323b6e"/>
+            </g>
+            <g id="Group_1120-3" data-name="Group 1120" transform="translate(-171 1)">
+              <text id="_All_customers_who_subscribed_in_the_last_3_days_" data-name=" All customers who subscribed in the last 3 days " transform="translate(692 13)" fill="#323b6e" font-size="12" font-family="Open Sans, sans-serif"><tspan x="0" y="0" xml:space="preserve"> All customers who</tspan><tspan y="0" xml:space="preserve" fill="#0067fb" font-family="Open Sans, sans-serif" font-weight="600"> subscribed in the last 3 days</tspan><tspan y="0"> </tspan></text>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Group_2641" data-name="Group 2641" transform="translate(-12 22)">
+      <line id="Line_116-2" data-name="Line 116" x2="391" transform="translate(144.546 92.556)" fill="none" stroke="#e8eef6" stroke-width="1"/>
+      <g id="Group_2642" data-name="Group 2642">
+        <text id="Subject:" transform="translate(144.046 78.056)" fill="#7f848d" font-size="12" font-family="Open Sans, sans-serif"><tspan x="0" y="0">Subject:</tspan></text>
+        <text id="Welcome_Aboard" data-name="Welcome Aboard" transform="translate(195.046 78.056)" fill="#323b6e" font-size="12" font-family="Open Sans, sans-serif"><tspan x="0" y="0">Welcome Aboard</tspan></text>
+        <text id="_2" data-name="!" transform="translate(407.046 78.056)" fill="#323b6e" font-size="12" font-family="Open Sans, sans-serif"><tspan x="0" y="0">!</tspan></text>
+        <g id="Chips-4" data-name="Chips" transform="translate(297.324 61.056)">
+          <g id="Group_1178-4" data-name="Group 1178" transform="translate(0 -1)">
+            <rect id="Rectangle_618-4" data-name="Rectangle 618" width="105" height="25" rx="12.5" transform="translate(0 1)" fill="#e8eef6"/>
+            <g id="Group_2237-4" data-name="Group 2237" transform="translate(-513 4)">
+              <g id="Close-4" data-name="Close" transform="translate(594 2)">
+                <path id="Path_654-4" data-name="Path 654" d="M0,0H16V16H0Z" fill="none"/>
+                <path id="Path_655-4" data-name="Path 655" d="M13,5.806,12.194,5,9,8.194,5.806,5,5,5.806,8.194,9,5,12.194,5.806,13,9,9.806,12.194,13,13,12.194,9.806,9Z" transform="translate(-1 -1)" fill="#323b6e"/>
+              </g>
+              <g id="Group_1120-4" data-name="Group 1120" transform="translate(-171 1)">
+                <text id="_First_Name" data-name="#First Name" transform="translate(692 13)" fill="#0067fb" font-size="12" font-family="Open Sans, sans-serif" font-weight="600"><tspan x="0" y="0">#First Name</tspan></text>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Group_2635" data-name="Group 2635" transform="translate(4 16.056)">
+      <rect id="Rectangle_1004" data-name="Rectangle 1004" width="115.046" height="332" fill="#f6f9fc"/>
+      <g id="Group_2634" data-name="Group 2634" transform="translate(8 16)">
+        <rect id="Rectangle_1005" data-name="Rectangle 1005" width="95.046" height="10" fill="#e8eef6"/>
+        <rect id="Rectangle_1006" data-name="Rectangle 1006" width="72" height="10" transform="translate(0 21)" fill="#e8eef6"/>
+        <rect id="Rectangle_1007" data-name="Rectangle 1007" width="52" height="10" transform="translate(0 40)" fill="#e8eef6"/>
+        <rect id="Rectangle_1008" data-name="Rectangle 1008" width="86.046" height="10" transform="translate(0 61)" fill="#e8eef6"/>
+        <rect id="Rectangle_1009" data-name="Rectangle 1009" width="95.046" height="10" transform="translate(0 82)" fill="#e8eef6"/>
+      </g>
+    </g>
+  </g>
+</svg>

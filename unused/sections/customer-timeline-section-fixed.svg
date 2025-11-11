@@ -1,0 +1,170 @@
+<?xml-stylesheet type="text/css" href="/static/css/bundle-main.css" ?>
+
+<!-- height="411" -->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="475" viewBox="0 0 475 411">
+  <g id="Group_2682" data-name="Group 2682" transform="translate(-4269 -3707)">
+    <g id="Group_2681" data-name="Group 2681" transform="translate(863 381)">
+      <g id="Group_2678" data-name="Group 2678" transform="translate(0 -217)" opacity="0.353">
+        <g id="Group_2295" data-name="Group 2295" transform="translate(402 3934)">
+          <text id="_9:30_AM" data-name="9:30 AM" transform="translate(3005 11)" fill="#7f848d" font-size="10" font-family="sans-serif"><tspan x="0" y="0">9:30 AM</tspan></text>
+        </g>
+        <g id="Group_2292" data-name="Group 2292" transform="translate(3454.5 3925)">
+          <line id="Line_121" data-name="Line 121" x2="426.5" transform="translate(0 15.5)" fill="none" stroke="#0067fb" stroke-width="1"/>
+          <g id="Chips" transform="translate(75.5)">
+            <g id="Group_1178" data-name="Group 1178">
+              <rect id="Rectangle_618" data-name="Rectangle 618" width="275" height="29" rx="14.5" fill="#f6f9fc"/>
+              <g id="Group_2237" data-name="Group 2237" transform="translate(-513 5)">
+                <g id="Group_1120" data-name="Group 1120" transform="translate(-145 3)">
+                  <text id="Web_Activity_starts_-_2h" data-name="Web activity starts - 2h" transform="translate(692 13)" fill="#323b6e" font-size="12" font-family="sans-serif"><tspan x="0" y="0">Web activity starts - 2h</tspan></text>
+                </g>
+                <g id="desktop_windows-24px" transform="translate(521)">
+                  <path id="Path_838" data-name="Path 838" d="M0,0H20V20H0Z" fill="none"/>
+                  <path id="Path_839" data-name="Path 839" d="M17.364,2H2.636A1.623,1.623,0,0,0,1,3.6v9.6a1.623,1.623,0,0,0,1.636,1.6H8.364v1.6H6.727V18h6.545V16.4H11.636V14.8h5.727A1.623,1.623,0,0,0,19,13.2V3.6A1.623,1.623,0,0,0,17.364,2Zm0,11.2H2.636V3.6H17.364Z" fill="#0067fb"/>
+                </g>
+              </g>
+              <g id="Group_2298" data-name="Group 2298" transform="translate(169 7)">
+                <g id="Group_1540" data-name="Group 1540">
+                  <g id="play_arrow-24px" transform="translate(0)">
+                    <path id="Path_824" data-name="Path 824" d="M0,0H18V18H0Z" fill="none"/>
+                    <path id="Path_825" data-name="Path 825" d="M8,5V19l11-7Z" transform="translate(-4 -3)" fill="#0067fb"/>
+                  </g>
+                  <text id="Play_Moment" data-name="Play moment" transform="translate(24 13)" fill="#0067fb" font-size="12" font-family="sans-serif"><tspan x="0" y="0">Play moment</tspan></text>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="Group_2666" data-name="Group 2666" transform="translate(3362 3344)" opacity="0.353">
+        <g id="Group_1547" data-name="Group 1547" transform="translate(93 231)">
+          <circle id="Ellipse_39" data-name="Ellipse 39" cx="15" cy="15" r="15" fill="#c6e9ff"/>
+        </g>
+        <g id="Notes" transform="translate(99 237)">
+          <path id="Path_826" data-name="Path 826" d="M0,0H18V18H0Z" fill="none"/>
+          <path id="Path_827" data-name="Path 827" d="M6.5,11.8h5v1.4h-5ZM6.5,9h5v1.4h-5Zm3.75-7h-5A1.335,1.335,0,0,0,4,3.4V14.6A1.33,1.33,0,0,0,5.244,16H12.75A1.335,1.335,0,0,0,14,14.6V6.2Zm2.5,12.6H5.25V3.4H9.625V6.9H12.75Z" fill="#0067fb"/>
+        </g>
+        <text id="Converation_Note_Added" data-name="Converation Note Added" transform="translate(133 252)" fill="#323b6e" font-size="14" font-family="sans-serif" font-weight="600"><tspan x="0" y="0">Converation Note Added</tspan></text>
+        <g id="Group_1691" data-name="Group 1691" transform="translate(-152)">
+          <g id="play_arrow-24px-2" data-name="play_arrow-24px" transform="translate(573 237)">
+            <path id="Path_824-2" data-name="Path 824" d="M0,0H18V18H0Z" fill="none"/>
+            <path id="Path_825-2" data-name="Path 825" d="M8,5V19l11-7Z" transform="translate(-4 -3)" fill="#0067fb"/>
+          </g>
+          <text id="Play_Moment-2" data-name="Play moment" transform="translate(597 250)" fill="#0067fb" font-size="12" font-family="sans-serif"><tspan x="0" y="0">Play moment</tspan></text>
+        </g>
+        <g id="Group_2689" data-name="Group 2689">
+          <text id="Yeah_this_looks_like_exactly_what_I_need._Will_try_it_out_today" data-name="Yeah this looks like exactly what I need. Will try it out today" transform="translate(173 306)" fill="#323b6e" font-size="12" font-family="sans-serif"><tspan x="0" y="13">Yeah this looks like exactly what I need. Will try it out today</tspan></text>
+          <text id="Names" transform="translate(173 292)" fill="#323b6e" font-size="14" font-family="sans-serif" font-weight="600"><tspan x="0" y="0">Rachel +2</tspan></text>
+          <g id="Happy_Smiley" data-name="Happy Smiley" transform="translate(253 277)">
+            <path id="Path_504" data-name="Path 504" d="M0,0H18V18H0Z" fill="none"/>
+            <circle id="Ellipse_29" data-name="Ellipse 29" cx="1" cy="1" r="1" transform="translate(10.242 6)" fill="#0fc632"/>
+            <circle id="Ellipse_30" data-name="Ellipse 30" cx="1" cy="1" r="1" transform="translate(6.242 6)" fill="#0fc632"/>
+            <path id="Path_505" data-name="Path 505" d="M9.5,12.5A3,3,0,0,1,6.913,11H5.66a4.121,4.121,0,0,0,7.68,0H12.088A3,3,0,0,1,9.5,12.5ZM9.493,2A7.5,7.5,0,1,0,17,9.5,7.5,7.5,0,0,0,9.493,2ZM9.5,15.5a6,6,0,1,1,6-6A6,6,0,0,1,9.5,15.5Z" transform="translate(-0.5 -0.5)" fill="#0fc632"/>
+          </g>
+          <g id="Avatar" transform="translate(133 271)">
+            <path id="Path_637" data-name="Path 637" d="M15,0A15,15,0,1,1,0,15,15,15,0,0,1,15,0Z" fill="#c6e9ff"/>
+            <text id="RG" transform="translate(15 20)" fill="#0067fb" font-size="12" font-family="sans-serif" font-weight="600"><tspan x="-8.191" y="0">RG</tspan></text>
+            <g id="Path_659" data-name="Path 659" transform="translate(21 21)" fill="#0fc632" opacity="0">
+              <path d="M 4.5 8.5 C 2.294389963150024 8.5 0.5 6.705609798431396 0.5 4.5 C 0.5 2.294389963150024 2.294389963150024 0.5 4.5 0.5 C 6.705609798431396 0.5 8.5 2.294389963150024 8.5 4.5 C 8.5 6.705609798431396 6.705609798431396 8.5 4.5 8.5 Z" stroke="none"/>
+              <path d="M 4.5 1 C 2.570089817047119 1 1 2.570089817047119 1 4.5 C 1 6.429909706115723 2.570089817047119 8 4.5 8 C 6.429909706115723 8 8 6.429909706115723 8 4.5 C 8 2.570089817047119 6.429909706115723 1 4.5 1 M 4.5 0 C 6.98528003692627 0 9 2.01471996307373 9 4.5 C 9 6.98528003692627 6.98528003692627 9 4.5 9 C 2.01471996307373 9 0 6.98528003692627 0 4.5 C 0 2.01471996307373 2.01471996307373 0 4.5 0 Z" stroke="none" fill="#0360e5"/>
+            </g>
+          </g>
+        </g>
+        <g id="Group_1805" data-name="Group 1805" transform="translate(-2955 -7670)">
+          <text id="_6:50_AM" data-name="6:50 AM" transform="translate(3000 7919)" fill="#7f848d" font-size="10" font-family="sans-serif"><tspan x="0" y="0">6:50 AM</tspan></text>
+        </g>
+      </g>
+      <g id="Group_2667" data-name="Group 2667" transform="translate(3143 2555)">
+        <g id="Group_1858" data-name="Group 1858" transform="translate(-3568 -10108)">
+          <g id="Group_1613" data-name="Group 1613" transform="translate(3768 10096)">
+            <g id="Group_1547-2" data-name="Group 1547" transform="translate(112 964)">
+              <circle id="Ellipse_39-2" data-name="Ellipse 39" cx="15" cy="15" r="15" fill="#0fc632"/>
+            </g>
+            <g id="thumb_up_alt-24px" transform="translate(118 970)">
+              <path id="Path_832" data-name="Path 832" d="M0,0H18V18H0Z" fill="none" opacity="0.87"/>
+              <path id="Path_833" data-name="Path 833" d="M15.545,5.9H10.956l.691-3.2.022-.224a1.034,1.034,0,0,0-.32-.742L10.578,1,5.793,5.613a1.344,1.344,0,0,0-.429.987v7A1.432,1.432,0,0,0,6.818,15h6.545a1.447,1.447,0,0,0,1.338-.854l2.2-4.935A1.338,1.338,0,0,0,17,8.7V7.3A1.432,1.432,0,0,0,15.545,5.9Zm0,2.8-2.182,4.9H6.818v-7L9.975,3.562,9.167,7.3h6.378ZM1,6.6H3.909V15H1Z" fill="#fff"/>
+            </g>
+          </g>
+          <text id="Subscribed" transform="translate(3919 11081)" fill="#323b6e" font-size="14" font-family="sans-serif" font-weight="600"><tspan x="0" y="0">Subscribed</tspan></text>
+          <g id="Group_1574" data-name="Group 1574" transform="translate(3359 10381)">
+            <g id="Group_1540-2" data-name="Group 1540" transform="translate(849.211 684)">
+              <g id="play_arrow-24px-3" data-name="play_arrow-24px" transform="translate(-0.211 1)">
+                <path id="Path_824-3" data-name="Path 824" d="M0,0H18V18H0Z" fill="none"/>
+                <path id="Path_825-3" data-name="Path 825" d="M8,5V19l11-7Z" transform="translate(-4 -3)" fill="#0067fb"/>
+              </g>
+              <text id="Play_Moment-3" data-name="Play moment" transform="translate(23.789 14)" fill="#0067fb" font-size="12" font-family="sans-serif"><tspan x="0" y="0">Play moment</tspan></text>
+            </g>
+          </g>
+          <text id="_12.99_monthly_subscription" data-name="$ 12.99 monthly subscription" transform="translate(3921 11104)" fill="#323b6e" font-size="12" font-family="sans-serif"><tspan x="0" y="0">$ 12.99 monthly subscription</tspan></text>
+        </g>
+        <g id="Group_1861" data-name="Group 1861" transform="translate(-2741 -6955)">
+          <text id="_2:26_PM" data-name="2:26 PM" transform="translate(3043 7926)" fill="#7f848d" font-size="10" font-family="sans-serif"><tspan x="-37.461" y="0">2:26 PM</tspan></text>
+        </g>
+      </g>
+      <g id="Group_2668" data-name="Group 2668" transform="translate(3142 2239)" opacity="0.353">
+        <g id="Group_1854" data-name="Group 1854" transform="translate(-3568 -9790)">
+          <g id="Group_1619" data-name="Group 1619" transform="translate(3768 10126)">
+            <g id="Group_1547-3" data-name="Group 1547" transform="translate(112 864)">
+              <circle id="Ellipse_39-3" data-name="Ellipse 39" cx="15" cy="15" r="15" fill="#0fc632"/>
+            </g>
+            <g id="monetization_on-24px" transform="translate(118 870)">
+              <path id="Path_828" data-name="Path 828" d="M0,0H18V18H0Z" fill="none"/>
+              <path id="Path_829" data-name="Path 829" d="M9,2a7,7,0,1,0,7,7A7,7,0,0,0,9,2ZM9,14.6A5.6,5.6,0,1,1,14.6,9,5.607,5.607,0,0,1,9,14.6Zm.217-6.2C7.978,8.083,7.579,7.74,7.579,7.229c0-.588.553-1,1.47-1,.966,0,1.33.462,1.358,1.148h1.2A2.172,2.172,0,0,0,9.861,5.3V4.1H8.23V5.283a2.115,2.115,0,0,0-1.9,1.967C6.326,8.5,7.369,9.133,8.888,9.5c1.365.322,1.638.8,1.638,1.309,0,.371-.273.973-1.47.973-1.12,0-1.561-.5-1.624-1.148h-1.2a2.27,2.27,0,0,0,2,2.079V13.9H9.868V12.731c1.064-.2,1.9-.812,1.911-1.939-.007-1.54-1.33-2.072-2.562-2.394Z" fill="#fff"/>
+            </g>
+          </g>
+          <text id="Payment_Successfully_Charged" data-name="Payment Successfully Charged" transform="translate(3919 11011)" fill="#323b6e" font-size="14" font-family="sans-serif" font-weight="600"><tspan x="0" y="0">Payment Successfully Charged</tspan></text>
+          <g id="Group_1574-2" data-name="Group 1574" transform="translate(3360 10311)">
+            <g id="Group_1540-3" data-name="Group 1540" transform="translate(849.211 684)">
+              <g id="play_arrow-24px-4" data-name="play_arrow-24px" transform="translate(-0.211 1)">
+                <path id="Path_824-4" data-name="Path 824" d="M0,0H18V18H0Z" fill="none"/>
+                <path id="Path_825-4" data-name="Path 825" d="M8,5V19l11-7Z" transform="translate(-4 -3)" fill="#0067fb"/>
+              </g>
+              <text id="Play_Moment-4" data-name="Play moment" transform="translate(23.789 14)" fill="#0067fb" font-size="12" font-family="sans-serif"><tspan x="0" y="0">Play moment</tspan></text>
+            </g>
+          </g>
+          <text id="_169.00_charged" data-name="$ 169.00 charged" transform="translate(3919 11034)" fill="#323b6e" font-size="12" font-family="sans-serif"><tspan x="0" y="0">$ 169.00 charged</tspan></text>
+        </g>
+        <g id="Group_1864" data-name="Group 1864" transform="translate(-2741 -6707)">
+          <text id="_3:15_PM" data-name="3:15 PM" transform="translate(3043 7926)" fill="#7f848d" font-size="10" font-family="sans-serif"><tspan x="-37.461" y="0">3:15 PM</tspan></text>
+        </g>
+      </g>
+      <g id="Group_2669" data-name="Group 2669" transform="translate(3157 2779)" opacity="0.353">
+        <g id="Group_2072" data-name="Group 2072" transform="translate(251 555)">
+          <text id="_2:45_PM" data-name="2:45 PM" transform="translate(0 11)" fill="#7f848d" font-size="10" font-family="sans-serif"><tspan x="0" y="0">2:45 PM</tspan></text>
+        </g>
+        <g id="Group_1926" data-name="Group 1926" transform="translate(298 547)">
+          <text id="Custom_Event_csv_export_error_" data-name="Custom Event csv_export_error " transform="translate(39 21)" fill="#323b6e" font-size="14" font-family="sans-serif" font-weight="600"><tspan x="0" y="0">Custom Event csv_export_error </tspan></text>
+          <g id="Group_1856" data-name="Group 1856">
+            <g id="Group_1660" data-name="Group 1660" transform="translate(328 6)">
+              <g id="Group_1540-4" data-name="Group 1540">
+                <g id="play_arrow-24px-5" data-name="play_arrow-24px" transform="translate(0)">
+                  <path id="Path_824-5" data-name="Path 824" d="M0,0H18V18H0Z" fill="none"/>
+                  <path id="Path_825-5" data-name="Path 825" d="M8,5V19l11-7Z" transform="translate(-4 -3)" fill="#0067fb"/>
+                </g>
+                <text id="Play_Moment-5" data-name="Play moment" transform="translate(24 13)" fill="#0067fb" font-size="12" font-family="sans-serif"><tspan x="0" y="0">Play moment</tspan></text>
+              </g>
+            </g>
+            <g id="Group_1659" data-name="Group 1659">
+              <g id="Group_1547-4" data-name="Group 1547">
+                <circle id="Ellipse_39-4" data-name="Ellipse 39" cx="15" cy="15" r="15" fill="#c6e9ff"/>
+              </g>
+              <g id="calendar_today-24px" transform="translate(6 6)">
+                <path id="Path_840" data-name="Path 840" d="M0,0H18V18H0Z" fill="none"/>
+                <path id="Path_841" data-name="Path 841" d="M15.5,2.5h-.75V1h-1.5V2.5H5.75V1H4.25V2.5H3.5A1.5,1.5,0,0,0,2,4V16a1.5,1.5,0,0,0,1.5,1.5h12A1.5,1.5,0,0,0,17,16V4A1.5,1.5,0,0,0,15.5,2.5Zm0,13.5H3.5V6.25h12Z" transform="translate(-0.5 -0.25)" fill="#0067fb"/>
+              </g>
+            </g>
+            <g id="Group_2276" data-name="Group 2276" transform="translate(39 31)">
+              <g id="Rectangle_903" data-name="Rectangle 903" fill="#f6f9fc" stroke="#e8eef6" stroke-width="1">
+                <rect width="387" height="62" rx="4" stroke="none"/>
+                <rect x="0.5" y="0.5" width="386" height="61" rx="3.5" fill="none"/>
+              </g>
+              <text id="_report_id_:_125163_" data-name="{
+“report_id”: 125163
+}" transform="translate(10 10)" fill="#323b6e" font-size="12" font-family="CourierNewPS-BoldMT, Courier New" font-weight="700"><tspan x="0" y="10">{</tspan><tspan x="0" y="24">“report_id”: 125163</tspan><tspan x="0" y="38">}</tspan></text>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
