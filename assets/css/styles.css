@@ -229,6 +229,7 @@ h2 {
     gap: 3rem;
     align-items: center;
     margin-top: 2rem;
+    text-align: left;
 }
 
 .timeline-image {
@@ -339,6 +340,18 @@ h2 {
     gap: 4rem;
     row-gap: 0;
     flex-wrap: nowrap;
+}
+
+.instructions-layout > div:first-child {
+    text-align: left;
+}
+
+.instructions-layout > div:first-child h2 {
+    text-align: left;
+}
+
+.instructions-layout > div:first-child .subtitle {
+    text-align: left;
 }
 
 
