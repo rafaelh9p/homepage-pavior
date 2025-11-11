@@ -92,7 +92,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem 2rem;
+    padding: 4rem 4rem;
 }
 
 .section:first-child {
@@ -244,6 +244,15 @@ h2 {
 .timeline-content {
     flex: 1;
     padding-top: 1rem;
+    text-align: left;
+}
+
+.timeline-content h2 {
+    text-align: left;
+}
+
+.timeline-content .subtitle {
+    text-align: left;
 }
 
 .timeline-features {
