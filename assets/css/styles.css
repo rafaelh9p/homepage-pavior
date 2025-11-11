@@ -1656,10 +1656,10 @@ footer {
 
 .screenshot-overlay {
     position: absolute;
-    pointer-events: none;
+    pointer-events: auto;
     opacity: 0;
     transition: opacity 0.5s ease-in;
-    cursor: default;
+    cursor: help;
 }
 
 .screenshot-overlay.visible {
@@ -1677,6 +1677,7 @@ footer {
     border-radius: 4px;
     white-space: nowrap;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    pointer-events: none;
 }
 
 .screenshot-overlay::after {
@@ -1691,6 +1692,7 @@ footer {
     transform: translateY(-50%);
     border: 2px solid white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
 }
 
 /* Tooltip - default (appears on right) */
@@ -1711,6 +1713,7 @@ footer {
     z-index: 1000;
     width: auto;
     height: auto;
+    pointer-events: none;
 }
 
 /* Tooltip for right-positioned overlays (appears on left) */
