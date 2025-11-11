@@ -439,6 +439,12 @@ h2 {
     .hero-content .cta-buttons {
         justify-content: center;
     }
+
+    .hero-laptop {
+        display: flex;
+        justify-content: center;
+        padding: 0 10px;
+    }
 }
 
 @media (max-width: 768px) {
