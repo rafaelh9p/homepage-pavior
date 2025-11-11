@@ -1667,9 +1667,9 @@ footer {
 }
 
 .screenshot-overlay::before {
-    content: attr(data-label) " ⓘ";
+    content: attr(data-label);
     display: inline-block;
-    padding: 6px 12px;
+    padding: 6px 32px 6px 12px;
     background: rgba(0, 103, 251, 0.85);
     color: white;
     font-size: 0.75rem;
@@ -1679,6 +1679,18 @@ footer {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     pointer-events: none;
     position: relative;
+}
+
+.screenshot-overlay .info-icon {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: white;
+    pointer-events: none;
+    line-height: 1;
 }
 
 .screenshot-overlay::after {
@@ -1694,6 +1706,11 @@ footer {
     border: 2px solid white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     pointer-events: none;
+}
+
+.screenshot-overlay.dot-right::after {
+    left: auto;
+    right: -22px;
 }
 
 .screenshot-overlay .tooltip-text {
