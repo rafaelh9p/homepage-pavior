@@ -241,7 +241,7 @@
                 <h2>Simple installation</h2>
                 <p class="subtitle">Just <a href="https://app.pavior.com/signup/createteam">create an account</a> and paste this snippet on your site.<br/>Don't forget to use your own team ID!</p>
                 <div class="code-snippet">
-                    <pre><code>&lt;script src="https://www.pavior.com/embed"&gt;&lt;/script&gt;
+                    <pre><code id="install-code">&lt;script src="https://app.pavior.com/embed"&gt;&lt;/script&gt;
 &lt;script&gt;
   Pavior('init', {
     'teamId': 'YOUR_TEAM_ID',
@@ -249,6 +249,7 @@
     'doChat': true,
   });
 &lt;/script&gt;</code></pre>
+                    <button class="btn-copy" onclick="copyInstallCode()">Copy code</button>
                 </div>
             </div>
         </section>
@@ -569,6 +570,35 @@
         });
 
         document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Copy installation code to clipboard
+        function copyInstallCode() {
+            const codeElement = document.getElementById('install-code');
+            const button = event.target;
+            const originalText = button.textContent;
+
+            // Get the text content
+            const code = codeElement.textContent;
+
+            // Copy to clipboard
+            navigator.clipboard.writeText(code).then(() => {
+                // Show success feedback
+                button.textContent = 'Copied!';
+                button.style.background = '#059669';
+
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '#000';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+                button.textContent = 'Failed to copy';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
 
         // YouTube video loader
         function loadYouTubeVideo() {
