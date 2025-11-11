@@ -767,6 +767,7 @@ h2 {
     cursor: pointer;
     transition: all 0.2s;
     box-shadow: rgba(87, 85, 85, 0.33) 0px 3px 3px;
+    min-width: 140px;
 }
 
 .btn-copy:hover {
