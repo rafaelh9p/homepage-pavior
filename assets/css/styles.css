@@ -130,6 +130,13 @@ main {
     padding: 0 3%;
 }
 
+.hero-image-container {
+    position: relative;
+    flex-basis: 65%;
+    min-width: 0;
+    max-width: 100%;
+}
+
 .section-white {
     background: white;
 }
@@ -473,6 +480,13 @@ h2 {
     .hero-laptop .tablet-frame {
         width: 100%;
         max-width: 600px;
+    }
+
+    .hero-image-container {
+        display: flex;
+        justify-content: center;
+        padding: 0 10px;
+        width: 100%;
     }
 }
 
