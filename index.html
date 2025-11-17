@@ -662,7 +662,7 @@
 
           const teams = getAuthenticatedTeams();
 
-          if (teams) {
+          if (teams && Object.keys(teams).length > 0) {
             const teamIds = Object.keys(teams);
             const numTeams = teamIds.length;
 
