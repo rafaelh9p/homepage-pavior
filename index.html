@@ -614,36 +614,30 @@
         // Update Login button based on authentication status
         function getAuthenticatedTeams() {
           try {
-            // Read the authData cookie
+            // Read the auth_tkt cookie
             const cookies = document.cookie.split(';');
-            let authData = null;
+            let authTkt = null;
 
             for (let cookie of cookies) {
               const trimmed = cookie.trim();
-              if (trimmed.startsWith('authData=')) {
-                authData = trimmed.substring('authData='.length);
+              if (trimmed.startsWith('auth_tkt=')) {
+                authTkt = trimmed.substring('auth_tkt='.length);
                 break;
               }
             }
 
-            if (!authData) {
+            if (!authTkt) {
               return null; // Not authenticated
             }
 
-            // Base64 decode the authData
-            const authDataDecoded = atob(authData);
-
             // Cookie format: [hash]![base64_userid]!userid_type:[type]
-            const parts = authDataDecoded.split('!');
+            const parts = authTkt.split('!');
             if (parts.length < 2) {
               return null;
             }
 
-            // Get the userid part (second element)
-            const userIdEncoded = decodeURIComponent(parts[1]);
-
-            // Base64 decode again
-            const userIdJson = atob(userIdEncoded);
+            // Get the userid part (second element) - it's already the base64 encoded JSON
+            const userIdJson = atob(parts[1]);
 
             // Parse JSON
             const userData = JSON.parse(userIdJson);
