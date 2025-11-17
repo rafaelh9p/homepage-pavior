@@ -630,14 +630,18 @@
               return null; // Not authenticated
             }
 
-            // Cookie format: [hash]![base64_userid]!userid_type:[type]
+            // Cookie format: [128-char-hash][base64_userid]!userid_type:[type]
             const parts = authTkt.split('!');
             if (parts.length < 2) {
               return null;
             }
 
-            // Get the userid part (second element) - it's already the base64 encoded JSON
-            const userIdJson = atob(parts[1]);
+            // The hash is 128 hex characters, followed by base64 data
+            const hashAndData = parts[0];
+            const base64Data = hashAndData.substring(128);
+
+            // Decode the base64 JSON
+            const userIdJson = atob(base64Data);
 
             // Parse JSON
             const userData = JSON.parse(userIdJson);
