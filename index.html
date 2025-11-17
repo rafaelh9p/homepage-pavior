@@ -630,20 +630,23 @@
               return null; // Not authenticated
             }
 
-            // Cookie format: [128-char-hash][base64_userid]!userid_type:[type]
+            // Cookie format: [digest][base64_userid]!userid_type:[type]
+            // Pyramid auth_tkt uses SHA512 digest + base64 JSON
             const parts = authTkt.split('!');
             if (parts.length < 2) {
               return null;
             }
 
-            // The hash is 128 hex characters, followed by base64 data
-            const hashAndData = parts[0];
-            const base64Data = hashAndData.substring(128);
+            const digestAndUserId = parts[0];
 
-            // Decode the base64 JSON
+            // Find where base64 starts (always starts with 'eyJ' which is base64 for '{"')
+            const base64Start = digestAndUserId.indexOf('eyJ');
+            if (base64Start === -1) {
+              return null;
+            }
+
+            const base64Data = digestAndUserId.substring(base64Start);
             const userIdJson = atob(base64Data);
-
-            // Parse JSON
             const userData = JSON.parse(userIdJson);
 
             return userData.teamusers;
