@@ -30,7 +30,7 @@
                     <li><a href="#features">Features</a></li>
                     <li><a href="https://pavior.help.guide/v1/user-manual/overview">Docs</a></li>
                     <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="https://app.pavior.com/signin">Login</a></li>
+                    <li><a id="login-btn" href="https://app.pavior.com/signin">Login</a></li>
                 </ul>
             </div>
         </nav>
@@ -610,6 +610,75 @@
             container.innerHTML = '';
             container.appendChild(iframe);
         }
+
+        // Update Login button based on authentication status
+        function getAuthenticatedTeams() {
+          try {
+            // Read the auth_tkt cookie
+            const cookies = document.cookie.split(';');
+            let authTkt = null;
+
+            for (let cookie of cookies) {
+              const trimmed = cookie.trim();
+              if (trimmed.startsWith('auth_tkt=')) {
+                authTkt = trimmed.substring('auth_tkt='.length);
+                break;
+              }
+            }
+
+            if (!authTkt) {
+              return null; // Not authenticated
+            }
+
+            // Cookie format: [hash]![base64_userid]!userid_type:[type]
+            const parts = authTkt.split('!');
+            if (parts.length < 2) {
+              return null;
+            }
+
+            // Get the userid part (second element)
+            const userIdEncoded = decodeURIComponent(parts[1]);
+
+            // Base64 decode
+            const userIdJson = atob(userIdEncoded);
+
+            // Parse JSON
+            const userData = JSON.parse(userIdJson);
+
+            return userData.teamusers;
+          } catch (e) {
+            console.error('Error parsing auth cookie:', e);
+            return null;
+          }
+        }
+
+        function updateLoginButton() {
+          const loginBtn = document.getElementById('login-btn');
+          if (!loginBtn) return;
+
+          const teams = getAuthenticatedTeams();
+
+          if (teams) {
+            const teamIds = Object.keys(teams);
+            const numTeams = teamIds.length;
+
+            // Update button text
+            loginBtn.textContent = 'Launch app';
+
+            // Update redirect URL based on number of teams
+            if (numTeams === 1) {
+              // Single team: redirect directly to that team
+              loginBtn.href = 'https://app.pavior.com/team/' + teamIds[0];
+            } else if (numTeams > 1) {
+              // Multiple teams: go to team selection page
+              loginBtn.href = 'https://app.pavior.com/team';
+            }
+          }
+          // If no teams, keep default "Login" text and signin URL
+        }
+
+        // Run on page load
+        updateLoginButton();
     </script>
 </body>
 </html>
