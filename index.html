@@ -621,7 +621,7 @@
             for (let cookie of cookies) {
               const trimmed = cookie.trim();
               if (trimmed.startsWith('auth_tkt=')) {
-                authTkt = trimmed.substring('auth_tkt='.length);
+                authTkt = decodeURIComponent(trimmed.substring('auth_tkt='.length));
                 break;
               }
             }
