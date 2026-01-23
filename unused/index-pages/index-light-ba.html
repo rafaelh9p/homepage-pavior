@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavior | Modern Support Suite</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAFBFF;
+            color: #1E293B;
+        }
+        .bento-card {
+            background: white;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            border-color: #3B82F6;
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04);
+            transform: translateY(-4px);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top, #EFF6FF 0%, #FAFBFF 100%);
+        }
+        .feature-tag {
+            background: #E0E7FF;
+            color: #4338CA;
+        }
+        /* Pricing table styles */
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .pricing-table th,
+        .pricing-table td {
+            padding: 1rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid #E2E8F0;
+        }
+        .pricing-table th {
+            background: #F8FAFC;
+        }
+        .pricing-table .feature-label {
+            text-align: left;
+            font-weight: 500;
+            color: #475569;
+        }
+        .pricing-table .plan-header h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            text-transform: lowercase;
+            margin-bottom: 0.5rem;
+        }
+        .pricing-table .price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1E293B;
+        }
+        .pricing-table .price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #64748B;
+        }
+        .pricing-table .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #3B82F6, #4F46E5);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .pricing-table .yes {
+            color: #10B981;
+            font-weight: 600;
+        }
+        .pricing-table .no {
+            color: #94A3B8;
+        }
+        .pricing-table .cta-row td {
+            padding: 1.5rem;
+            border-bottom: none;
+        }
+        /* Mobile pricing cards */
+        .mobile-pricing-card {
+            background: white;
+            border: 1px solid #E2E8F0;
+            border-radius: 24px;
+            padding: 2rem;
+            text-align: center;
+        }
+        .mobile-pricing-card.featured {
+            border-color: #3B82F6;
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1);
+        }
+        .mobile-pricing-card h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            text-transform: lowercase;
+            margin-bottom: 0.5rem;
+        }
+        .mobile-pricing-card .mobile-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1E293B;
+            margin-bottom: 1.5rem;
+        }
+        .mobile-pricing-card .mobile-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #64748B;
+        }
+        .mobile-pricing-card .mobile-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem 0;
+            text-align: left;
+        }
+        .mobile-pricing-card .mobile-features li {
+            padding: 0.5rem 0;
+            color: #475569;
+            border-bottom: 1px solid #F1F5F9;
+        }
+        .mobile-pricing-card .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #3B82F6, #4F46E5);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        /* Phone frame */
+        .phone-frame {
+            width: 280px;
+            height: 580px;
+            background: linear-gradient(145deg, #2a2a3e, #1a1a2e);
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        .phone-frame::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 30px;
+            background: #1a1a2e;
+            border-radius: 0 0 20px 20px;
+        }
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+        .slideshow {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+        .slide.active {
+            opacity: 1;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Laptop frame */
+        .laptop-frame {
+            background: linear-gradient(145deg, #2a2a3e, #1a1a2e);
+            border-radius: 16px;
+            padding: 16px 16px 0 16px;
+        }
+        .laptop-screen {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .laptop-screen video {
+            width: 100%;
+            display: block;
+        }
+        .laptop-base {
+            height: 20px;
+            background: linear-gradient(180deg, #2a2a3e, #1a1a2e);
+            border-radius: 0 0 8px 8px;
+            margin: 0 -16px;
+            position: relative;
+        }
+        .laptop-base::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #3a3a4e;
+            border-radius: 4px 4px 0 0;
+        }
+        /* Before/After styles */
+        .workflow-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        .workflow-before .workflow-icon {
+            background: #FEE2E2;
+            color: #DC2626;
+        }
+        .workflow-after .workflow-icon {
+            background: #DCFCE7;
+            color: #16A34A;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .pricing-table-wrapper {
+                display: none;
+            }
+            .mobile-pricing-cards {
+                display: flex !important;
+            }
+        }
+    </style>
+</head>
+<body class="hero-gradient min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
+        <img src="assets/images/logo.svg" alt="Pavior" class="h-8">
+        <div class="hidden md:flex space-x-10 text-sm font-semibold text-slate-500">
+            <a href="#features" class="hover:text-blue-600 transition-colors">Features</a>
+            <a href="https://pavior.help.guide/v1/user-manual/overview" class="hover:text-blue-600 transition-colors">Docs</a>
+            <a href="#pricing" class="hover:text-blue-600 transition-colors">Pricing</a>
+        </div>
+        <div class="flex items-center space-x-5">
+            <a href="https://app.pavior.com/signin" class="text-sm font-bold text-slate-600 hover:text-blue-600 transition-colors">Sign in</a>
+            <a href="https://app.pavior.com/signup/createteam" class="bg-[rgb(0,103,251)] hover:bg-[rgb(0,77,190)] px-6 py-2.5 rounded-xl text-sm font-bold text-white shadow-lg shadow-blue-200 transition-all">
+                Get started for free
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="max-w-4xl mx-auto text-center pt-24 pb-20 px-4">
+        <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-blue-100 text-blue-700 rounded-full">
+            Modern SaaS Support
+        </span>
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-slate-900 leading-[1.1]">
+            One suite. <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#01A9FB] to-[#0067FB]">Infinite context.</span>
+        </h1>
+        <p class="text-xl text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Stop switching tabs. Get live chat, session recordings, and CRM insights in a single, lightning-fast dashboard.
+        </p>
+    </header>
+
+    <!-- Features Bento Grid -->
+    <section id="features" class="max-w-7xl mx-auto px-6 pb-24">
+        <h2 class="text-3xl font-extrabold text-center mb-4">Pick and choose the features you need</h2>
+        <p class="text-slate-500 text-center mb-12 max-w-2xl mx-auto">Everything you need to provide exceptional customer support, all in one place.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Chat -->
+            <div class="bento-card rounded-[32px] p-8">
+                <div class="w-12 h-12 mb-4">
+                    <img src="assets/images/app-logos/chat-logo.svg" alt="Chat" class="w-full h-full">
+                </div>
+                <h3 class="text-xl font-extrabold mb-2">Chat</h3>
+                <p class="text-slate-500 text-sm">Live chat with your customers directly from your website.</p>
+            </div>
+
+            <!-- Time Travel -->
+            <div class="bento-card rounded-[32px] p-8">
+                <div class="w-12 h-12 mb-4">
+                    <img src="assets/images/app-logos/time-travel-logo.svg" alt="Time Travel" class="w-full h-full">
+                </div>
+                <h3 class="text-xl font-extrabold mb-2">Time Travel</h3>
+                <p class="text-slate-500 text-sm">Record and replay user sessions to debug issues instantly.</p>
+            </div>
+
+            <!-- Campaigns -->
+            <div class="bento-card rounded-[32px] p-8">
+                <div class="w-12 h-12 mb-4">
+                    <img src="assets/images/app-logos/campaigns-logo.svg" alt="Campaigns" class="w-full h-full">
+                </div>
+                <h3 class="text-xl font-extrabold mb-2">Campaigns</h3>
+                <p class="text-slate-500 text-sm">Email marketing and automation campaigns that convert.</p>
+            </div>
+
+            <!-- Records -->
+            <div class="bento-card rounded-[32px] p-8">
+                <div class="w-12 h-12 mb-4">
+                    <img src="assets/images/app-logos/records-logo.svg" alt="Records" class="w-full h-full">
+                </div>
+                <h3 class="text-xl font-extrabold mb-2">Records</h3>
+                <p class="text-slate-500 text-sm">Complete CRM to track every customer interaction.</p>
+            </div>
+
+            <!-- Suggest -->
+            <div class="bento-card rounded-[32px] p-8">
+                <div class="w-12 h-12 mb-4">
+                    <img src="assets/images/app-logos/suggest-logo.svg" alt="Suggest" class="w-full h-full">
+                </div>
+                <h3 class="text-xl font-extrabold mb-2">Suggest</h3>
+                <p class="text-slate-500 text-sm">Collect feedback with 4-click rage detection.</p>
+            </div>
+
+            <!-- Announce -->
+            <div class="bento-card rounded-[32px] p-8">
+                <div class="w-12 h-12 mb-4">
+                    <img src="assets/images/app-logos/announce-logo.svg" alt="Announce" class="w-full h-full">
+                </div>
+                <h3 class="text-xl font-extrabold mb-2">Announce</h3>
+                <p class="text-slate-500 text-sm">In-app announcements and product updates.</p>
+            </div>
+
+            <!-- Website Builder -->
+            <div class="bento-card rounded-[32px] p-8">
+                <div class="w-12 h-12 mb-4">
+                    <img src="assets/images/app-logos/website-builder-logo.svg" alt="Website Builder" class="w-full h-full">
+                </div>
+                <h3 class="text-xl font-extrabold mb-2">Website Builder</h3>
+                <p class="text-slate-500 text-sm">Build beautiful landing pages and websites.</p>
+            </div>
+
+            <!-- Help Guide -->
+            <div class="bento-card rounded-[32px] p-8">
+                <div class="w-12 h-12 mb-4">
+                    <img src="assets/images/app-logos/help-guide-logo.svg" alt="Help Guide" class="w-full h-full">
+                </div>
+                <h3 class="text-xl font-extrabold mb-2">Help Guide</h3>
+                <p class="text-slate-500 text-sm">Knowledge base and documentation portal.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Section -->
+    <section class="bg-white border-y border-slate-100 py-24">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold mb-4">Beautiful chat, crafted for your business</h2>
+            <p class="text-slate-500 mb-12 font-medium max-w-xl mx-auto">Engage with customers in real-time. Customizable to match your brand perfectly.</p>
+            <div class="bento-card rounded-[32px] p-6">
+                <img src="assets/images/sections/chat-section-updated.svg" alt="Chat interface" class="w-full max-w-3xl mx-auto rounded-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Section -->
+    <section class="py-24 max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl font-extrabold text-center mb-16">The old way vs. the Pavior way</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Before Column -->
+            <div class="bento-card rounded-[32px] p-8 border-red-100 hover:border-red-200">
+                <h3 class="text-xl font-extrabold mb-6 text-red-600">Before Pavior</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-4">
+                        <span class="workflow-icon workflow-before">X</span>
+                        <span class="text-slate-600">"Can you send a screenshot?"</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <span class="workflow-icon workflow-before">X</span>
+                        <span class="text-slate-600">"What browser are you using?"</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <span class="workflow-icon workflow-before">X</span>
+                        <span class="text-slate-600">"Can you try again and tell me what happens?"</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <span class="workflow-icon workflow-before">X</span>
+                        <span class="text-slate-600">Back-and-forth emails, frustrated customers</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- After Column -->
+            <div class="bento-card rounded-[32px] p-8 border-green-100 hover:border-green-200">
+                <h3 class="text-xl font-extrabold mb-6 text-green-600">With Pavior</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-4">
+                        <span class="workflow-icon workflow-after">✓</span>
+                        <span class="text-slate-600">Watch the session replay</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <span class="workflow-icon workflow-after">✓</span>
+                        <span class="text-slate-600">See the error in console</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <span class="workflow-icon workflow-after">✓</span>
+                        <span class="text-slate-600">Respond with solution in first reply</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <span class="workflow-icon workflow-after">✓</span>
+                        <span class="text-slate-600">Happy customer, fast resolution</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile App Section -->
+    <section class="bg-white border-y border-slate-100 py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-extrabold mb-4">Stay connected on the go</h2>
+                    <p class="text-slate-500 mb-8 font-medium">Full-featured mobile app for iOS and Android. Respond to customers, check analytics, and manage your team from anywhere.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-slate-600">
+                            <svg class="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Real-time push notifications
+                        </li>
+                        <li class="flex items-center text-slate-600">
+                            <svg class="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Full chat and inbox access
+                        </li>
+                        <li class="flex items-center text-slate-600">
+                            <svg class="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            View session recordings
+                        </li>
+                        <li class="flex items-center text-slate-600">
+                            <svg class="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Team collaboration tools
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://apps.apple.com/us/app/pavior-live-chat/id6466522216" class="bento-card px-6 py-3 rounded-xl font-bold text-slate-700 hover:text-blue-600">
+                            App Store
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.momentmobile&hl=en_US" class="bento-card px-6 py-3 rounded-xl font-bold text-slate-700 hover:text-blue-600">
+                            Google Play
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="slideshow">
+                                <div class="slide active">
+                                    <img src="assets/images/mobile/main-menu.svg" alt="Mobile Main Menu">
+                                </div>
+                                <div class="slide">
+                                    <img src="assets/images/mobile/inbox.svg" alt="Mobile Inbox">
+                                </div>
+                                <div class="slide">
+                                    <img src="assets/images/mobile/chat.svg" alt="Mobile Chat">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Time Travel Section -->
+    <section class="py-24 max-w-5xl mx-auto px-6 text-center">
+        <h2 class="text-4xl font-extrabold mb-4">Rewind time to debug issues</h2>
+        <p class="text-slate-500 mb-12 font-medium max-w-xl mx-auto">Watch exactly what your users experienced. See console errors, network requests, and user actions.</p>
+        <div class="bento-card rounded-[32px] p-6 max-w-4xl mx-auto">
+            <div class="laptop-frame">
+                <div class="laptop-screen">
+                    <video autoplay loop muted playsinline>
+                        <source src="assets/videos/timetravel.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="laptop-base"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Timeline Section -->
+    <section class="bg-white border-y border-slate-100 py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-extrabold mb-4">Customer timeline</h2>
+                    <p class="text-slate-500 font-medium">Every interaction, purchase, and support ticket in one place. Build better relationships with complete context.</p>
+                </div>
+                <div class="bento-card rounded-[32px] p-6">
+                    <img src="assets/images/sections/customer-timeline-section.svg" alt="Customer Timeline" class="w-full rounded-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Code Section -->
+    <section class="py-24">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold mb-4">Simple installation</h2>
+            <p class="text-slate-500 mb-12 font-medium">Just <a href="https://app.pavior.com/signup/createteam" class="text-blue-600 hover:underline">create an account</a> and paste this snippet on your site. Don't forget to use your own team ID!</p>
+            <div class="bg-slate-900 rounded-2xl p-8 text-left shadow-2xl overflow-hidden relative">
+                <button onclick="copyInstallCode()" class="absolute top-4 right-4 bg-white text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-slate-100 transition-colors">Copy code</button>
+                <div class="flex space-x-2 mb-6">
+                    <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                    <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                    <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                </div>
+                <pre class="font-mono text-sm leading-loose overflow-x-auto"><code id="install-code"><span class="text-blue-400">&lt;script</span> <span class="text-emerald-400">src</span>=<span class="text-orange-300">"https://app.pavior.com/embed"</span><span class="text-blue-400">&gt;&lt;/script&gt;</span>
+<span class="text-blue-400">&lt;script&gt;</span>
+  <span class="text-slate-300">Pavior('init', {</span>
+    <span class="text-emerald-400">'teamId'</span>: <span class="text-orange-300">'YOUR_TEAM_ID'</span>,
+    <span class="text-emerald-400">'doTimeTravel'</span>: <span class="text-purple-400">true</span>,
+    <span class="text-emerald-400">'doChat'</span>: <span class="text-purple-400">true</span>,
+  <span class="text-slate-300">});</span>
+<span class="text-blue-400">&lt;/script&gt;</span></code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="bg-white border-y border-slate-100 py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-center mb-4">Simple, transparent pricing</h2>
+            <p class="text-slate-500 text-center mb-12 max-w-xl mx-auto">Choose a plan which works best for you. Start free, upgrade when you're ready.</p>
+
+            <!-- Mobile Pricing Cards -->
+            <div class="mobile-pricing-cards hidden flex-col gap-6 md:hidden">
+                <div class="mobile-pricing-card">
+                    <h3>basic</h3>
+                    <div class="mobile-price">$0<span>/mo</span></div>
+                    <ul class="mobile-features">
+                        <li>2 seats</li>
+                        <li>1k contacts</li>
+                        <li>100 conversations</li>
+                        <li>1k session recordings/mo</li>
+                        <li>Community support</li>
+                    </ul>
+                    <a href="https://app.pavior.com/signup/createteam" class="block w-full bg-[rgb(0,103,251)] hover:bg-[rgb(0,77,190)] text-white font-bold py-3 px-6 rounded-xl text-center transition-colors">Start free</a>
+                </div>
+                <div class="mobile-pricing-card featured">
+                    <span class="badge">Most popular</span>
+                    <h3>economy</h3>
+                    <div class="mobile-price">$25<span>/mo</span></div>
+                    <ul class="mobile-features">
+                        <li>4 seats</li>
+                        <li>10k contacts</li>
+                        <li>Unlimited conversations</li>
+                        <li>10k session recordings/mo</li>
+                        <li>Custom email domain</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="https://app.pavior.com/signup/createteam?buying=true" class="block w-full bg-[rgb(0,103,251)] hover:bg-[rgb(0,77,190)] text-white font-bold py-3 px-6 rounded-xl text-center transition-colors">Get economy</a>
+                </div>
+                <div class="mobile-pricing-card">
+                    <h3>premium</h3>
+                    <div class="mobile-price">$99<span>/mo</span></div>
+                    <ul class="mobile-features">
+                        <li>10 seats</li>
+                        <li>100k contacts</li>
+                        <li>Unlimited conversations</li>
+                        <li>50k session recordings/mo</li>
+                        <li>Remove watermark</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="https://app.pavior.com/signup/createteam?buying=true" class="block w-full bg-[rgb(0,103,251)] hover:bg-[rgb(0,77,190)] text-white font-bold py-3 px-6 rounded-xl text-center transition-colors">Get premium</a>
+                </div>
+            </div>
+
+            <!-- Desktop Pricing Table -->
+            <div class="pricing-table-wrapper bento-card rounded-[32px] overflow-hidden">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>
+                                <div class="plan-header">
+                                    <h3>basic</h3>
+                                    <div class="price">$0</div>
+                                </div>
+                            </th>
+                            <th class="bg-blue-50">
+                                <div class="plan-header">
+                                    <span class="badge">Most popular</span>
+                                    <h3>economy</h3>
+                                    <div class="price">$25<span>/mo</span></div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="plan-header">
+                                    <h3>premium</h3>
+                                    <div class="price">$99<span>/mo</span></div>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-label">Seats</td>
+                            <td>2</td>
+                            <td class="bg-blue-50/50">4</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">Contacts in CRM</td>
+                            <td>1k</td>
+                            <td class="bg-blue-50/50">10k</td>
+                            <td>100k</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">Conversations</td>
+                            <td>100</td>
+                            <td class="bg-blue-50/50">Unlimited</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">Chat & email retention</td>
+                            <td>3 months</td>
+                            <td class="bg-blue-50/50">1 year</td>
+                            <td>3 years</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">Active automessages</td>
+                            <td>1</td>
+                            <td class="bg-blue-50/50">10</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">Automessages sent/month</td>
+                            <td>1k</td>
+                            <td class="bg-blue-50/50">10k</td>
+                            <td>100k</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">Leads generated/month</td>
+                            <td>0</td>
+                            <td class="bg-blue-50/50">100</td>
+                            <td>1,000</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">Session recordings/month</td>
+                            <td>1k</td>
+                            <td class="bg-blue-50/50">10k</td>
+                            <td>50k</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">Session retention</td>
+                            <td>7 days</td>
+                            <td class="bg-blue-50/50">30 days</td>
+                            <td>90 days</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">Favorite moments</td>
+                            <td>5 minutes</td>
+                            <td class="bg-blue-50/50">60 minutes</td>
+                            <td>300 minutes</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">Custom email domain</td>
+                            <td><span class="no">&#10005;</span></td>
+                            <td class="bg-blue-50/50"><span class="yes">&#10003;</span></td>
+                            <td><span class="yes">&#10003;</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">Remove watermark</td>
+                            <td><span class="no">&#10005;</span></td>
+                            <td class="bg-blue-50/50"><span class="no">&#10005;</span></td>
+                            <td><span class="yes">&#10003;</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-label">Support</td>
+                            <td>Community</td>
+                            <td class="bg-blue-50/50">Email</td>
+                            <td>Priority</td>
+                        </tr>
+                        <tr class="cta-row">
+                            <td></td>
+                            <td>
+                                <a href="https://app.pavior.com/signup/createteam" class="inline-block bg-[rgb(0,103,251)] hover:bg-[rgb(0,77,190)] text-white font-bold py-3 px-6 rounded-xl transition-colors">Start free</a>
+                            </td>
+                            <td class="bg-blue-50/50">
+                                <a href="https://app.pavior.com/signup/createteam?buying=true" class="inline-block bg-[rgb(0,103,251)] hover:bg-[rgb(0,77,190)] text-white font-bold py-3 px-6 rounded-xl transition-colors">Get economy</a>
+                            </td>
+                            <td>
+                                <a href="https://app.pavior.com/signup/createteam?buying=true" class="inline-block bg-[rgb(0,103,251)] hover:bg-[rgb(0,77,190)] text-white font-bold py-3 px-6 rounded-xl transition-colors">Get premium</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="text-center text-slate-500 mt-8">
+                Need higher limits or custom features? <a href="#" onclick="event.preventDefault(); window.MomentCRM && window.MomentCRM('open')" class="text-blue-600 hover:underline">Contact sales</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-100 bg-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <img src="assets/images/logo.svg" alt="Pavior" class="h-8 mb-4">
+                    <p class="text-slate-500 text-sm">Modern customer support platform for SaaS teams.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-4">Contact Us</h3>
+                    <p class="text-slate-500 text-sm space-y-1">
+                        <a href="mailto:hello@pavior.com" class="block hover:text-blue-600">hello@pavior.com</a>
+                        <a href="tel:+16478966479" class="block hover:text-blue-600">647-896-6479</a>
+                        <span class="block">222 Finch Ave. West #213</span>
+                        <span class="block">Toronto, Canada M2R 1M6</span>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-4">Product</h3>
+                    <p class="text-slate-500 text-sm space-y-1">
+                        <a href="#features" class="block hover:text-blue-600">Features</a>
+                        <a href="#pricing" class="block hover:text-blue-600">Pricing</a>
+                        <a href="https://pavior.help.guide" class="block hover:text-blue-600">Documentation</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-4">Legal</h3>
+                    <p class="text-slate-500 text-sm">
+                        <a href="https://pavior.help.guide/v1/legal/docs/terms-and-conditions" target="_blank" class="block hover:text-blue-600">Terms and Conditions</a>
+                    </p>
+                </div>
+            </div>
+            <div class="text-center text-slate-400 text-sm pt-8 border-t border-slate-100">
+                &copy; <span id="current-year"></span> Pavior Inc. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Slideshow functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        if (totalSlides > 0) {
+            setInterval(nextSlide, 3000);
+        }
+
+        // Video playback control
+        const videos = document.querySelectorAll('video');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const video = entry.target;
+                if (entry.isIntersecting) {
+                    video.currentTime = 0;
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        }, observerOptions);
+
+        videos.forEach(video => {
+            video.pause();
+            observer.observe(video);
+        });
+
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Copy installation code
+        function copyInstallCode() {
+            const code = `<script src="https://app.pavior.com/embed"><\/script>
+<script>
+  Pavior('init', {
+    'teamId': 'YOUR_TEAM_ID',
+    'doTimeTravel': true,
+    'doChat': true,
+  });
+<\/script>`;
+
+            navigator.clipboard.writeText(code).then(() => {
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.classList.add('bg-emerald-500', 'text-white');
+                button.classList.remove('bg-white', 'text-slate-900');
+
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.remove('bg-emerald-500', 'text-white');
+                    button.classList.add('bg-white', 'text-slate-900');
+                }, 3000);
+            });
+        }
+    </script>
+</body>
+</html>

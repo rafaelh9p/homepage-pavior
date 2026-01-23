@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://app.momentcrm.com/embed"></script>
+    <script>
+      MomentCRM('init', {
+        'teamVanityId': 'pavior',
+        'doChat': true,
+        'doTimeTravel': true,
+        'quadClickForFeedback': true,
+        'shareAuth': true,
+      });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavior - Customer Support Software Your SaaS Team Will Love</title>
+    <meta name="description" content="Modern customer support platform with live chat, help center, and session replay. Fast, powerful tools that make supporting customers easy.">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: rgb(0, 103, 251);
+            --primary-hover: rgb(0, 77, 190);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #020617;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .btn {
+            padding: 0.5rem 1.5rem;
+            font-size: 0.875rem;
+            font-family: inherit;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: rgb(255, 255, 255);
+            box-shadow: rgba(87, 85, 85, 0.33) 0px 3px 3px;
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+        .glow-effect {
+            position: absolute;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 400px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(2, 6, 23, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .border-glow {
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.05);
+        }
+        .active-tab {
+            background: #1e293b;
+            border-color: #3b82f6;
+            color: #fff;
+        }
+
+        /* Phone frame styles */
+        .phone-frame {
+            position: relative;
+            width: 280px;
+            height: 580px;
+            background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 40px;
+            padding: 12px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+            flex-shrink: 0;
+        }
+        .phone-power-button {
+            position: absolute;
+            right: -3px;
+            top: 120px;
+            width: 3px;
+            height: 60px;
+            background: #334155;
+            border-radius: 0 2px 2px 0;
+        }
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: #0f172a;
+            border-radius: 32px;
+            overflow: hidden;
+            position: relative;
+        }
+        .slideshow {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.active {
+            opacity: 1;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Laptop frame styles */
+        .laptop-frame {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .laptop-screen {
+            background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 12px 12px 0 0;
+            padding: 8px;
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .laptop-screen-inner {
+            background: #0f172a;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+        }
+        .laptop-screen-inner video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .laptop-base {
+            background: linear-gradient(to bottom, #334155 0%, #1e293b 100%);
+            height: 16px;
+            border-radius: 0 0 8px 8px;
+            position: relative;
+        }
+        .laptop-base::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #475569;
+            border-radius: 0 0 4px 4px;
+        }
+
+        /* Code snippet styles */
+        .code-snippet {
+            background: #0f172a;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 24px;
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+        .code-snippet pre {
+            margin: 0;
+            font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #94a3b8;
+        }
+        .code-snippet code {
+            color: #94a3b8;
+        }
+        .btn-copy {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: #1e293b;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-copy:hover {
+            background: #334155;
+        }
+
+        /* Tab content styles */
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: flex;
+        }
+        .sidebar-content {
+            display: none;
+        }
+        .sidebar-content.active {
+            display: block;
+        }
+        .preview-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .preview-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .centered-logo {
+            width: 120px;
+            height: 120px;
+            opacity: 0.9;
+        }
+        /* Preview phone frame styles */
+        .phone-frame-preview {
+            width: 220px;
+            height: 460px;
+            background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 26px;
+            padding: 8px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+        .phone-screen-preview {
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .preview-slideshow {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .preview-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .preview-slide.active {
+            opacity: 1;
+        }
+        .preview-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Pricing table styles */
+        .pricing-table {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .pricing-table {
+                display: table;
+            }
+            .mobile-pricing-cards {
+                display: none;
+            }
+        }
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .pricing-table th,
+        .pricing-table td {
+            padding: 16px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .pricing-table th {
+            background: #0f172a;
+        }
+        .pricing-table td.feature-label {
+            text-align: left;
+            color: #94a3b8;
+        }
+        .pricing-table .plan-header h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: lowercase;
+            margin-bottom: 8px;
+        }
+        .pricing-table .price {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+        .pricing-table .price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #64748b;
+        }
+        .pricing-table .badge {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .pricing-table .yes {
+            color: #22c55e;
+        }
+        .pricing-table .no {
+            color: #64748b;
+        }
+
+        /* Mobile pricing cards */
+        .mobile-pricing-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .mobile-pricing-card {
+            background: #0f172a;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+        }
+        .mobile-pricing-card.featured {
+            border-color: #3b82f6;
+            position: relative;
+        }
+        .mobile-pricing-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: lowercase;
+            margin-bottom: 8px;
+        }
+        .mobile-pricing-card .mobile-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .mobile-pricing-card .mobile-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #64748b;
+        }
+        .mobile-pricing-card .badge {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .mobile-pricing-card .mobile-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 24px 0;
+            text-align: left;
+        }
+        .mobile-pricing-card .mobile-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: #94a3b8;
+        }
+        .mobile-pricing-card .mobile-features li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="glow-effect"></div>
+
+    <!-- Header/Nav -->
+    <nav class="relative z-10 flex justify-between items-center py-6 px-6 md:px-10 max-w-7xl mx-auto">
+        <div class="logo">
+            <a href="index.html"><img src="assets/images/logo.svg" alt="Pavior logo" height="40" class="h-10 brightness-0 invert"></a>
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+            <a href="#features" class="text-slate-300 hover:text-white transition text-sm font-medium">Features</a>
+            <a href="https://pavior.help.guide/v1/user-manual/overview" class="text-slate-300 hover:text-white transition text-sm font-medium">Docs</a>
+            <a href="#pricing" class="text-slate-300 hover:text-white transition text-sm font-medium">Pricing</a>
+            <a id="login-btn" href="https://app.pavior.com/signin" class="text-slate-300 hover:text-white transition text-sm font-medium">Sign in</a>
+        </div>
+        <div>
+            <a href="https://app.pavior.com/signup/createteam" class="btn btn-primary">Get started for free</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative z-10 pt-16 pb-24 px-6 text-center">
+            <div class="inline-flex items-center gap-2 bg-slate-900 border border-slate-800 rounded-full px-4 py-1.5 mb-8">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                <span class="text-xs font-bold text-slate-300 uppercase tracking-widest">Rewind Customer Friction</span>
+            </div>
+
+            <h1 class="text-4xl md:text-7xl font-extrabold tracking-tight mb-8">
+                Don't just ask them.<br>
+                <span class="text-blue-500">See what they saw.</span>
+            </h1>
+
+            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+                Stop the "can you send a screenshot?" loop. Pavior's <b class="text-white">Time Travel</b> feature lets you replay user sessions with full console logs, network errors, and click maps.
+            </p>
+
+            <!-- Tabbed HUD Component (from index-hud.html, adapted to blue accent) -->
+            <div class="max-w-5xl mx-auto">
+                <div class="border-glow rounded-xl bg-slate-950 overflow-hidden">
+                    <div class="flex flex-wrap border-b border-white/5 bg-black/40">
+                        <button class="preview-tab px-4 md:px-6 py-4 text-xs md:text-sm font-medium border-r border-white/5 active-tab" data-tab="0">Session Replay</button>
+                        <button class="preview-tab px-4 md:px-6 py-4 text-xs md:text-sm font-medium border-r border-white/5 text-gray-500 hover:text-white transition" data-tab="1">Live Messaging</button>
+                        <button class="preview-tab px-4 md:px-6 py-4 text-xs md:text-sm font-medium border-r border-white/5 text-gray-500 hover:text-white transition hidden md:block" data-tab="2">Customer CRM</button>
+                        <button class="preview-tab px-4 md:px-6 py-4 text-xs md:text-sm font-medium text-gray-500 hover:text-white transition hidden md:block" data-tab="3">Mobile App</button>
+                    </div>
+
+                    <!-- Content area - fixed 500px height -->
+                    <div id="content-area" class="p-1 gap-1 flex flex-col md:flex-row h-auto md:h-[500px]">
+                        <!-- Main content area with tab panels -->
+                        <div class="flex-grow bg-black/20 rounded-lg relative border border-white/5 min-h-[250px] overflow-hidden">
+                            <!-- Tab 0: Session Replay Video -->
+                            <div class="tab-content active absolute inset-0 items-center justify-center" data-tab="0">
+                                <video class="preview-video" autoplay loop muted playsinline>
+                                    <source src="assets/videos/timetravel.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <!-- Tab 1: Live Messaging -->
+                            <div class="tab-content absolute inset-0 items-center justify-center bg-white rounded-lg" data-tab="1">
+                                <img src="assets/images/sections/chat-section-updated.svg" alt="Live Chat Interface" class="preview-image">
+                            </div>
+                            <!-- Tab 2: Customer CRM -->
+                            <div class="tab-content absolute inset-0 items-center justify-center bg-white rounded-lg" data-tab="2">
+                                <img src="assets/images/sections/customer-timeline-section.svg" alt="Customer Timeline" class="preview-image">
+                            </div>
+                            <!-- Tab 3: Mobile App -->
+                            <div class="tab-content absolute inset-0 items-center justify-center" data-tab="3">
+                                <div class="phone-frame-preview">
+                                    <div class="phone-screen-preview">
+                                        <div class="preview-slideshow">
+                                            <div class="preview-slide active">
+                                                <img src="assets/images/mobile/main-menu.svg" alt="Mobile Main Menu">
+                                            </div>
+                                            <div class="preview-slide">
+                                                <img src="assets/images/mobile/inbox.svg" alt="Mobile Inbox">
+                                            </div>
+                                            <div class="preview-slide">
+                                                <img src="assets/images/mobile/chat.svg" alt="Mobile Chat">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar with feature descriptions -->
+                        <div class="w-full md:w-80 bg-black/40 rounded-lg p-6 border border-white/5 flex flex-col justify-between">
+                            <div>
+                                <!-- Tab 0: Session Replay Description -->
+                                <div class="sidebar-content active" data-tab="0">
+                                    <h3 class="text-lg font-bold text-white mb-3">Session Replay</h3>
+                                    <p class="text-gray-400 text-sm mb-4">Watch exactly what your users experienced. Debug issues in seconds, not hours.</p>
+                                    <ul class="space-y-2 text-sm">
+                                        <li class="flex items-center gap-2 text-gray-300"><span class="text-blue-500">&#10003;</span> Full DOM recording</li>
+                                        <li class="flex items-center gap-2 text-gray-300"><span class="text-blue-500">&#10003;</span> Console & network logs</li>
+                                        <li class="flex items-center gap-2 text-gray-300"><span class="text-blue-500">&#10003;</span> Click & scroll tracking</li>
+                                        <li class="flex items-center gap-2 text-gray-300"><span class="text-blue-500">&#10003;</span> Rage click detection</li>
+                                    </ul>
+                                </div>
+                                <!-- Tab 1: Live Messaging Description -->
+                                <div class="sidebar-content" data-tab="1">
+                                    <h3 class="text-lg font-bold text-white mb-3">Live Messaging</h3>
+                                    <p class="text-gray-400 text-sm mb-4">Connect with customers in real-time. Beautiful chat that matches your brand.</p>
+                                    <ul class="space-y-2 text-sm">
+                                        <li class="flex items-center gap-2 text-gray-300"><span class="text-blue-500">&#10003;</span> Real-time messaging</li>
+                                        <li class="flex items-center gap-2 text-gray-300"><span class="text-blue-500">&#10003;</span> File sharing</li>
+                                        <li class="flex items-center gap-2 text-gray-300"><span class="text-blue-500">&#10003;</span> Custom branding</li>
+                                        <li class="flex items-center gap-2 text-gray-300"><span class="text-blue-500">&#10003;</span> Mobile app support</li>
+                                    </ul>
+                                </div>
+                                <!-- Tab 2: Customer CRM Description -->
+                                <div class="sidebar-content" data-tab="2">
+                                    <h3 class="text-lg font-bold text-white mb-3">Customer CRM</h3>
+                                    <p class="text-gray-400 text-sm mb-4">Complete customer timeline. Every interaction, purchase, and support ticket in one place.</p>
+                                    <ul class="space-y-2 text-sm">
+                                        <li class="flex items-center gap-2 text-gray-300"><span class="text-blue-500">&#10003;</span> Unified timeline</li>
+                                        <li class="flex items-center gap-2 text-gray-300"><span class="text-blue-500">&#10003;</span> Contact management</li>
+                                        <li class="flex items-center gap-2 text-gray-300"><span class="text-blue-500">&#10003;</span> Custom properties</li>
+                                        <li class="flex items-center gap-2 text-gray-300"><span class="text-blue-500">&#10003;</span> Activity tracking</li>
+                                    </ul>
+                                </div>
+                                <!-- Tab 3: Mobile App Description -->
+                                <div class="sidebar-content" data-tab="3">
+                                    <h3 class="text-lg font-bold text-white mb-3">Mobile App</h3>
+                                    <p class="text-gray-400 text-sm mb-4">Full-featured mobile app for iOS and Android. Respond to customers, check analytics, and manage your team from anywhere.</p>
+                                    <ul class="space-y-2 text-sm">
+                                        <li class="flex items-center gap-2 text-gray-300"><span class="text-blue-500">&#10003;</span> Real-time push notifications</li>
+                                        <li class="flex items-center gap-2 text-gray-300"><span class="text-blue-500">&#10003;</span> Full chat and inbox access</li>
+                                        <li class="flex items-center gap-2 text-gray-300"><span class="text-blue-500">&#10003;</span> View session recordings</li>
+                                        <li class="flex items-center gap-2 text-gray-300"><span class="text-blue-500">&#10003;</span> Team collaboration tools</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://app.pavior.com/signup/createteam" class="btn btn-primary block w-full mt-6">Get started for free</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid Section -->
+        <section id="features" class="py-20 px-6 bg-slate-900">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Pick and choose the features you need</h2>
+                <p class="text-slate-400 text-center mb-12 max-w-2xl mx-auto">Everything you need to support your customers, all in one platform.</p>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                    <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition">
+                        <div class="mb-4">
+                            <img src="assets/images/app-logos/chat-logo.svg" alt="Chat" width="48" height="48" class="brightness-0 invert opacity-80">
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">Chat</h3>
+                        <p class="text-slate-400 text-sm">Live chat with your customers directly from your website.</p>
+                    </div>
+                    <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition">
+                        <div class="mb-4">
+                            <img src="assets/images/app-logos/time-travel-logo.svg" alt="Time Travel" width="48" height="48" class="brightness-0 invert opacity-80">
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">Time travel</h3>
+                        <p class="text-slate-400 text-sm">Record and replay user sessions to debug issues instantly.</p>
+                    </div>
+                    <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition">
+                        <div class="mb-4">
+                            <img src="assets/images/app-logos/campaigns-logo.svg" alt="Campaigns" width="48" height="48" class="brightness-0 invert opacity-80">
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">Campaigns</h3>
+                        <p class="text-slate-400 text-sm">Email marketing and automation campaigns that convert.</p>
+                    </div>
+                    <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition">
+                        <div class="mb-4">
+                            <img src="assets/images/app-logos/records-logo.svg" alt="Records" width="48" height="48" class="brightness-0 invert opacity-80">
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">Records</h3>
+                        <p class="text-slate-400 text-sm">Complete CRM to track every customer interaction.</p>
+                    </div>
+                    <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition">
+                        <div class="mb-4">
+                            <img src="assets/images/app-logos/suggest-logo.svg" alt="Suggest" width="48" height="48" class="brightness-0 invert opacity-80">
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">Suggest</h3>
+                        <p class="text-slate-400 text-sm">Collect feedback with 4-click rage detection.</p>
+                    </div>
+                    <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition">
+                        <div class="mb-4">
+                            <img src="assets/images/app-logos/announce-logo.svg" alt="Announce" width="48" height="48" class="brightness-0 invert opacity-80">
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">Announce</h3>
+                        <p class="text-slate-400 text-sm">In-app announcements and product updates.</p>
+                    </div>
+                    <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition">
+                        <div class="mb-4">
+                            <img src="assets/images/app-logos/website-builder-logo.svg" alt="Website Builder" width="48" height="48" class="brightness-0 invert opacity-80">
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">Website builder</h3>
+                        <p class="text-slate-400 text-sm">Build beautiful landing pages and websites.</p>
+                    </div>
+                    <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition">
+                        <div class="mb-4">
+                            <img src="assets/images/app-logos/help-guide-logo.svg" alt="Help Guide" width="48" height="48" class="brightness-0 invert opacity-80">
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">Help guide</h3>
+                        <p class="text-slate-400 text-sm">Knowledge base and documentation portal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Installation Section -->
+        <section class="py-20 px-6 bg-slate-950">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Simple installation</h2>
+                <p class="text-slate-400 mb-12">Just <a href="https://app.pavior.com/signup/createteam" class="text-blue-500 hover:underline">create an account</a> and paste this snippet on your site.<br/>Don't forget to use your own team ID!</p>
+                <div class="code-snippet text-left">
+                    <pre><code id="install-code">&lt;script src="https://app.pavior.com/embed"&gt;&lt;/script&gt;
+&lt;script&gt;
+  Pavior('init', {
+    'teamId': 'YOUR_TEAM_ID',
+    'doTimeTravel': true,
+    'doChat': true,
+  });
+&lt;/script&gt;</code></pre>
+                    <button class="btn-copy" onclick="copyInstallCode()">Copy code</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20 px-6 bg-slate-900">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Simple, transparent pricing</h2>
+                <p class="text-slate-400 text-center mb-12">Choose a plan which works best for you.<br/>Start free, upgrade when you're ready.</p>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Basic -->
+                    <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 text-center transition hover:border-blue-500/50">
+                        <h3 class="text-xl font-bold mb-4">basic</h3>
+                        <div class="text-5xl font-extrabold mb-6">$0</div>
+                        <ul class="text-left mb-8 text-slate-300">
+                            <li class="py-3 border-b border-slate-700/50">2 seats</li>
+                            <li class="py-3 border-b border-slate-700/50">1k contacts</li>
+                            <li class="py-3 border-b border-slate-700/50">100 conversations</li>
+                            <li class="py-3 border-b border-slate-700/50">1k session recordings/mo</li>
+                            <li class="py-3">Community support</li>
+                        </ul>
+                        <a href="https://app.pavior.com/signup/createteam" class="btn btn-primary block w-full">Start free</a>
+                    </div>
+
+                    <!-- Economy (Featured) -->
+                    <div class="bg-slate-800/50 border border-blue-500/50 rounded-xl p-8 text-center md:scale-105 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
+                        <span class="inline-block bg-blue-500 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-4">Most popular</span>
+                        <h3 class="text-xl font-bold mb-4">economy</h3>
+                        <div class="text-5xl font-extrabold mb-1">$25<span class="text-lg font-normal text-slate-400">/mo</span></div>
+                        <ul class="text-left mb-8 mt-6 text-slate-300">
+                            <li class="py-3 border-b border-slate-700/50">4 seats</li>
+                            <li class="py-3 border-b border-slate-700/50">10k contacts</li>
+                            <li class="py-3 border-b border-slate-700/50">Unlimited conversations</li>
+                            <li class="py-3 border-b border-slate-700/50">10k session recordings/mo</li>
+                            <li class="py-3 border-b border-slate-700/50">Custom email domain</li>
+                            <li class="py-3">Email support</li>
+                        </ul>
+                        <a href="https://app.pavior.com/signup/createteam?buying=true" class="btn btn-primary block w-full">Get economy</a>
+                    </div>
+
+                    <!-- Premium -->
+                    <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 text-center transition hover:border-blue-500/50">
+                        <h3 class="text-xl font-bold mb-4">premium</h3>
+                        <div class="text-5xl font-extrabold mb-1">$99<span class="text-lg font-normal text-slate-400">/mo</span></div>
+                        <ul class="text-left mb-8 mt-6 text-slate-300">
+                            <li class="py-3 border-b border-slate-700/50">10 seats</li>
+                            <li class="py-3 border-b border-slate-700/50">100k contacts</li>
+                            <li class="py-3 border-b border-slate-700/50">Unlimited conversations</li>
+                            <li class="py-3 border-b border-slate-700/50">50k session recordings/mo</li>
+                            <li class="py-3 border-b border-slate-700/50">Remove watermark</li>
+                            <li class="py-3">Priority support</li>
+                        </ul>
+                        <a href="https://app.pavior.com/signup/createteam?buying=true" class="btn btn-primary block w-full">Get premium</a>
+                    </div>
+                </div>
+
+                <p class="text-slate-500 text-center mt-8">
+                    Need higher limits or custom features? <a href="#" onclick="event.preventDefault(); window.MomentCRM('open')" class="text-blue-500 hover:underline">Contact sales</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-16 px-6 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <h3 class="text-white font-bold mb-4">Contact Us</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        <a href="mailto:hello@pavior.com" class="hover:text-white transition">hello@pavior.com</a><br>
+                        <a href="tel:+16478966479" class="hover:text-white transition">647-896-6479</a><br>
+                        222 Finch Ave. West #213<br>
+                        Toronto, Canada M2R 1M6
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Product</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        <a href="#features" class="hover:text-white transition">Features</a><br>
+                        <a href="#pricing" class="hover:text-white transition">Pricing</a><br>
+                        <a href="https://pavior.help.guide" class="hover:text-white transition">Documentation</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Legal</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        <a href="https://pavior.help.guide/v1/legal/docs/terms-and-conditions" target="_blank" class="hover:text-white transition">Terms and Conditions</a>
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-center">
+                <p class="text-slate-500 text-sm">&copy; <span id="current-year"></span> Pavior Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Slideshow functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Auto-advance slides every 3 seconds
+        if (totalSlides > 0) {
+            setInterval(nextSlide, 3000);
+        }
+
+        // Preview slideshow functionality (for Mobile App tab)
+        let previewSlideIndex = 0;
+        let previewSlideshowInterval = null;
+        const previewSlides = document.querySelectorAll('.preview-slide');
+        const totalPreviewSlides = previewSlides.length;
+
+        function showPreviewSlide(index) {
+            previewSlides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextPreviewSlide() {
+            previewSlideIndex = (previewSlideIndex + 1) % totalPreviewSlides;
+            showPreviewSlide(previewSlideIndex);
+        }
+
+        function startPreviewSlideshow() {
+            if (totalPreviewSlides > 0 && !previewSlideshowInterval) {
+                previewSlideshowInterval = setInterval(nextPreviewSlide, 3000);
+            }
+        }
+
+        function stopPreviewSlideshow() {
+            if (previewSlideshowInterval) {
+                clearInterval(previewSlideshowInterval);
+                previewSlideshowInterval = null;
+            }
+        }
+
+        // Preview tab switching functionality
+        const previewTabs = document.querySelectorAll('.preview-tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        const sidebarContents = document.querySelectorAll('.sidebar-content');
+        const previewVideo = document.querySelector('.tab-content[data-tab="0"] video');
+
+        previewTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabIndex = tab.dataset.tab;
+
+                // Update tab buttons
+                previewTabs.forEach(t => {
+                    t.classList.remove('active-tab');
+                    t.classList.add('text-gray-500');
+                });
+                tab.classList.add('active-tab');
+                tab.classList.remove('text-gray-500');
+
+                // Update content panels
+                tabContents.forEach(content => {
+                    if (content.dataset.tab === tabIndex) {
+                        content.classList.add('active');
+                    } else {
+                        content.classList.remove('active');
+                    }
+                });
+
+                // Update sidebar panels
+                sidebarContents.forEach(content => {
+                    if (content.dataset.tab === tabIndex) {
+                        content.classList.add('active');
+                    } else {
+                        content.classList.remove('active');
+                    }
+                });
+
+                // Video playback control
+                if (previewVideo) {
+                    if (tabIndex === '0') {
+                        previewVideo.play();
+                    } else {
+                        previewVideo.pause();
+                    }
+                }
+
+                // Preview slideshow control
+                if (tabIndex === '3') {
+                    startPreviewSlideshow();
+                } else {
+                    stopPreviewSlideshow();
+                }
+            });
+        });
+
+        // Control video playback based on visibility
+        const videos = document.querySelectorAll('video');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const video = entry.target;
+                if (entry.isIntersecting) {
+                    video.currentTime = 0;
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        }, observerOptions);
+
+        videos.forEach(video => {
+            video.pause();
+            observer.observe(video);
+        });
+
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Copy installation code to clipboard
+        function copyInstallCode() {
+            const codeElement = document.getElementById('install-code');
+            const button = event.target;
+            const originalText = button.textContent;
+
+            const code = codeElement.textContent;
+
+            navigator.clipboard.writeText(code).then(() => {
+                button.textContent = 'Copied!';
+                button.style.background = 'white';
+                button.style.color = '#1a1a1a';
+
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '#1e293b';
+                    button.style.color = 'white';
+                }, 5000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+                button.textContent = 'Failed to copy';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 5000);
+            });
+        }
+
+        // Update Login button based on authentication status
+        function getAuthenticatedTeams() {
+            try {
+                const cookies = document.cookie.split(';');
+                let authTkt = null;
+
+                for (let cookie of cookies) {
+                    const trimmed = cookie.trim();
+                    if (trimmed.startsWith('auth_tkt=')) {
+                        authTkt = decodeURIComponent(trimmed.substring('auth_tkt='.length));
+                        break;
+                    }
+                }
+
+                if (!authTkt) {
+                    return null;
+                }
+
+                const parts = authTkt.split('!');
+                if (parts.length < 2) {
+                    return null;
+                }
+
+                const digestAndUserId = parts[0];
+
+                const base64Start = digestAndUserId.indexOf('eyJ');
+                if (base64Start === -1) {
+                    return null;
+                }
+
+                const base64Data = digestAndUserId.substring(base64Start);
+                const userIdJson = atob(base64Data);
+                const userData = JSON.parse(userIdJson);
+
+                return userData.teamusers;
+            } catch (e) {
+                console.error('Error parsing auth cookie:', e);
+                return null;
+            }
+        }
+
+        function updateLoginButton() {
+            const loginBtn = document.getElementById('login-btn');
+            if (!loginBtn) return;
+
+            const teams = getAuthenticatedTeams();
+
+            if (teams && Object.keys(teams).length > 0) {
+                const teamIds = Object.keys(teams);
+                const numTeams = teamIds.length;
+
+                loginBtn.textContent = 'Launch app';
+
+                if (numTeams === 1) {
+                    loginBtn.href = 'https://app.pavior.com/team/' + teamIds[0];
+                } else if (numTeams > 1) {
+                    loginBtn.href = 'https://app.pavior.com/team';
+                }
+            }
+        }
+
+        // Run on page load
+        updateLoginButton();
+    </script>
+</body>
+</html>
