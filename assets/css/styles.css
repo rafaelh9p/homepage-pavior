@@ -2977,6 +2977,35 @@ body.new-page .mobile-pricing-card .pricing-badge {
         --hero-content-height: 380px;
         --scrollytelling-peek: 120px;
     }
+
+    .hero-dynamic {
+        padding-bottom: 3rem; /* Fixed padding instead of viewport calculation */
+    }
+
+    @keyframes revealPeek {
+        0% {
+            padding-bottom: 30rem; /* Start with section completely off-screen (~480px) */
+        }
+        100% {
+            padding-bottom: 3rem;
+        }
+    }
+}
+
+/* Adjust for tablet where viewport calc still causes issues */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-dynamic {
+        padding-bottom: 4rem; /* Fixed padding for tablets */
+    }
+
+    @keyframes revealPeek {
+        0% {
+            padding-bottom: 55rem; /* Start with section completely off-screen */
+        }
+        100% {
+            padding-bottom: 4rem;
+        }
+    }
 }
 
 /* ============================================
