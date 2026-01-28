@@ -61,8 +61,8 @@
                 </button>
             </div>
 
-            <!-- Content area - fixed 500px height -->
-            <div id="content-area" class="p-2 flex flex-col md:flex-row gap-2 h-[500px]">
+            <!-- Content area - responsive height: 800px on mobile, 500px on desktop -->
+            <div id="content-area" class="p-2 flex flex-col md:flex-row gap-2 h-[800px] md:h-[500px]">
                 <!-- Main content area with tab panels -->
                 <div class="flex-grow bg-slate-50 rounded-2xl relative border border-slate-100 overflow-hidden">
                     <!-- Tab 0: Live Chat -->
@@ -71,7 +71,7 @@
                     </div>
                     <!-- Tab 1: Session Replay Video -->
                     <div class="tab-content absolute inset-0 items-center justify-center" data-tab="1">
-                        <video class="preview-video" autoplay loop muted playsinline>
+                        <video class="preview-video preview-video-contain" autoplay loop muted playsinline>
                             <source src="assets/videos/timetravel.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -163,46 +163,56 @@
         <div class="flex flex-wrap justify-center gap-6">
             <!-- Campaigns -->
             <div class="bento-card rounded-[32px] p-8 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                <div class="w-12 h-12 mb-4">
-                    <img src="assets/images/app-logos/campaigns-logo.svg" alt="Campaigns" class="w-full h-full">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 mr-3">
+                        <img src="assets/images/app-logos/campaigns-logo.svg" alt="Campaigns" class="w-full h-full">
+                    </div>
+                    <h3 class="text-xl font-extrabold">Campaigns</h3>
                 </div>
-                <h3 class="text-xl font-extrabold mb-2">Campaigns</h3>
                 <p class="text-slate-500 text-sm">Email marketing and automation campaigns that convert.</p>
             </div>
 
             <!-- Suggest -->
             <div class="bento-card rounded-[32px] p-8 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                <div class="w-12 h-12 mb-4">
-                    <img src="assets/images/app-logos/suggest-logo.svg" alt="Suggest" class="w-full h-full">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 mr-3">
+                        <img src="assets/images/app-logos/suggest-logo.svg" alt="Suggest" class="w-full h-full">
+                    </div>
+                    <h3 class="text-xl font-extrabold">Suggest</h3>
                 </div>
-                <h3 class="text-xl font-extrabold mb-2">Suggest</h3>
                 <p class="text-slate-500 text-sm">Collect feedback with 4-click rage detection.</p>
             </div>
 
             <!-- Announce -->
             <div class="bento-card rounded-[32px] p-8 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                <div class="w-12 h-12 mb-4">
-                    <img src="assets/images/app-logos/announce-logo.svg" alt="Announce" class="w-full h-full">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 mr-3">
+                        <img src="assets/images/app-logos/announce-logo.svg" alt="Announce" class="w-full h-full">
+                    </div>
+                    <h3 class="text-xl font-extrabold">Announce</h3>
                 </div>
-                <h3 class="text-xl font-extrabold mb-2">Announce</h3>
                 <p class="text-slate-500 text-sm">In-app announcements and product updates.</p>
             </div>
 
             <!-- Website Builder -->
             <div class="bento-card rounded-[32px] p-8 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                <div class="w-12 h-12 mb-4">
-                    <img src="assets/images/app-logos/website-builder-logo.svg" alt="Website Builder" class="w-full h-full">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 mr-3">
+                        <img src="assets/images/app-logos/website-builder-logo.svg" alt="Website Builder" class="w-full h-full">
+                    </div>
+                    <h3 class="text-xl font-extrabold">Website Builder</h3>
                 </div>
-                <h3 class="text-xl font-extrabold mb-2">Website Builder</h3>
                 <p class="text-slate-500 text-sm">Build beautiful landing pages and websites.</p>
             </div>
 
             <!-- Help Guide -->
             <div class="bento-card rounded-[32px] p-8 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                <div class="w-12 h-12 mb-4">
-                    <img src="assets/images/app-logos/help-guide-logo.svg" alt="Help Guide" class="w-full h-full">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 mr-3">
+                        <img src="assets/images/app-logos/help-guide-logo.svg" alt="Help Guide" class="w-full h-full">
+                    </div>
+                    <h3 class="text-xl font-extrabold">Help Guide</h3>
                 </div>
-                <h3 class="text-xl font-extrabold mb-2">Help Guide</h3>
                 <p class="text-slate-500 text-sm">Knowledge base and documentation portal.</p>
             </div>
         </div>

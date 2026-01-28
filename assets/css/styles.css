@@ -2595,3 +2595,19 @@ body.new-page .mobile-pricing-card .pricing-badge {
         display: none;
     }
 }
+
+/* Mobile phone frame - smaller on mobile */
+@media (max-width: 767px) {
+    .phone-frame-preview {
+        width: 180px;
+        height: 380px;
+    }
+}
+
+/* Video uses object-fit contain on mobile (shows full video with letterboxing) */
+@media (max-width: 767px) {
+    .preview-video-contain {
+        object-fit: contain;
+        background: #f1f5f9;
+    }
+}
