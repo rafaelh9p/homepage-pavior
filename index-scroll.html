@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pavior | Modern Support Suite</title>
-    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body class="hero-gradient min-h-screen new-page">
 
     <!-- Navigation -->
     <nav class="flex items-center justify-between px-8 max-w-7xl mx-auto">
-        <img src="../../assets/images/logo.svg" alt="Pavior" class="h-8">
+        <img src="assets/images/logo.svg" alt="Pavior" class="h-8">
         <div class="flex items-center space-x-10">
             <a href="#features" class="hidden md:block text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors">Features</a>
             <a href="https://pavior.help.guide/v1/user-manual/overview" class="hidden md:block text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors">Docs</a>
@@ -26,185 +26,259 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="max-w-4xl mx-auto text-center pt-24 pb-20 px-4">
+    <header class="hero-dynamic max-w-4xl mx-auto text-center px-4">
         <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-blue-100 text-blue-700 rounded-full">
             Modern Support Platform
         </span>
         <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-slate-900 leading-[1.1]">
-            What if support tools <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#01A9FB] to-[#0067FB]">actually worked together?</span>
+            Your entire support suite. <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#01A9FB] to-[#0067FB]">In one place.</span>
         </h1>
         <p class="text-lg text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed">
             Stop switching tabs. Get live chat, session recordings, and CRM insights in a single, lightning-fast dashboard.
         </p>
     </header>
 
-    <!-- Product Preview Frame -->
-    <section id="features" class="max-w-7xl mx-auto px-6 pb-16">
-        <div class="preview-frame rounded-[32px] overflow-hidden">
-            <!-- Tab bar with chevron navigation -->
-            <div class="tab-bar-container relative">
-                <button class="tab-chevron tab-chevron-left hidden" aria-label="Scroll left">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-                <div class="tab-bar-scroll flex border-b border-slate-100 bg-slate-50 overflow-x-auto scroll-smooth">
-                    <button class="tab-btn px-6 py-4 text-sm font-bold active-tab" data-tab="0">Chat</button>
-                    <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-400 hover:text-slate-600" data-tab="1">Time travel</button>
-                    <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-400 hover:text-slate-600" data-tab="2">Records</button>
-                    <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-400 hover:text-slate-600" data-tab="3">Mobile App</button>
-                </div>
-                <button class="tab-chevron tab-chevron-right" aria-label="Scroll right">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                    </svg>
-                </button>
+    <!-- Scrollytelling Features Section -->
+    <section id="features" class="scroll-features-section">
+        <!-- Sticky Sidebar Navigation (desktop only) -->
+        <nav class="scroll-nav" aria-label="Feature navigation">
+            <div class="scroll-nav-inner">
+                <span class="scroll-nav-label">Features</span>
+                <div class="scroll-nav-divider"></div>
+                <a href="#section-live-chat" class="scroll-nav-item active" data-section="section-live-chat">
+                    <span class="scroll-nav-dot"></span>
+                    <span class="scroll-nav-text">Chat</span>
+                </a>
+                <a href="#section-session-replay" class="scroll-nav-item" data-section="section-session-replay">
+                    <span class="scroll-nav-dot"></span>
+                    <span class="scroll-nav-text">Time travel</span>
+                </a>
+                <a href="#section-customer-crm" class="scroll-nav-item" data-section="section-customer-crm">
+                    <span class="scroll-nav-dot"></span>
+                    <span class="scroll-nav-text">Records</span>
+                </a>
+                <a href="#section-campaigns" class="scroll-nav-item" data-section="section-campaigns">
+                    <span class="scroll-nav-dot"></span>
+                    <span class="scroll-nav-text">Campaigns</span>
+                </a>
+                <a href="#section-mobile-app" class="scroll-nav-item" data-section="section-mobile-app">
+                    <span class="scroll-nav-dot"></span>
+                    <span class="scroll-nav-text">Mobile App</span>
+                </a>
+                <div class="scroll-nav-divider"></div>
+                <a href="#section-more-features" class="scroll-nav-item" data-section="section-more-features">
+                    <span class="scroll-nav-dot"></span>
+                    <span class="scroll-nav-text">More Features</span>
+                </a>
             </div>
+        </nav>
 
-            <!-- Content area - fixed 500px height -->
-            <div id="content-area" class="p-2 flex flex-col md:flex-row gap-2 h-[500px]">
-                <!-- Main content area with tab panels -->
-                <div class="flex-grow bg-slate-50 rounded-2xl relative border border-slate-100 overflow-hidden">
-                    <!-- Tab 0: Chat -->
-                    <div class="tab-content active absolute inset-0 items-center justify-center" data-tab="0">
-                        <img src="../../assets/images/sections/chat-section-updated.svg" alt="Chat Interface" class="preview-image">
+        <!-- Scrollable Content Area -->
+        <div class="scroll-content">
+            <!-- Section 1: Live Chat -->
+            <section id="section-live-chat" class="scroll-section">
+                <div class="scroll-section-inner scroll-section-left">
+                    <div class="scroll-section-preview">
+                        <img src="assets/images/sections/chat-section-updated.svg" alt="Live Chat Interface" class="scroll-preview-image">
                     </div>
-                    <!-- Tab 1: Time travel Video -->
-                    <div class="tab-content absolute inset-0 items-center justify-center" data-tab="1">
-                        <video class="preview-video" autoplay loop muted playsinline>
-                            <source src="../../assets/videos/timetravel.mp4" type="video/mp4">
+                    <div class="scroll-section-text">
+                        <div class="scroll-section-header">
+                            <div class="scroll-section-icon">
+                                <img src="assets/images/app-logos/chat-logo.svg" alt="Live Chat">
+                            </div>
+                            <h2 class="scroll-section-title">Chat</h2>
+                        </div>
+                        <p class="scroll-section-description">Connect with customers in real-time. Beautiful chat that matches your brand.</p>
+                        <ul class="scroll-section-bullets">
+                            <li><span class="text-blue-600">&#10003;</span> Real-time messaging</li>
+                            <li><span class="text-blue-600">&#10003;</span> File sharing</li>
+                            <li><span class="text-blue-600">&#10003;</span> Custom branding</li>
+                            <li><span class="text-blue-600">&#10003;</span> Mobile app support</li>
+                        </ul>
+                        <a href="https://app.pavior.com/signup/createteam" class="btn-new btn-new-primary mt-6 inline-block">
+                            Get started for free
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Session Replay -->
+            <section id="section-session-replay" class="scroll-section">
+                <div class="scroll-section-inner scroll-section-left">
+                    <div class="scroll-section-text">
+                        <div class="scroll-section-header">
+                            <div class="scroll-section-icon">
+                                <img src="assets/images/app-logos/time-travel-logo.svg" alt="Session Replay">
+                            </div>
+                            <h2 class="scroll-section-title">Time travel</h2>
+                        </div>
+                        <p class="scroll-section-description">Watch exactly what your users experienced. Debug issues in seconds, not hours.</p>
+                        <ul class="scroll-section-bullets">
+                            <li><span class="text-blue-600">&#10003;</span> Full DOM recording</li>
+                            <li><span class="text-blue-600">&#10003;</span> Console & network logs</li>
+                            <li><span class="text-blue-600">&#10003;</span> Click & scroll tracking</li>
+                            <li><span class="text-blue-600">&#10003;</span> Rage click detection</li>
+                        </ul>
+                        <a href="https://app.pavior.com/signup/createteam" class="btn-new btn-new-primary mt-6 inline-block">
+                            Get started for free
+                        </a>
+                    </div>
+                    <div class="scroll-section-preview">
+                        <video class="scroll-preview-video" autoplay loop muted playsinline>
+                            <source src="assets/videos/timetravel.mp4" type="video/mp4">
                         </video>
                     </div>
-                    <!-- Tab 2: Records -->
-                    <div class="tab-content absolute inset-0 items-center justify-center" data-tab="2">
-                        <img src="../../assets/images/sections/customer-timeline-section.svg" alt="Customer Timeline" class="preview-image">
+                </div>
+            </section>
+
+            <!-- Section 3: Customer CRM -->
+            <section id="section-customer-crm" class="scroll-section">
+                <div class="scroll-section-inner scroll-section-left">
+                    <div class="scroll-section-preview">
+                        <img src="assets/images/sections/customer-timeline-section.svg" alt="Customer Timeline" class="scroll-preview-image">
                     </div>
-                    <!-- Tab 3: Mobile App -->
-                    <div class="tab-content absolute inset-0 items-center justify-center" data-tab="3">
+                    <div class="scroll-section-text">
+                        <div class="scroll-section-header">
+                            <div class="scroll-section-icon">
+                                <img src="assets/images/app-logos/records-logo.svg" alt="Customer CRM">
+                            </div>
+                            <h2 class="scroll-section-title">Records</h2>
+                        </div>
+                        <p class="scroll-section-description">Complete customer timeline. Every interaction, purchase, and support ticket in one place.</p>
+                        <ul class="scroll-section-bullets">
+                            <li><span class="text-blue-600">&#10003;</span> Unified timeline</li>
+                            <li><span class="text-blue-600">&#10003;</span> Contact management</li>
+                            <li><span class="text-blue-600">&#10003;</span> Custom properties</li>
+                            <li><span class="text-blue-600">&#10003;</span> Activity tracking</li>
+                        </ul>
+                        <a href="https://app.pavior.com/signup/createteam" class="btn-new btn-new-primary mt-6 inline-block">
+                            Get started for free
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Campaigns -->
+            <section id="section-campaigns" class="scroll-section">
+                <div class="scroll-section-inner scroll-section-left">
+                    <div class="scroll-section-text">
+                        <div class="scroll-section-header">
+                            <div class="scroll-section-icon">
+                                <img src="assets/images/app-logos/campaigns-logo.svg" alt="Campaigns">
+                            </div>
+                            <h2 class="scroll-section-title">Campaigns</h2>
+                        </div>
+                        <p class="scroll-section-description">Email marketing and automation campaigns that convert.</p>
+                        <ul class="scroll-section-bullets">
+                            <li><span class="text-blue-600">&#10003;</span> Email sequences</li>
+                            <li><span class="text-blue-600">&#10003;</span> Automation triggers</li>
+                            <li><span class="text-blue-600">&#10003;</span> A/B testing</li>
+                            <li><span class="text-blue-600">&#10003;</span> Analytics & reporting</li>
+                        </ul>
+                        <a href="https://app.pavior.com/signup/createteam" class="btn-new btn-new-primary mt-6 inline-block">
+                            Get started for free
+                        </a>
+                    </div>
+                    <div class="scroll-section-preview">
+                        <img src="assets/images/sections/campaigns.svg" alt="Campaigns Interface" class="scroll-preview-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Mobile App -->
+            <section id="section-mobile-app" class="scroll-section">
+                <div class="scroll-section-inner scroll-section-left">
+                    <div class="scroll-section-preview scroll-section-preview-mobile">
                         <div class="phone-frame-preview">
                             <div class="phone-screen-preview">
-                                <div class="preview-slideshow">
+                                <div class="preview-slideshow" id="mobile-slideshow">
                                     <div class="preview-slide active">
-                                        <img src="../../assets/images/mobile/main-menu.svg" alt="Mobile Main Menu">
+                                        <img src="assets/images/mobile/main-menu.svg" alt="Mobile Main Menu">
                                     </div>
                                     <div class="preview-slide">
-                                        <img src="../../assets/images/mobile/inbox.svg" alt="Mobile Inbox">
+                                        <img src="assets/images/mobile/inbox.svg" alt="Mobile Inbox">
                                     </div>
                                     <div class="preview-slide">
-                                        <img src="../../assets/images/mobile/chat.svg" alt="Mobile Chat">
+                                        <img src="assets/images/mobile/chat.svg" alt="Mobile Chat">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Sidebar with feature descriptions -->
-                <div class="w-full md:w-72 bg-slate-50 rounded-2xl p-6 border border-slate-100 flex flex-col justify-between">
-                    <div>
-                        <!-- Tab 0: Chat Description -->
-                        <div class="sidebar-content active" data-tab="0">
-                            <h3 class="text-lg font-bold text-slate-900 mb-3">Chat</h3>
-                            <p class="text-slate-500 text-sm mb-4">Connect with customers in real-time. Beautiful chat that matches your brand.</p>
-                            <ul class="space-y-2 text-sm">
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Real-time messaging</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> File sharing</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Custom branding</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Mobile app support</li>
-                            </ul>
+                    <div class="scroll-section-text">
+                        <div class="scroll-section-header">
+                            <div class="scroll-section-icon">
+                                <img src="assets/images/app-logos/chat-logo.svg" alt="Mobile App">
+                            </div>
+                            <h2 class="scroll-section-title">Mobile App</h2>
                         </div>
-                        <!-- Tab 1: Time travel Description -->
-                        <div class="sidebar-content" data-tab="1">
-                            <h3 class="text-lg font-bold text-slate-900 mb-3">Time travel</h3>
-                            <p class="text-slate-500 text-sm mb-4">Watch exactly what your users experienced. Debug issues in seconds, not hours.</p>
-                            <ul class="space-y-2 text-sm">
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Full DOM recording</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Console & network logs</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Click & scroll tracking</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Rage click detection</li>
-                            </ul>
-                        </div>
-                        <!-- Tab 2: Records Description -->
-                        <div class="sidebar-content" data-tab="2">
-                            <h3 class="text-lg font-bold text-slate-900 mb-3">Records</h3>
-                            <p class="text-slate-500 text-sm mb-4">Complete customer timeline. Every interaction, purchase, and support ticket in one place.</p>
-                            <ul class="space-y-2 text-sm">
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Unified timeline</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Contact management</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Custom properties</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Activity tracking</li>
-                            </ul>
-                        </div>
-                        <!-- Tab 3: Mobile App Description -->
-                        <div class="sidebar-content" data-tab="3">
-                            <h3 class="text-lg font-bold text-slate-900 mb-3">Mobile App</h3>
-                            <p class="text-slate-500 text-sm mb-4">Full-featured mobile app for iOS and Android. Respond to customers, check analytics, and manage your team from anywhere.</p>
-                            <ul class="space-y-2 text-sm">
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Real-time push notifications</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Full chat and inbox access</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> View session recordings</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Team collaboration tools</li>
-                            </ul>
-                        </div>
+                        <p class="scroll-section-description">Full-featured mobile app for iOS and Android. Respond to customers, check analytics, and manage your team from anywhere.</p>
+                        <ul class="scroll-section-bullets">
+                            <li><span class="text-blue-600">&#10003;</span> Real-time push notifications</li>
+                            <li><span class="text-blue-600">&#10003;</span> Full chat and inbox access</li>
+                            <li><span class="text-blue-600">&#10003;</span> View session recordings</li>
+                            <li><span class="text-blue-600">&#10003;</span> Team collaboration tools</li>
+                        </ul>
+                        <a href="https://app.pavior.com/signup/createteam" class="btn-new btn-new-primary mt-6 inline-block">
+                            Get started for free
+                        </a>
                     </div>
-                    <a href="https://app.pavior.com/signup/createteam" class="btn-new btn-new-primary block w-full mt-6">
-                        Get started for free
-                    </a>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Features Bento Grid -->
-    <section class="max-w-7xl mx-auto px-6 pb-24">
-        <h2 class="text-3xl font-extrabold text-center mb-4">Pick and choose the features you need</h2>
-        <p class="text-slate-500 text-center mb-12 max-w-2xl mx-auto">Everything you need to provide exceptional customer support, all in one place.</p>
-
-        <div class="flex flex-wrap justify-center gap-6">
-            <!-- Campaigns -->
-            <div class="bento-card rounded-[32px] p-8 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                <div class="w-12 h-12 mb-4">
-                    <img src="../../assets/images/app-logos/campaigns-logo.svg" alt="Campaigns" class="w-full h-full">
+            <!-- Section 6: More Features (Bento Grid) -->
+            <section id="section-more-features" class="scroll-section scroll-section-bento">
+                <div class="scroll-bento-header">
+                    <h2 class="text-3xl font-extrabold text-center mb-4">Pick and choose the features you need</h2>
+                    <p class="text-slate-500 text-center mb-12 max-w-2xl mx-auto">Everything you need to provide exceptional customer support, all in one place.</p>
                 </div>
-                <h3 class="text-xl font-extrabold mb-2">Campaigns</h3>
-                <p class="text-slate-500 text-sm">Email marketing and automation campaigns that convert.</p>
-            </div>
 
-            <!-- Suggest -->
-            <div class="bento-card rounded-[32px] p-8 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                <div class="w-12 h-12 mb-4">
-                    <img src="../../assets/images/app-logos/suggest-logo.svg" alt="Suggest" class="w-full h-full">
-                </div>
-                <h3 class="text-xl font-extrabold mb-2">Suggest</h3>
-                <p class="text-slate-500 text-sm">Collect feedback with 4-click rage detection.</p>
-            </div>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <!-- Suggest -->
+                    <div class="bento-card rounded-[32px] p-8 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 mr-3">
+                                <img src="assets/images/app-logos/suggest-logo.svg" alt="Suggest" class="w-full h-full">
+                            </div>
+                            <h3 class="text-xl font-extrabold">Suggest</h3>
+                        </div>
+                        <p class="text-slate-500 text-sm">Collect feedback with 4-click rage detection.</p>
+                    </div>
 
-            <!-- Announce -->
-            <div class="bento-card rounded-[32px] p-8 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                <div class="w-12 h-12 mb-4">
-                    <img src="../../assets/images/app-logos/announce-logo.svg" alt="Announce" class="w-full h-full">
-                </div>
-                <h3 class="text-xl font-extrabold mb-2">Announce</h3>
-                <p class="text-slate-500 text-sm">In-app announcements and product updates.</p>
-            </div>
+                    <!-- Announce -->
+                    <div class="bento-card rounded-[32px] p-8 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 mr-3">
+                                <img src="assets/images/app-logos/announce-logo.svg" alt="Announce" class="w-full h-full">
+                            </div>
+                            <h3 class="text-xl font-extrabold">Announce</h3>
+                        </div>
+                        <p class="text-slate-500 text-sm">In-app announcements and product updates.</p>
+                    </div>
 
-            <!-- Website Builder -->
-            <div class="bento-card rounded-[32px] p-8 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                <div class="w-12 h-12 mb-4">
-                    <img src="../../assets/images/app-logos/website-builder-logo.svg" alt="Website Builder" class="w-full h-full">
-                </div>
-                <h3 class="text-xl font-extrabold mb-2">Website Builder</h3>
-                <p class="text-slate-500 text-sm">Build beautiful landing pages and websites.</p>
-            </div>
+                    <!-- Website Builder -->
+                    <div class="bento-card rounded-[32px] p-8 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 mr-3">
+                                <img src="assets/images/app-logos/website-builder-logo.svg" alt="Website Builder" class="w-full h-full">
+                            </div>
+                            <h3 class="text-xl font-extrabold">Website Builder</h3>
+                        </div>
+                        <p class="text-slate-500 text-sm">Build beautiful landing pages and websites.</p>
+                    </div>
 
-            <!-- Help Guide -->
-            <div class="bento-card rounded-[32px] p-8 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                <div class="w-12 h-12 mb-4">
-                    <img src="../../assets/images/app-logos/help-guide-logo.svg" alt="Help Guide" class="w-full h-full">
+                    <!-- Help Guide -->
+                    <div class="bento-card rounded-[32px] p-8 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 mr-3">
+                                <img src="assets/images/app-logos/help-guide-logo.svg" alt="Help Guide" class="w-full h-full">
+                            </div>
+                            <h3 class="text-xl font-extrabold">Help Guide</h3>
+                        </div>
+                        <p class="text-slate-500 text-sm">Knowledge base and documentation portal.</p>
+                    </div>
                 </div>
-                <h3 class="text-xl font-extrabold mb-2">Help Guide</h3>
-                <p class="text-slate-500 text-sm">Knowledge base and documentation portal.</p>
-            </div>
+            </section>
         </div>
     </section>
 
@@ -384,7 +458,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <div>
-                    <img src="../../assets/images/logo.svg" alt="Pavior" class="h-8 mb-4">
+                    <img src="assets/images/logo.svg" alt="Pavior" class="h-8 mb-4">
                     <p class="text-slate-500 text-sm">Modern customer support platform for SaaS teams.</p>
                 </div>
                 <div>
@@ -418,33 +492,66 @@
     </footer>
 
     <script>
-        // Slideshow functionality
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const totalSlides = slides.length;
+        // Scroll navigation functionality
+        const scrollNavItems = document.querySelectorAll('.scroll-nav-item');
+        const scrollSections = document.querySelectorAll('.scroll-section');
 
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.remove('active');
-                if (i === index) {
-                    slide.classList.add('active');
+        // Smooth scroll on nav click
+        scrollNavItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = item.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
-        }
+        });
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
-        }
+        // Intersection Observer to track active section
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -60% 0px',
+            threshold: 0
+        };
 
-        if (totalSlides > 0) {
-            setInterval(nextSlide, 3000);
-        }
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const sectionId = entry.target.id;
 
-        // Preview slideshow functionality (for Mobile App tab)
+                    // Update nav active state
+                    scrollNavItems.forEach(item => {
+                        item.classList.remove('active');
+                        if (item.dataset.section === sectionId) {
+                            item.classList.add('active');
+                        }
+                    });
+
+                    // Handle video autoplay
+                    const video = entry.target.querySelector('video');
+                    if (video) {
+                        video.currentTime = 0;
+                        video.play();
+                    }
+                } else {
+                    // Pause video when section leaves viewport
+                    const video = entry.target.querySelector('video');
+                    if (video) {
+                        video.pause();
+                    }
+                }
+            });
+        }, observerOptions);
+
+        scrollSections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Mobile slideshow functionality
         let previewSlideIndex = 0;
         let previewSlideshowInterval = null;
-        const previewSlides = document.querySelectorAll('.preview-slide');
+        const previewSlides = document.querySelectorAll('#mobile-slideshow .preview-slide');
         const totalPreviewSlides = previewSlides.length;
 
         function showPreviewSlide(index) {
@@ -467,94 +574,44 @@
             }
         }
 
-        function stopPreviewSlideshow() {
-            if (previewSlideshowInterval) {
-                clearInterval(previewSlideshowInterval);
-                previewSlideshowInterval = null;
-            }
-        }
-
-        // Preview tab switching functionality
-        const previewTabs = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
-        const sidebarContents = document.querySelectorAll('.sidebar-content');
-        const previewVideo = document.querySelector('.tab-content[data-tab="1"] video');
-
-        previewTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                const tabIndex = tab.dataset.tab;
-
-                // Update tab buttons
-                previewTabs.forEach(t => {
-                    t.classList.remove('active-tab', 'font-bold');
-                    t.classList.add('text-slate-400', 'font-semibold');
-                });
-                tab.classList.add('active-tab', 'font-bold');
-                tab.classList.remove('text-slate-400', 'font-semibold');
-
-                // Update content panels
-                tabContents.forEach(content => {
-                    if (content.dataset.tab === tabIndex) {
-                        content.classList.add('active');
-                    } else {
-                        content.classList.remove('active');
-                    }
-                });
-
-                // Update sidebar panels
-                sidebarContents.forEach(content => {
-                    if (content.dataset.tab === tabIndex) {
-                        content.classList.add('active');
-                    } else {
-                        content.classList.remove('active');
-                    }
-                });
-
-                // Video playback control
-                if (previewVideo) {
-                    if (tabIndex === '1') {
-                        previewVideo.play();
-                    } else {
-                        previewVideo.pause();
-                    }
-                }
-
-                // Preview slideshow control
-                if (tabIndex === '3') {
+        // Start mobile slideshow when mobile section is in view
+        const mobileSectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
                     startPreviewSlideshow();
                 } else {
-                    stopPreviewSlideshow();
+                    if (previewSlideshowInterval) {
+                        clearInterval(previewSlideshowInterval);
+                        previewSlideshowInterval = null;
+                    }
                 }
             });
-        });
+        }, { threshold: 0.3 });
 
-        // Video playback control
-        const videos = document.querySelectorAll('video');
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.5
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                const video = entry.target;
-                if (entry.isIntersecting) {
-                    video.currentTime = 0;
-                    video.play();
-                } else {
-                    video.pause();
-                }
-            });
-        }, observerOptions);
-
-        videos.forEach(video => {
-            video.pause();
-            observer.observe(video);
-        });
+        const mobileSection = document.getElementById('section-mobile-app');
+        if (mobileSection) {
+            mobileSectionObserver.observe(mobileSection);
+        }
 
         // Set current year
         document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Bento card accordion
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const wasExpanded = this.classList.contains('expanded');
+
+                // Collapse all cards
+                document.querySelectorAll('.bento-card').forEach(c => {
+                    c.classList.remove('expanded');
+                });
+
+                // If clicked card wasn't expanded, expand it
+                if (!wasExpanded) {
+                    this.classList.add('expanded');
+                }
+            });
+        });
 
         // Copy installation code
         function copyInstallCode() {
@@ -581,46 +638,6 @@
                 }, 3000);
             });
         }
-
-        // Tab bar chevron navigation
-        const tabBarScroll = document.querySelector('.tab-bar-scroll');
-        const chevronLeft = document.querySelector('.tab-chevron-left');
-        const chevronRight = document.querySelector('.tab-chevron-right');
-
-        function updateChevronVisibility() {
-            if (!tabBarScroll) return;
-
-            const scrollLeft = tabBarScroll.scrollLeft;
-            const maxScroll = tabBarScroll.scrollWidth - tabBarScroll.clientWidth;
-
-            // Show/hide left chevron
-            if (scrollLeft > 0) {
-                chevronLeft.classList.remove('hidden');
-            } else {
-                chevronLeft.classList.add('hidden');
-            }
-
-            // Show/hide right chevron
-            if (scrollLeft < maxScroll - 1) {
-                chevronRight.classList.remove('hidden');
-            } else {
-                chevronRight.classList.add('hidden');
-            }
-        }
-
-        chevronLeft?.addEventListener('click', () => {
-            tabBarScroll.scrollBy({ left: -120, behavior: 'smooth' });
-        });
-
-        chevronRight?.addEventListener('click', () => {
-            tabBarScroll.scrollBy({ left: 120, behavior: 'smooth' });
-        });
-
-        tabBarScroll?.addEventListener('scroll', updateChevronVisibility);
-        window.addEventListener('resize', updateChevronVisibility);
-
-        // Initial check
-        updateChevronVisibility();
     </script>
 </body>
 </html>

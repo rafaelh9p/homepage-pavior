@@ -49,9 +49,9 @@
                     </svg>
                 </button>
                 <div class="tab-bar-scroll flex border-b border-slate-100 bg-slate-50 overflow-x-auto scroll-smooth">
-                    <button class="tab-btn px-6 py-4 text-sm font-bold active-tab" data-tab="0">Live Chat</button>
-                    <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-400 hover:text-slate-600" data-tab="1">Session Replay</button>
-                    <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-400 hover:text-slate-600" data-tab="2">Customer CRM</button>
+                    <button class="tab-btn px-6 py-4 text-sm font-bold active-tab" data-tab="0">Chat</button>
+                    <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-400 hover:text-slate-600" data-tab="1">Time travel</button>
+                    <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-400 hover:text-slate-600" data-tab="2">Records</button>
                     <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-400 hover:text-slate-600" data-tab="3">Mobile App</button>
                 </div>
                 <button class="tab-chevron tab-chevron-right" aria-label="Scroll right">
@@ -65,17 +65,17 @@
             <div id="content-area" class="p-2 flex flex-col md:flex-row gap-2 h-[800px] md:h-[500px]">
                 <!-- Main content area with tab panels -->
                 <div class="flex-grow bg-slate-50 rounded-2xl relative border border-slate-100 overflow-hidden">
-                    <!-- Tab 0: Live Chat -->
+                    <!-- Tab 0: Chat -->
                     <div class="tab-content active absolute inset-0 items-center justify-center" data-tab="0">
-                        <img src="assets/images/sections/chat-section-updated.svg" alt="Live Chat Interface" class="preview-image">
+                        <img src="assets/images/sections/chat-section-updated.svg" alt="Chat Interface" class="preview-image">
                     </div>
-                    <!-- Tab 1: Session Replay Video -->
+                    <!-- Tab 1: Time travel Video -->
                     <div class="tab-content absolute inset-0 items-center justify-center" data-tab="1">
                         <video class="preview-video preview-video-contain" autoplay loop muted playsinline>
                             <source src="assets/videos/timetravel.mp4" type="video/mp4">
                         </video>
                     </div>
-                    <!-- Tab 2: Customer CRM -->
+                    <!-- Tab 2: Records -->
                     <div class="tab-content absolute inset-0 items-center justify-center" data-tab="2">
                         <img src="assets/images/sections/customer-timeline-section.svg" alt="Customer Timeline" class="preview-image">
                     </div>
@@ -102,9 +102,9 @@
                 <!-- Sidebar with feature descriptions -->
                 <div class="w-full md:w-72 bg-slate-50 rounded-2xl p-6 border border-slate-100 flex flex-col justify-between">
                     <div>
-                        <!-- Tab 0: Live Chat Description -->
+                        <!-- Tab 0: Chat Description -->
                         <div class="sidebar-content active" data-tab="0">
-                            <h3 class="text-lg font-bold text-slate-900 mb-3">Live Chat</h3>
+                            <h3 class="text-lg font-bold text-slate-900 mb-3">Chat</h3>
                             <p class="text-slate-500 text-sm mb-4">Connect with customers in real-time. Beautiful chat that matches your brand.</p>
                             <ul class="space-y-2 text-sm">
                                 <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Real-time messaging</li>
@@ -113,9 +113,9 @@
                                 <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Mobile app support</li>
                             </ul>
                         </div>
-                        <!-- Tab 1: Session Replay Description -->
+                        <!-- Tab 1: Time travel Description -->
                         <div class="sidebar-content" data-tab="1">
-                            <h3 class="text-lg font-bold text-slate-900 mb-3">Session Replay</h3>
+                            <h3 class="text-lg font-bold text-slate-900 mb-3">Time travel</h3>
                             <p class="text-slate-500 text-sm mb-4">Watch exactly what your users experienced. Debug issues in seconds, not hours.</p>
                             <ul class="space-y-2 text-sm">
                                 <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Full DOM recording</li>
@@ -124,9 +124,9 @@
                                 <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Rage click detection</li>
                             </ul>
                         </div>
-                        <!-- Tab 2: Customer CRM Description -->
+                        <!-- Tab 2: Records Description -->
                         <div class="sidebar-content" data-tab="2">
-                            <h3 class="text-lg font-bold text-slate-900 mb-3">Customer CRM</h3>
+                            <h3 class="text-lg font-bold text-slate-900 mb-3">Records</h3>
                             <p class="text-slate-500 text-sm mb-4">Complete customer timeline. Every interaction, purchase, and support ticket in one place.</p>
                             <ul class="space-y-2 text-sm">
                                 <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Unified timeline</li>

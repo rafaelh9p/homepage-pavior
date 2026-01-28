@@ -31,7 +31,7 @@
             Modern Support Platform
         </span>
         <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-slate-900 leading-[1.1]">
-            What if support tools <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#01A9FB] to-[#0067FB]">actually worked together?</span>
+            Your entire support suite. <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#01A9FB] to-[#0067FB]">In one place.</span>
         </h1>
         <p class="text-lg text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed">
             Stop switching tabs. Get live chat, session recordings, and CRM insights in a single, lightning-fast dashboard.
@@ -61,8 +61,8 @@
                 </button>
             </div>
 
-            <!-- Content area - fixed 500px height -->
-            <div id="content-area" class="p-2 flex flex-col md:flex-row gap-2 h-[500px]">
+            <!-- Content area - responsive height: 800px on mobile, 500px on desktop -->
+            <div id="content-area" class="p-2 flex flex-col md:flex-row gap-2 h-[800px] md:h-[500px]">
                 <!-- Main content area with tab panels -->
                 <div class="flex-grow bg-slate-50 rounded-2xl relative border border-slate-100 overflow-hidden">
                     <!-- Tab 0: Chat -->
@@ -71,7 +71,7 @@
                     </div>
                     <!-- Tab 1: Time travel Video -->
                     <div class="tab-content absolute inset-0 items-center justify-center" data-tab="1">
-                        <video class="preview-video" autoplay loop muted playsinline>
+                        <video class="preview-video preview-video-contain" autoplay loop muted playsinline>
                             <source src="../../assets/videos/timetravel.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -163,47 +163,57 @@
         <div class="flex flex-wrap justify-center gap-6">
             <!-- Campaigns -->
             <div class="bento-card rounded-[32px] p-8 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                <div class="w-12 h-12 mb-4">
-                    <img src="../../assets/images/app-logos/campaigns-logo.svg" alt="Campaigns" class="w-full h-full">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 mr-3">
+                        <img src="../../assets/images/app-logos/campaigns-logo.svg" alt="Campaigns" class="w-full h-full">
+                    </div>
+                    <h3 class="text-xl font-extrabold">Campaigns</h3>
                 </div>
-                <h3 class="text-xl font-extrabold mb-2">Campaigns</h3>
-                <p class="text-slate-500 text-sm">Email marketing and automation campaigns that convert.</p>
+                <p class="text-slate-500 text-sm">Build drip campaigns, trigger emails, and track conversions from one dashboard.</p>
             </div>
 
             <!-- Suggest -->
             <div class="bento-card rounded-[32px] p-8 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                <div class="w-12 h-12 mb-4">
-                    <img src="../../assets/images/app-logos/suggest-logo.svg" alt="Suggest" class="w-full h-full">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 mr-3">
+                        <img src="../../assets/images/app-logos/suggest-logo.svg" alt="Suggest" class="w-full h-full">
+                    </div>
+                    <h3 class="text-xl font-extrabold">Suggest</h3>
                 </div>
-                <h3 class="text-xl font-extrabold mb-2">Suggest</h3>
-                <p class="text-slate-500 text-sm">Collect feedback with 4-click rage detection.</p>
+                <p class="text-slate-500 text-sm">Spot confused users in real time with rage detection, then capture their feedback.</p>
             </div>
 
             <!-- Announce -->
             <div class="bento-card rounded-[32px] p-8 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                <div class="w-12 h-12 mb-4">
-                    <img src="../../assets/images/app-logos/announce-logo.svg" alt="Announce" class="w-full h-full">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 mr-3">
+                        <img src="../../assets/images/app-logos/announce-logo.svg" alt="Announce" class="w-full h-full">
+                    </div>
+                    <h3 class="text-xl font-extrabold">Announce</h3>
                 </div>
-                <h3 class="text-xl font-extrabold mb-2">Announce</h3>
-                <p class="text-slate-500 text-sm">In-app announcements and product updates.</p>
+                <p class="text-slate-500 text-sm">Share product news, feature releases, and updates directly inside your app.</p>
             </div>
 
             <!-- Website Builder -->
             <div class="bento-card rounded-[32px] p-8 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                <div class="w-12 h-12 mb-4">
-                    <img src="../../assets/images/app-logos/website-builder-logo.svg" alt="Website Builder" class="w-full h-full">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 mr-3">
+                        <img src="../../assets/images/app-logos/website-builder-logo.svg" alt="Website Builder" class="w-full h-full">
+                    </div>
+                    <h3 class="text-xl font-extrabold">Website Builder</h3>
                 </div>
-                <h3 class="text-xl font-extrabold mb-2">Website Builder</h3>
-                <p class="text-slate-500 text-sm">Build beautiful landing pages and websites.</p>
+                <p class="text-slate-500 text-sm">Landing pages, microsites, and marketing pages you can ship in minutes.</p>
             </div>
 
             <!-- Help Guide -->
             <div class="bento-card rounded-[32px] p-8 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
-                <div class="w-12 h-12 mb-4">
-                    <img src="../../assets/images/app-logos/help-guide-logo.svg" alt="Help Guide" class="w-full h-full">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 mr-3">
+                        <img src="../../assets/images/app-logos/help-guide-logo.svg" alt="Help Guide" class="w-full h-full">
+                    </div>
+                    <h3 class="text-xl font-extrabold">Help Guide</h3>
                 </div>
-                <h3 class="text-xl font-extrabold mb-2">Help Guide</h3>
-                <p class="text-slate-500 text-sm">Knowledge base and documentation portal.</p>
+                <p class="text-slate-500 text-sm">Self-service help center with searchable docs, guides, and FAQs.</p>
             </div>
         </div>
     </section>

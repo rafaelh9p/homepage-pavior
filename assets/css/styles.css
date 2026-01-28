@@ -5,6 +5,10 @@
     --text-light: #666666;
     --bg-white: #ffffff;
     --border-light: #e5e5e5;
+    --nav-height: 90px;
+    --hero-padding-top: 6rem;
+    --hero-content-height: 320px;
+    --scrollytelling-peek: 180px;
 }
 
 * {
@@ -2247,17 +2251,95 @@ body.new-page nav {
     background: #f6f8fa;
 }
 
+/* Bento card - base styles (content visible by default) */
 .bento-card {
     background: white;
     border: 1px solid #E2E8F0;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 }
 
+/* Description visible by default */
+.bento-card > p {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 0;
+}
+
+/* Hover state - levitate */
 .bento-card:hover {
+    transform: translateY(-4px);
     border-color: #3B82F6;
     box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04);
-    transform: translateY(-4px);
+}
+
+/* Expanded state (for scroll-section-bento cards) */
+.bento-card.expanded {
+    background: white;
+    border: 1px solid #3B82F6;
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04);
+}
+
+/* Don't levitate when expanded */
+.bento-card.expanded:hover {
+    transform: none;
+}
+
+/* Collapsed state only within scroll-section-bento */
+.scroll-section-bento .bento-card {
+    text-align: center;
+    padding: 1rem;
+    background: transparent;
+    border: 1px solid transparent;
+    box-shadow: none;
+}
+
+.scroll-section-bento .bento-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+    border-color: transparent;
+}
+
+.scroll-section-bento .bento-card .flex.items-center {
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 0;
+    transition: margin 0.3s ease;
+}
+
+.scroll-section-bento .bento-card .flex.items-center .w-12 {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+}
+
+.scroll-section-bento .bento-card > p {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+/* Expanded state within scroll-section-bento */
+.scroll-section-bento .bento-card.expanded {
+    text-align: left;
+    padding: 2rem;
+    background: white;
+    border: 1px solid #3B82F6;
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04);
+}
+
+.scroll-section-bento .bento-card.expanded .flex.items-center {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+.scroll-section-bento .bento-card.expanded .flex.items-center .w-12 {
+    margin-right: 0.75rem;
+    margin-bottom: 0;
+}
+
+.scroll-section-bento .bento-card.expanded > p {
+    max-height: 100px;
+    opacity: 1;
 }
 
 .hero-gradient {
@@ -2609,5 +2691,552 @@ body.new-page .mobile-pricing-card .pricing-badge {
     .preview-video-contain {
         object-fit: contain;
         background: #f1f5f9;
+    }
+}
+
+/* ============================================
+   EXPANDABLE GRID VARIANT STYLES
+   ============================================ */
+
+/* Feature Grid Container */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Base Feature Card */
+.feature-card-new {
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.feature-card-new:hover {
+    border-color: #3B82F6;
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04);
+    transform: translateY(-4px);
+}
+
+/* Primary Feature Cards (larger with thumbnail) */
+.feature-card-primary {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card-thumb {
+    height: 180px;
+    background: #F8FAFC;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.feature-card-thumb img,
+.feature-card-thumb video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-card-thumb-mobile {
+    background: linear-gradient(145deg, #f1f5f9, #e2e8f0);
+}
+
+.feature-card-thumb-mobile img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+.feature-card-info {
+    padding: 1.5rem;
+}
+
+.feature-card-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.75rem;
+}
+
+.feature-card-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.feature-card-new h3 {
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: #1E293B;
+    margin-bottom: 0.25rem;
+}
+
+.feature-card-new p {
+    font-size: 0.875rem;
+    color: #64748B;
+    margin: 0;
+}
+
+/* Secondary Feature Cards (smaller with icon only) */
+.feature-card-secondary {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card-secondary .feature-card-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+}
+
+/* Expanded Feature Panel (Modal Overlay) */
+.feature-expanded-panel {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.75);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feature-expanded-panel.active {
+    opacity: 1;
+}
+
+.feature-expanded-panel.hidden {
+    display: none;
+}
+
+.feature-expanded-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: #64748B;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    z-index: 10;
+}
+
+.feature-expanded-close:hover {
+    background: #F1F5F9;
+    color: #1E293B;
+}
+
+.feature-expanded-content {
+    background: white;
+    border-radius: 24px;
+    max-width: 1000px;
+    width: 100%;
+    max-height: 90vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .feature-expanded-content {
+        flex-direction: column;
+    }
+}
+
+.feature-expanded-preview {
+    flex: 1;
+    min-height: 300px;
+    background: #F8FAFC;
+    border-radius: 24px 0 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .feature-expanded-preview {
+        border-radius: 24px 24px 0 0;
+        min-height: 250px;
+    }
+}
+
+.feature-expanded-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.feature-expanded-preview video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.feature-expanded-details {
+    flex: 1;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-expanded-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #1E293B;
+    margin-bottom: 1rem;
+}
+
+.feature-expanded-description {
+    font-size: 1rem;
+    color: #64748B;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.feature-expanded-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.feature-expanded-bullets li {
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ============================================
+   DYNAMIC HERO FOR SCROLLYTELLING PEEK
+   ============================================ */
+
+.hero-dynamic {
+    padding-top: var(--hero-padding-top);
+    padding-bottom: calc(100vh - var(--nav-height) - var(--hero-padding-top) - var(--hero-content-height) - var(--scrollytelling-peek));
+    min-height: 0;
+    animation: revealPeek 0.6s ease-out 1s both;
+}
+
+@keyframes revealPeek {
+    0% {
+        /* Initial: no peek visible */
+        padding-bottom: calc(100vh - var(--nav-height) - var(--hero-padding-top) - var(--hero-content-height));
+    }
+    100% {
+        /* Final: peek visible */
+        padding-bottom: calc(100vh - var(--nav-height) - var(--hero-padding-top) - var(--hero-content-height) - var(--scrollytelling-peek));
+    }
+}
+
+/* Ensure minimum padding on very short viewports */
+@media (max-height: 500px) {
+    .hero-dynamic {
+        padding-bottom: 2rem;
+    }
+}
+
+/* Adjust for mobile where hero content may wrap differently */
+@media (max-width: 768px) {
+    :root {
+        --hero-padding-top: 4rem;
+        --hero-content-height: 380px;
+        --scrollytelling-peek: 120px;
+    }
+}
+
+/* ============================================
+   SCROLLYTELLING VARIANT STYLES
+   ============================================ */
+
+/* Scrollytelling Section Container */
+.scroll-features-section {
+    display: flex;
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Sticky Sidebar Navigation */
+.scroll-nav {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+    width: 200px;
+    flex-shrink: 0;
+    padding-right: 2rem;
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .scroll-nav {
+        display: block;
+    }
+}
+
+.scroll-nav-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.scroll-nav-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #94A3B8;
+    padding: 0.5rem 0;
+}
+
+.scroll-nav-divider {
+    height: 1px;
+    background: #E2E8F0;
+    margin: 0.5rem 0;
+}
+
+.scroll-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    text-decoration: none;
+    color: #64748B;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-left: 2px solid transparent;
+    padding-left: 1rem;
+    margin-left: -1rem;
+}
+
+.scroll-nav-item:hover {
+    color: #3B82F6;
+}
+
+.scroll-nav-item.active {
+    color: #3B82F6;
+    border-left-color: #3B82F6;
+}
+
+.scroll-nav-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #CBD5E1;
+    transition: all 0.2s;
+}
+
+.scroll-nav-item.active .scroll-nav-dot {
+    background: #3B82F6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+}
+
+.scroll-nav-text {
+    white-space: nowrap;
+}
+
+/* Scroll Content Area */
+.scroll-content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Individual Scroll Sections */
+.scroll-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.scroll-section-inner {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .scroll-section-inner {
+        flex-direction: column !important;
+        gap: 2rem;
+    }
+
+    /* Ensure preview/mockup always appears above text on mobile */
+    .scroll-section-preview {
+        order: -1;
+    }
+}
+
+/* Alternating layouts */
+.scroll-section-left {
+    flex-direction: row;
+}
+
+.scroll-section-right {
+    flex-direction: row-reverse;
+}
+
+/* Section Preview */
+.scroll-section-preview {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-preview-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-preview-video {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-section-preview-mobile {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Section Text Content */
+.scroll-section-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.scroll-section-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1.5rem;
+}
+
+.scroll-section-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Horizontal icon+title layout for scroll sections */
+.scroll-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.scroll-section-header .scroll-section-icon {
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.scroll-section-header .scroll-section-title {
+    margin-bottom: 0;
+}
+
+.scroll-section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1E293B;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+    .scroll-section-title {
+        font-size: 2rem;
+    }
+}
+
+.scroll-section-description {
+    font-size: 1.125rem;
+    color: #64748B;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.scroll-section-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.scroll-section-bullets li {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Bento section within scrollytelling */
+.scroll-section-bento {
+    min-height: auto;
+    padding: 6rem 0;
+    flex-direction: column;
+}
+
+.scroll-bento-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Mobile navigation (pill nav at bottom) */
+@media (max-width: 1023px) {
+    .scroll-features-section {
+        flex-direction: column;
+    }
+
+    .scroll-section {
+        min-height: auto;
+        padding: 3rem 0;
     }
 }
