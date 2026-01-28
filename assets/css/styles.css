@@ -3135,6 +3135,33 @@ body.new-page .mobile-pricing-card .pricing-badge {
     .scroll-section-preview {
         order: -1;
     }
+
+    /* Consistent left alignment for text content */
+    .scroll-section-text {
+        text-align: left;
+        width: 100%;
+    }
+}
+
+/* Tablet breakpoint - stack vertically like mobile */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .scroll-section-inner {
+        flex-direction: column !important;
+        gap: 2rem;
+    }
+
+    /* Ensure preview always appears above text */
+    .scroll-section-preview {
+        order: -1;
+    }
+
+    /* Consistent left alignment for text content */
+    .scroll-section-text {
+        text-align: left;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
 }
 
 /* Alternating layouts */
