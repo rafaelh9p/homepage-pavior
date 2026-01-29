@@ -3284,6 +3284,33 @@ body.new-page .mobile-pricing-card .pricing-badge {
     margin-bottom: 2rem;
 }
 
+/* Hero-to-scrollytelling intro animation (desktop only) */
+@media (min-width: 1024px) {
+    .hero-intro-active .scroll-nav {
+        opacity: 0;
+    }
+    .hero-intro-active #section-live-chat .scroll-section-text {
+        opacity: 0;
+    }
+    .hero-intro-active #section-live-chat .scroll-preview-image {
+        will-change: transform;
+    }
+}
+
+/* Reduced motion: disable all scroll-driven animations */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .scroll-features-section { animation: none; opacity: 1; }
+    .hero-intro-active .scroll-nav,
+    .hero-intro-active #section-live-chat .scroll-section-text {
+        opacity: 1 !important;
+    }
+    .hero-intro-active #section-live-chat .scroll-preview-image {
+        will-change: auto !important;
+        transform: none !important;
+    }
+}
+
 /* Mobile navigation (pill nav at bottom) */
 @media (max-width: 1023px) {
     .scroll-features-section {

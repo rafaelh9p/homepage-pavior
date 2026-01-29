@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="hero-gradient min-h-screen new-page">
+<body class="hero-gradient min-h-screen new-page hero-intro-active">
 
     <!-- Navigation -->
     <nav class="flex items-center justify-between px-8 max-w-7xl mx-auto">
@@ -515,6 +515,133 @@
     </footer>
 
     <script>
+        // Hero-to-scrollytelling scroll transition (desktop only)
+        (function () {
+            var body = document.body;
+
+            // Bail: prefers-reduced-motion
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                body.classList.remove('hero-intro-active');
+                return;
+            }
+
+            // Bail: narrow viewport (mobile/tablet uses stacked layout)
+            if (window.innerWidth < 1024) {
+                body.classList.remove('hero-intro-active');
+                return;
+            }
+
+            var chatSection = document.getElementById('section-live-chat');
+            var scrollNav = document.querySelector('.scroll-nav');
+            if (!chatSection) { body.classList.remove('hero-intro-active'); return; }
+
+            var chatImage = chatSection.querySelector('.scroll-preview-image');
+            var chatText = chatSection.querySelector('.scroll-section-text');
+            if (!chatImage) { body.classList.remove('hero-intro-active'); return; }
+
+            var offsetX = 0;
+            var scrollEnd = 200;
+            var animationDone = false;
+            var rafId = null;
+
+            function easeOutCubic(t) {
+                return 1 - Math.pow(1 - t, 3);
+            }
+
+            function clamp(v, min, max) {
+                return v < min ? min : v > max ? max : v;
+            }
+
+            function measure() {
+                // Temporarily remove transform to measure natural position
+                var prev = chatImage.style.transform;
+                chatImage.style.transform = 'none';
+                var rect = chatImage.getBoundingClientRect();
+                var imageCenter = rect.left + rect.width / 2;
+                var viewportCenter = window.innerWidth / 2;
+                offsetX = viewportCenter - imageCenter;
+                chatImage.style.transform = prev;
+
+                var sectionTop = chatSection.getBoundingClientRect().top + window.scrollY;
+                scrollEnd = sectionTop - (window.innerHeight * 0.2);
+                if (scrollEnd < 200) scrollEnd = 200;
+            }
+
+            function cleanup() {
+                animationDone = true;
+                chatImage.style.transform = '';
+                chatImage.style.willChange = '';
+                if (chatText) chatText.style.opacity = '';
+                if (scrollNav) scrollNav.style.opacity = '';
+                body.classList.remove('hero-intro-active');
+                window.removeEventListener('scroll', onScroll);
+                if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+            }
+
+            function applyScroll() {
+                rafId = null;
+                if (animationDone) return;
+
+                var rawProgress = clamp(window.scrollY / scrollEnd, 0, 1);
+                var progress = easeOutCubic(rawProgress);
+
+                chatImage.style.transform = 'translateX(' + (offsetX * (1 - progress)) + 'px)';
+                if (scrollNav) scrollNav.style.opacity = progress;
+                if (chatText) chatText.style.opacity = progress;
+
+            }
+
+            function onScroll() {
+                if (!rafId) {
+                    rafId = requestAnimationFrame(applyScroll);
+                }
+            }
+
+            // Debounced resize handler
+            var resizeTimer;
+            window.addEventListener('resize', function () {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function () {
+                    if (window.innerWidth < 1024) {
+                        if (!animationDone) {
+                            cleanup();
+                        }
+                        return;
+                    }
+
+                    // Re-initialize if previously torn down (e.g. resized below 1024 then back)
+                    if (animationDone) {
+                        animationDone = false;
+                        body.classList.add('hero-intro-active');
+                        measure();
+                        chatImage.style.transform = 'translateX(' + offsetX + 'px)';
+                        if (scrollNav) scrollNav.style.opacity = 0;
+                        if (chatText) chatText.style.opacity = 0;
+                        window.addEventListener('scroll', onScroll, { passive: true });
+                        applyScroll();
+                        return;
+                    }
+
+                    // Still active, just re-measure
+                    measure();
+                    applyScroll();
+                }, 150);
+            });
+
+            window.addEventListener('load', function () {
+                measure();
+
+                // Set initial offscreen position before first scroll calc
+                chatImage.style.transform = 'translateX(' + offsetX + 'px)';
+                if (scrollNav) scrollNav.style.opacity = 0;
+                if (chatText) chatText.style.opacity = 0;
+
+                window.addEventListener('scroll', onScroll, { passive: true });
+                // Apply immediately — handles mid-page reload (progress=1) and partial scroll
+                applyScroll();
+            });
+        })();
+
         // Scroll navigation functionality
         const scrollNavItems = document.querySelectorAll('.scroll-nav-item');
         const scrollSections = document.querySelectorAll('.scroll-section');
