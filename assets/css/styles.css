@@ -3164,6 +3164,14 @@ body.new-page .mobile-pricing-card .pricing-badge {
     }
 }
 
+/* iPad Pro and larger tablets - reduce section spacing */
+@media (min-width: 1024px) and (max-width: 1366px) {
+    .scroll-section {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+}
+
 /* Alternating layouts */
 .scroll-section-left {
     flex-direction: row;
