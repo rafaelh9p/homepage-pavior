@@ -2954,8 +2954,8 @@ body.new-page .mobile-pricing-card .pricing-badge {
 
 @keyframes revealPeek {
     0% {
-        /* Initial: no peek visible */
-        padding-bottom: calc(100vh - var(--nav-height) - var(--hero-padding-top) - var(--hero-content-height));
+        /* Initial: 75% closer to end state (only 25% travel remaining) */
+        padding-bottom: calc(100vh - var(--nav-height) - var(--hero-padding-top) - var(--hero-content-height) - (var(--scrollytelling-peek) * 3 / 4));
     }
     100% {
         /* Final: peek visible */
@@ -2984,7 +2984,7 @@ body.new-page .mobile-pricing-card .pricing-badge {
 
     @keyframes revealPeek {
         0% {
-            padding-bottom: 30rem; /* Start with section completely off-screen (~480px) */
+            padding-bottom: 9.75rem; /* 75% closer to 3rem end state */
         }
         100% {
             padding-bottom: 3rem;
@@ -3000,7 +3000,7 @@ body.new-page .mobile-pricing-card .pricing-badge {
 
     @keyframes revealPeek {
         0% {
-            padding-bottom: 55rem; /* Start with section completely off-screen */
+            padding-bottom: 16.75rem; /* 75% closer to 4rem end state */
         }
         100% {
             padding-bottom: 4rem;
@@ -3019,6 +3019,13 @@ body.new-page .mobile-pricing-card .pricing-badge {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 1.5rem;
+    opacity: 0;
+    animation: revealScrollytelling 0.6s ease-out 1s both;
+}
+
+@keyframes revealScrollytelling {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 /* Sticky Sidebar Navigation */
