@@ -142,3 +142,139 @@ This document contains all brainstormed sidebar description options for the prev
 
 #### Feature-aware but light
 10. Push notifications, full chat access, and session recordings — all on mobile.
+
+---
+
+## Index-Scroll Copy Brainstorm (Benefit-First, Unified Tone)
+
+Target voice: Lead with what the user gains. 1-2 sentences max. No filler adjectives. Every line should feel like it belongs next to "Talk to customers the moment they need you. Fast, native, and customizable."
+
+---
+
+### 1. Chat
+
+**Current:** Connect with customers in real-time. Beautiful chat that matches your brand.
+
+1. Talk to customers the moment they need you. Fast, native, and customizable.
+2. Be there when it matters. Real-time chat that keeps customers from waiting.
+3. Answer questions before they become tickets. Instant, on-brand messaging.
+4. Turn browsers into buyers with real-time conversation. No delays, no friction.
+5. Catch every customer at the right moment. Live chat that actually feels live.
+6. Customers hate waiting. Give them answers the second they ask.
+7. Real-time support, zero lag. Chat that keeps pace with your team.
+8. Stop losing conversations to slow response times. Be instant.
+
+---
+
+### 2. Time Travel
+
+**Current:** Watch exactly what your users experienced. Debug issues in seconds, not hours.
+
+1. See what your customers saw. Solve problems before they explain them.
+2. Stop guessing what went wrong. Watch it happen, fix it once.
+3. Replay the exact moment things broke. Resolve on the first reply.
+4. Know the problem before the customer finishes describing it. Full session playback.
+5. Cut your debug time to seconds. Every click, scroll, and error recorded.
+6. Understand every user journey without asking a single question.
+7. Watch the experience through your customer's eyes. Fix what matters fast.
+8. No more "can you reproduce that?" — just hit replay.
+
+---
+
+### 3. Records
+
+**Current:** Complete customer timeline. Every interaction, purchase, and support ticket in one place.
+
+1. The full story of every customer. Conversations, purchases, sessions, events.
+2. Know your customer before you say a word. Complete context, one screen.
+3. Stop digging through five tabs for one answer. Everything lives here.
+4. Every touchpoint, one timeline. Reply with full context every time.
+5. See the whole customer journey — not just the last message.
+6. Context shouldn't require detective work. One view, complete history.
+7. Resolve issues faster when you already know the backstory.
+
+---
+
+### 4. Campaigns
+
+**Current:** Email marketing and automation campaigns that convert.
+
+1. Reach the right customers at the right time. Automated, targeted, measurable.
+2. Send emails that get opened. Sequences and triggers that drive action.
+3. Turn signups into revenue with messages that land at the right moment.
+4. Nurture leads while you sleep. Automated campaigns that actually convert.
+5. Put your outreach on autopilot. Targeted emails, real results.
+6. Stop blasting your whole list. Send the right message to the right person.
+7. Grow revenue with campaigns that adapt to what customers do.
+8. Emails that hit inboxes at the perfect moment. Built-in A/B testing and analytics.
+
+---
+
+### 5. Suggest
+
+**Current:** Collect and manage customer feedback. Understand what users want with smart detection and organized insights.
+
+1. Build what your customers actually want. Feedback captured and prioritized automatically.
+2. Stop guessing your next feature. Let customers tell you what matters.
+3. Hear your users before they churn. In-app feedback, captured in context.
+4. Turn scattered feedback into a clear product roadmap. Prioritized by real demand.
+5. Know exactly what to build next. Customer votes, not hunches.
+6. Catch frustration the moment it happens. Feedback collection with rage-click detection.
+7. Your customers already know what's missing. Make it easy for them to tell you.
+
+---
+
+### 6. Announce
+
+**Current:** Keep users informed with in-app announcements. Share product updates, changelogs, and news directly inside your app.
+
+1. Ship updates that users actually see. In-app announcements, right where they work.
+2. Stop hoping customers read your blog. Put news in front of them.
+3. Launch features and make sure people know about them. Targeted, in-app delivery.
+4. Keep users in the loop without cluttering their inbox. In-app, on-schedule.
+5. Every release deserves an audience. Announce updates where users already are.
+6. New feature? Your users will know about it the next time they log in.
+7. Get product updates in front of the right users at the right time.
+
+---
+
+### 7. Website Builder
+
+**Current:** Build beautiful landing pages and marketing sites without code. Drag-and-drop simplicity with professional results.
+
+1. Launch landing pages without waiting on a developer. Drag, drop, publish.
+2. Go from idea to live page in minutes. No code, no blockers.
+3. Ship marketing pages on your own schedule. No engineering tickets required.
+4. Stop waiting on dev to push a landing page. Build and launch it yourself.
+5. Turn campaigns into live pages fast. Drag-and-drop, custom domains, done.
+6. Your next landing page shouldn't be a sprint task. Own it end to end.
+7. Publish pages when you need them, not when engineering has capacity.
+8. Move at the speed of your ideas. Landing pages with zero code.
+
+---
+
+### 8. Help Guide
+
+**Current:** Create a comprehensive knowledge base. Help customers find answers on their own with organized documentation.
+
+1. Let customers help themselves. A knowledge base that actually gets used.
+2. Fewer repeat tickets. More self-service answers. Always available.
+3. Answer your most common questions once. Customers find them forever.
+4. Deflect tickets before they're filed. Searchable docs, embedded anywhere.
+5. Give customers answers at 3 AM without staffing a night shift.
+6. Every "how do I...?" has a home. Searchable, organized, embeddable.
+7. Reduce support volume with docs customers can actually find.
+
+---
+
+### 9. Mobile App
+
+**Current:** Full-featured mobile app for iOS and Android. Respond to customers, check analytics, and manage your team from anywhere.
+
+1. Step away from your desk, not your customers. Full support on mobile.
+2. Reply from the train, the couch, or the coffee shop. Your inbox goes with you.
+3. Support doesn't stop when you leave the office. Neither should you.
+4. Every customer message, every notification — right in your pocket.
+5. Never miss an urgent conversation. Push alerts and full inbox access, anywhere.
+6. Your whole support dashboard, wherever you are. iOS and Android.
+7. Close tickets from anywhere. Your team stays connected on the go.

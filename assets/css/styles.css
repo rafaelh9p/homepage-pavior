@@ -3130,6 +3130,7 @@ body.new-page .mobile-pricing-card .pricing-badge {
     .scroll-section-text {
         text-align: left;
         width: 100%;
+        max-width: 550px;
     }
 }
 
@@ -3149,7 +3150,7 @@ body.new-page .mobile-pricing-card .pricing-badge {
     .scroll-section-text {
         text-align: left;
         width: 100%;
-        max-width: 600px;
+        max-width: 550px;
         margin: 0 auto;
     }
 }
