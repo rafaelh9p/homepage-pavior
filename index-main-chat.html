@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavior | Modern Support Suite</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="hero-gradient min-h-screen new-page hero-intro-active">
+
+    <!-- Navigation -->
+    <nav class="flex items-center justify-between px-8 max-w-7xl mx-auto">
+        <img src="assets/images/logo.svg" alt="Pavior" class="h-8">
+        <div class="flex items-center space-x-10">
+            <a href="#features" class="hidden md:block text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors">Features</a>
+            <a href="https://pavior.help.guide/v1/user-manual/overview" class="hidden md:block text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors">Docs</a>
+            <a href="#pricing" class="hidden md:block text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors">Pricing</a>
+            <a href="https://app.pavior.com/signin" class="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors">Sign in</a>
+            <a href="https://app.pavior.com/signup/createteam" class="btn-new btn-new-primary">
+                Get started for free
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-dynamic max-w-4xl mx-auto text-center px-4">
+        <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-blue-100 text-blue-700 rounded-full">
+            Modern Support Platform
+        </span>
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-slate-900 leading-[1.1]">
+            Your entire support suite. <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#01A9FB] to-[#0067FB]">In one place.</span>
+        </h1>
+        <p class="text-lg text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Stop switching tabs. Get live chat, session recordings, and CRM insights in a single, lightning-fast dashboard.
+        </p>
+    </header>
+
+    <!-- Scrollytelling Features Section -->
+    <section id="features" class="scroll-features-section">
+        <!-- Sticky Sidebar Navigation (desktop only) -->
+        <nav class="scroll-nav" aria-label="Feature navigation">
+            <div class="scroll-nav-inner">
+                <span class="scroll-nav-label">Features</span>
+                <div class="scroll-nav-divider"></div>
+                <a href="#section-live-chat" class="scroll-nav-item active" data-section="section-live-chat">
+                    <span class="scroll-nav-dot"></span>
+                    <span class="scroll-nav-text">Chat</span>
+                </a>
+                <a href="#section-session-replay" class="scroll-nav-item" data-section="section-session-replay">
+                    <span class="scroll-nav-dot"></span>
+                    <span class="scroll-nav-text">Time travel</span>
+                </a>
+                <a href="#section-customer-crm" class="scroll-nav-item" data-section="section-customer-crm">
+                    <span class="scroll-nav-dot"></span>
+                    <span class="scroll-nav-text">Records</span>
+                </a>
+                <a href="#section-campaigns" class="scroll-nav-item" data-section="section-campaigns">
+                    <span class="scroll-nav-dot"></span>
+                    <span class="scroll-nav-text">Campaigns</span>
+                </a>
+                <a href="#section-suggest" class="scroll-nav-item" data-section="section-suggest">
+                    <span class="scroll-nav-dot"></span>
+                    <span class="scroll-nav-text">Suggest</span>
+                </a>
+                <a href="#section-announce" class="scroll-nav-item" data-section="section-announce">
+                    <span class="scroll-nav-dot"></span>
+                    <span class="scroll-nav-text">Announce</span>
+                </a>
+                <a href="#section-website-builder" class="scroll-nav-item" data-section="section-website-builder">
+                    <span class="scroll-nav-dot"></span>
+                    <span class="scroll-nav-text">Website Builder</span>
+                </a>
+                <a href="#section-help-guide" class="scroll-nav-item" data-section="section-help-guide">
+                    <span class="scroll-nav-dot"></span>
+                    <span class="scroll-nav-text">Help Guide</span>
+                </a>
+                <a href="#section-mobile-app" class="scroll-nav-item" data-section="section-mobile-app">
+                    <span class="scroll-nav-dot"></span>
+                    <span class="scroll-nav-text">Mobile App</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Scrollable Content Area -->
+        <div class="scroll-content">
+            <!-- Section 1: Live Chat -->
+            <section id="section-live-chat" class="scroll-section">
+                <div class="scroll-section-inner scroll-section-left">
+                    <div class="scroll-section-preview">
+                        <img src="assets/images/sections/chat-home-screen.svg" alt="Live Chat Interface" class="scroll-preview-image">
+                    </div>
+                    <div class="scroll-section-text">
+                        <h2 class="scroll-section-title">Chat</h2>
+                        <p class="scroll-section-description">Turn browsers into buyers with real-time conversation. No delays, no friction.</p>
+                        <ul class="scroll-section-bullets">
+                            <li><span class="text-blue-600">&#10003;</span> Talk to customers the moment they land</li>
+                            <li><span class="text-blue-600">&#10003;</span> Send files in-thread</li>
+                            <li><span class="text-blue-600">&#10003;</span> Lightweight embed — no performance hit</li>
+                            <li><span class="text-blue-600">&#10003;</span> Customers see your brand, not ours</li>
+                        </ul>
+                        <a href="https://app.pavior.com/signup/createteam" class="btn-new btn-new-primary mt-6 inline-block">
+                            Get started for free
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Session Replay -->
+            <section id="section-session-replay" class="scroll-section">
+                <div class="scroll-section-inner scroll-section-left">
+                    <div class="scroll-section-text">
+                        <h2 class="scroll-section-title">Time travel</h2>
+                        <p class="scroll-section-description">See what your customers saw. Solve problems before they explain them.</p>
+                        <ul class="scroll-section-bullets">
+                            <li><span class="text-blue-600">&#10003;</span> Pixel-perfect session playback</li>
+                            <li><span class="text-blue-600">&#10003;</span> See exactly where users drop off</li>
+                            <li><span class="text-blue-600">&#10003;</span> No performance impact on your site</li>
+                            <li><span class="text-blue-600">&#10003;</span> Debug issues in seconds, not hours</li>
+                        </ul>
+                        <a href="https://app.pavior.com/signup/createteam" class="btn-new btn-new-primary mt-6 inline-block">
+                            Get started for free
+                        </a>
+                    </div>
+                    <div class="scroll-section-preview">
+                        <video class="scroll-preview-video" autoplay loop muted playsinline>
+                            <source src="assets/videos/timetravel.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Customer CRM -->
+            <section id="section-customer-crm" class="scroll-section">
+                <div class="scroll-section-inner scroll-section-left">
+                    <div class="scroll-section-preview">
+                        <img src="assets/images/sections/customer-timeline-section.svg" alt="Customer Timeline" class="scroll-preview-image">
+                    </div>
+                    <div class="scroll-section-text">
+                        <h2 class="scroll-section-title">Records</h2>
+                        <p class="scroll-section-description">The full story of every customer. Conversations, purchases, sessions, events.</p>
+                        <ul class="scroll-section-bullets">
+                            <li><span class="text-blue-600">&#10003;</span> Every interaction in one profile</li>
+                            <li><span class="text-blue-600">&#10003;</span> Custom fields for any data you need</li>
+                            <li><span class="text-blue-600">&#10003;</span> Auto-linked chat, email, and feedback</li>
+                            <li><span class="text-blue-600">&#10003;</span> No more switching between tools</li>
+                        </ul>
+                        <a href="https://app.pavior.com/signup/createteam" class="btn-new btn-new-primary mt-6 inline-block">
+                            Get started for free
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Campaigns -->
+            <section id="section-campaigns" class="scroll-section">
+                <div class="scroll-section-inner scroll-section-left">
+                    <div class="scroll-section-text">
+                        <h2 class="scroll-section-title">Campaigns</h2>
+                        <p class="scroll-section-description">Grow revenue with campaigns that adapt to what customers do.</p>
+                        <ul class="scroll-section-bullets">
+                            <li><span class="text-blue-600">&#10003;</span> Send the right email at the right time</li>
+                            <li><span class="text-blue-600">&#10003;</span> Trigger emails from user actions</li>
+                            <li><span class="text-blue-600">&#10003;</span> Send from your own domain</li>
+                            <li><span class="text-blue-600">&#10003;</span> Emails that feel personal at scale</li>
+                        </ul>
+                        <a href="https://app.pavior.com/signup/createteam" class="btn-new btn-new-primary mt-6 inline-block">
+                            Get started for free
+                        </a>
+                    </div>
+                    <div class="scroll-section-preview">
+                        <img src="assets/images/sections/campaigns.svg" alt="Campaigns Interface" class="scroll-preview-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Suggest -->
+            <section id="section-suggest" class="scroll-section">
+                <div class="scroll-section-inner scroll-section-left">
+                    <div class="scroll-section-preview">
+                        <video class="scroll-preview-video" autoplay loop muted playsinline>
+                            <source src="assets/videos/suggest.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="scroll-section-text">
+                        <h2 class="scroll-section-title">Suggest</h2>
+                        <p class="scroll-section-description">Catch frustration the moment it happens. Feedback collection with rage-click detection.</p>
+                        <ul class="scroll-section-bullets">
+                            <li><span class="text-blue-600">&#10003;</span> Turns rage clicks into actionable feedback</li>
+                            <li><span class="text-blue-600">&#10003;</span> Capture context the moment friction happens</li>
+                            <li><span class="text-blue-600">&#10003;</span> Automatic. No button, no widget, no prompt fatigue</li>
+                            <li><span class="text-blue-600">&#10003;</span> Users vent to your product, not your reviews</li>
+                        </ul>
+                        <a href="https://app.pavior.com/signup/createteam" class="btn-new btn-new-primary mt-6 inline-block">
+                            Get started for free
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 6: Announce -->
+            <section id="section-announce" class="scroll-section">
+                <div class="scroll-section-inner scroll-section-left">
+                    <div class="scroll-section-text">
+                        <h2 class="scroll-section-title">Announce</h2>
+                        <p class="scroll-section-description">Launch features and make sure people know about them. Targeted, in-app delivery.</p>
+                        <ul class="scroll-section-bullets">
+                            <li><span class="text-blue-600">&#10003;</span> Changelog your users will actually read</li>
+                            <li><span class="text-blue-600">&#10003;</span> Target announcements by user segment</li>
+                            <li><span class="text-blue-600">&#10003;</span> Engagement analytics per announcement</li>
+                            <li><span class="text-blue-600">&#10003;</span> Reduce support tickets with proactive updates</li>
+                        </ul>
+                        <a href="https://app.pavior.com/signup/createteam" class="btn-new btn-new-primary mt-6 inline-block">
+                            Get started for free
+                        </a>
+                    </div>
+                    <div class="scroll-section-preview">
+                        <img src="assets/images/sections/announce.svg" alt="Announce Interface" class="scroll-preview-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 7: Website Builder -->
+            <section id="section-website-builder" class="scroll-section">
+                <div class="scroll-section-inner scroll-section-left">
+                    <div class="scroll-section-preview">
+                        <img src="assets/images/sections/website-builder.svg" alt="Website Builder Interface" class="scroll-preview-image">
+                    </div>
+                    <div class="scroll-section-text">
+                        <h2 class="scroll-section-title">Website Builder</h2>
+                        <p class="scroll-section-description">Go from idea to live page in minutes. No code, no blockers.</p>
+                        <ul class="scroll-section-bullets">
+                            <li><span class="text-blue-600">&#10003;</span> Build pages without writing code</li>
+                            <li><span class="text-blue-600">&#10003;</span> Fast-loading, optimized pages</li>
+                            <li><span class="text-blue-600">&#10003;</span> Connect your own domain</li>
+                            <li><span class="text-blue-600">&#10003;</span> Global styles for brand consistency</li>
+                        </ul>
+                        <a href="https://app.pavior.com/signup/createteam" class="btn-new btn-new-primary mt-6 inline-block">
+                            Get started for free
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 8: Help Guide -->
+            <section id="section-help-guide" class="scroll-section">
+                <div class="scroll-section-inner scroll-section-left">
+                    <div class="scroll-section-text">
+                        <h2 class="scroll-section-title">Help Guide</h2>
+                        <p class="scroll-section-description">Give customers answers at 3 AM without staffing a night shift.</p>
+                        <ul class="scroll-section-bullets">
+                            <li><span class="text-blue-600">&#10003;</span> 24/7 support without adding headcount</li>
+                            <li><span class="text-blue-600">&#10003;</span> Suggest articles in chat automatically</li>
+                            <li><span class="text-blue-600">&#10003;</span> Custom domain for your help center</li>
+                            <li><span class="text-blue-600">&#10003;</span> Full-text search with instant results</li>
+                        </ul>
+                        <a href="https://app.pavior.com/signup/createteam" class="btn-new btn-new-primary mt-6 inline-block">
+                            Get started for free
+                        </a>
+                    </div>
+                    <div class="scroll-section-preview">
+                        <img src="assets/images/sections/help-guide.svg" alt="Help Guide Interface" class="scroll-preview-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 9: Mobile App -->
+            <section id="section-mobile-app" class="scroll-section">
+                <div class="scroll-section-inner scroll-section-left">
+                    <div class="scroll-section-preview scroll-section-preview-mobile">
+                        <div class="phone-frame-preview">
+                            <div class="phone-screen-preview">
+                                <div class="preview-slideshow" id="mobile-slideshow">
+                                    <div class="preview-slide active">
+                                        <img src="assets/images/mobile/main-menu.svg" alt="Mobile Main Menu">
+                                    </div>
+                                    <div class="preview-slide">
+                                        <img src="assets/images/mobile/inbox.svg" alt="Mobile Inbox">
+                                    </div>
+                                    <div class="preview-slide">
+                                        <img src="assets/images/mobile/chat.svg" alt="Mobile Chat">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scroll-section-text">
+                        <h2 class="scroll-section-title">Mobile App</h2>
+                        <p class="scroll-section-description">Step away from your desk, not your customers. Full support on mobile.</p>
+                        <ul class="scroll-section-bullets">
+                            <li><span class="text-blue-600">&#10003;</span> Customer context at your fingertips</li>
+                            <li><span class="text-blue-600">&#10003;</span> Reply to customers from anywhere</li>
+                            <li><span class="text-blue-600">&#10003;</span> Push alerts for new messages</li>
+                            <li><span class="text-blue-600">&#10003;</span> Lightweight and fast on any connection</li>
+                        </ul>
+                        <a href="https://app.pavior.com/signup/createteam" class="btn-new btn-new-primary mt-6 inline-block">
+                            Get started for free
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+    <!-- Installation Code Section -->
+    <section class="bg-white border-y border-slate-100 py-24">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold mb-4">Simple installation</h2>
+            <p class="text-slate-500 mb-12 font-medium">Just <a href="https://app.pavior.com/signup/createteam" class="text-blue-600 hover:underline">create an account</a> and paste this snippet on your site. Don't forget to use your own team ID!</p>
+            <div class="bg-slate-900 rounded-2xl p-8 text-left shadow-2xl overflow-hidden relative">
+                <button onclick="copyInstallCode()" class="absolute top-4 right-4 bg-white text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-slate-100 transition-colors">Copy code</button>
+                <div class="flex space-x-2 mb-6">
+                    <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                    <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                    <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                </div>
+                <pre class="font-mono text-sm leading-loose overflow-x-auto"><code id="install-code"><span class="text-blue-400">&lt;script</span> <span class="text-emerald-400">src</span>=<span class="text-orange-300">"https://app.pavior.com/embed"</span><span class="text-blue-400">&gt;&lt;/script&gt;</span>
+<span class="text-blue-400">&lt;script&gt;</span>
+  <span class="text-slate-300">Pavior('init', {</span>
+    <span class="text-emerald-400">'teamId'</span>: <span class="text-orange-300">'YOUR_TEAM_ID'</span>,
+    <span class="text-emerald-400">'doTimeTravel'</span>: <span class="text-purple-400">true</span>,
+    <span class="text-emerald-400">'doChat'</span>: <span class="text-purple-400">true</span>,
+  <span class="text-slate-300">});</span>
+<span class="text-blue-400">&lt;/script&gt;</span></code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section (3-Card Layout) -->
+    <section id="pricing" class="py-24 max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl font-extrabold text-center mb-4">Simple, transparent pricing</h2>
+        <p class="text-slate-500 text-center mb-12 max-w-xl mx-auto">Choose a plan which works best for you. Start free, upgrade when you're ready.</p>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <!-- Basic Plan -->
+            <div class="pricing-card rounded-[32px] p-8 text-center">
+                <h3 class="text-xl font-extrabold mb-2 text-slate-900">basic</h3>
+                <div class="text-5xl font-extrabold text-slate-900 mb-1">$0</div>
+                <p class="text-slate-500 mb-8">Free forever</p>
+                <ul class="text-left space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-slate-600">2 seats</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-slate-600">1k contacts</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-slate-600">100 conversations</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-slate-600">1k session recordings/mo</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-slate-600">Community support</span>
+                    </li>
+                </ul>
+                <a href="https://app.pavior.com/signup/createteam" class="btn-new btn-new-secondary block w-full">
+                    Start free
+                </a>
+            </div>
+
+            <!-- Economy Plan (Featured) -->
+            <div class="pricing-card featured rounded-[32px] p-8 text-center relative">
+                <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#01A9FB] to-[#0067FB] text-white text-xs font-bold px-4 py-1.5 rounded-full">
+                    Most popular
+                </span>
+                <h3 class="text-xl font-extrabold mb-2 text-slate-900 mt-2">economy</h3>
+                <div class="text-5xl font-extrabold text-slate-900 mb-1">$25<span class="text-xl font-normal text-slate-500">/mo</span></div>
+                <p class="text-slate-500 mb-8">Best for growing teams</p>
+                <ul class="text-left space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-slate-600">4 seats</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-slate-600">10k contacts</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-slate-600">Unlimited conversations</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-slate-600">10k session recordings/mo</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-slate-600">Custom email domain</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-slate-600">Email support</span>
+                    </li>
+                </ul>
+                <a href="https://app.pavior.com/signup/createteam?buying=true" class="btn-new btn-new-primary block w-full">
+                    Get economy
+                </a>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="pricing-card rounded-[32px] p-8 text-center">
+                <h3 class="text-xl font-extrabold mb-2 text-slate-900">premium</h3>
+                <div class="text-5xl font-extrabold text-slate-900 mb-1">$99<span class="text-xl font-normal text-slate-500">/mo</span></div>
+                <p class="text-slate-500 mb-8">For scaling businesses</p>
+                <ul class="text-left space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-slate-600">10 seats</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-slate-600">100k contacts</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-slate-600">Unlimited conversations</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-slate-600">50k session recordings/mo</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-slate-600">Priority support</span>
+                    </li>
+                </ul>
+                <a href="https://app.pavior.com/signup/createteam?buying=true" class="btn-new btn-new-secondary block w-full">
+                    Get premium
+                </a>
+            </div>
+        </div>
+
+        <p class="text-center text-slate-500 mt-12">
+            Need higher limits or custom features? <a href="#" onclick="event.preventDefault(); window.MomentCRM && window.MomentCRM('open')" class="text-blue-600 hover:underline">Contact sales</a>
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-100 bg-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <img src="assets/images/logo.svg" alt="Pavior" class="h-8 mb-4">
+                    <p class="text-slate-500 text-sm">Modern customer support platform for SaaS teams.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-4">Contact Us</h3>
+                    <p class="text-slate-500 text-sm space-y-1">
+                        <a href="mailto:hello@pavior.com" class="block hover:text-blue-600">hello@pavior.com</a>
+                        <a href="tel:+16478966479" class="block hover:text-blue-600">647-896-6479</a>
+                        <span class="block">222 Finch Ave. West #213</span>
+                        <span class="block">Toronto, Canada M2R 1M6</span>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-4">Product</h3>
+                    <p class="text-slate-500 text-sm space-y-1">
+                        <a href="#features" class="block hover:text-blue-600">Features</a>
+                        <a href="#pricing" class="block hover:text-blue-600">Pricing</a>
+                        <a href="https://pavior.help.guide" class="block hover:text-blue-600">Documentation</a>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 mb-4">Legal</h3>
+                    <p class="text-slate-500 text-sm">
+                        <a href="https://pavior.help.guide/v1/legal/docs/terms-and-conditions" target="_blank" class="block hover:text-blue-600">Terms and Conditions</a>
+                    </p>
+                </div>
+            </div>
+            <div class="text-center text-slate-400 text-sm pt-8 border-t border-slate-100">
+                &copy; <span id="current-year"></span> Pavior Inc. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hero-to-scrollytelling scroll transition (desktop only)
+        (function () {
+            var body = document.body;
+
+            var chatSection = document.getElementById('section-live-chat');
+            var scrollNav = document.querySelector('.scroll-nav');
+            if (!chatSection) { body.classList.remove('hero-intro-active'); return; }
+
+            var chatImage = chatSection.querySelector('.scroll-preview-image');
+            var chatText = chatSection.querySelector('.scroll-section-text');
+            if (!chatImage) { body.classList.remove('hero-intro-active'); return; }
+
+            // Bail: prefers-reduced-motion — show scrolled state immediately
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                chatImage.src = 'assets/images/sections/chat-section-updated.svg';
+                body.classList.remove('hero-intro-active');
+                return;
+            }
+
+            // Bail: narrow viewport (mobile/tablet uses stacked layout)
+            if (window.innerWidth < 1024) {
+                chatImage.src = 'assets/images/sections/chat-section-updated.svg';
+                body.classList.remove('hero-intro-active');
+                return;
+            }
+
+            // Preload both SVGs so src swaps are instant
+            var preloadScrolled = new Image();
+            preloadScrolled.src = 'assets/images/sections/chat-section-updated.svg';
+            var preloadHome = new Image();
+            preloadHome.src = 'assets/images/sections/chat-home-screen.svg';
+
+            var offsetX = 0;
+            var state = 'home';
+            var listenerActive = false;
+            var pendingSwapTimer = null;
+            var pendingSwapListener = null;
+
+            function measure() {
+                var prev = chatImage.style.transform;
+                chatImage.style.transform = 'none';
+                var rect = chatImage.getBoundingClientRect();
+                var imageCenter = rect.left + rect.width / 2;
+                var viewportCenter = window.innerWidth / 2;
+                offsetX = viewportCenter - imageCenter;
+                chatImage.style.transform = prev;
+            }
+
+            function cancelPendingSwap() {
+                if (pendingSwapTimer !== null) {
+                    clearTimeout(pendingSwapTimer);
+                    pendingSwapTimer = null;
+                }
+                if (pendingSwapListener) {
+                    chatImage.removeEventListener('transitionend', pendingSwapListener);
+                    pendingSwapListener = null;
+                }
+            }
+
+            function applyHomeState(immediate) {
+                cancelPendingSwap();
+
+                chatImage.style.transform = 'translateX(' + offsetX + 'px) scale(0.75)';
+                if (scrollNav) scrollNav.style.opacity = 0;
+                if (chatText) chatText.style.opacity = 0;
+                body.classList.add('hero-intro-active');
+                state = 'home';
+
+                if (immediate) {
+                    chatImage.src = 'assets/images/sections/chat-home-screen.svg';
+                    return;
+                }
+
+                // Deferred swap: wait for transform transition to finish, then swap src
+                var swapped = false;
+                function swapSrc() {
+                    if (swapped) return;
+                    swapped = true;
+                    clearTimeout(pendingSwapTimer);
+                    pendingSwapTimer = null;
+                    if (pendingSwapListener) {
+                        chatImage.removeEventListener('transitionend', pendingSwapListener);
+                        pendingSwapListener = null;
+                    }
+                    if (state !== 'home') return;
+                    chatImage.src = 'assets/images/sections/chat-home-screen.svg';
+                }
+                function onEnd(e) {
+                    if (e.propertyName === 'transform') swapSrc();
+                }
+                pendingSwapListener = onEnd;
+                chatImage.addEventListener('transitionend', onEnd);
+                pendingSwapTimer = setTimeout(swapSrc, 750);
+            }
+
+            function applyScrolledState() {
+                cancelPendingSwap();
+                chatImage.src = 'assets/images/sections/chat-section-updated.svg';
+                chatImage.style.transform = 'translateX(0px) scale(1)';
+                if (scrollNav) scrollNav.style.opacity = 1;
+                if (chatText) chatText.style.opacity = 1;
+                body.classList.remove('hero-intro-active');
+                state = 'scrolled';
+            }
+
+            function teardown() {
+                cancelPendingSwap();
+                chatImage.src = 'assets/images/sections/chat-section-updated.svg';
+                chatImage.style.transform = '';
+                chatImage.style.transition = '';
+                chatImage.style.willChange = '';
+                if (chatText) { chatText.style.opacity = ''; chatText.style.transition = ''; chatText.style.willChange = ''; }
+                if (scrollNav) { scrollNav.style.opacity = ''; scrollNav.style.transition = ''; scrollNav.style.willChange = ''; }
+                body.classList.remove('hero-intro-active');
+                window.removeEventListener('scroll', onScroll);
+                state = 'home';
+                listenerActive = false;
+            }
+
+            function applyTransitions() {
+                chatImage.style.transition = 'transform 0.6s cubic-bezier(0.33,1,0.68,1)';
+                chatImage.style.willChange = 'transform';
+                if (scrollNav) { scrollNav.style.transition = 'opacity 0.6s ease'; scrollNav.style.willChange = 'opacity'; }
+                if (chatText) { chatText.style.transition = 'opacity 0.6s ease'; chatText.style.willChange = 'opacity'; }
+            }
+
+            function onScroll() {
+                if (window.scrollY >= 1) {
+                    if (state === 'scrolled') return;
+                    applyScrolledState();
+                } else {
+                    if (state === 'home') return;
+                    applyHomeState();
+                }
+            }
+
+            // Debounced resize handler
+            var resizeTimer;
+            window.addEventListener('resize', function () {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function () {
+                    if (window.innerWidth < 1024) {
+                        if (listenerActive) {
+                            teardown();
+                        }
+                        return;
+                    }
+
+                    // Re-initialize if previously torn down
+                    if (!listenerActive) {
+                        measure();
+                        if (window.scrollY < 1) {
+                            applyHomeState(true);
+                        } else {
+                            applyScrolledState();
+                        }
+                        requestAnimationFrame(function () {
+                            applyTransitions();
+                        });
+                        window.addEventListener('scroll', onScroll, { passive: true });
+                        listenerActive = true;
+                        return;
+                    }
+
+                    // Still active, just re-measure and update transform
+                    cancelPendingSwap();
+                    measure();
+                    if (state === 'home') {
+                        chatImage.src = 'assets/images/sections/chat-home-screen.svg';
+                        chatImage.style.transform = 'translateX(' + offsetX + 'px) scale(0.75)';
+                    }
+                }, 150);
+            });
+
+            window.addEventListener('load', function () {
+                measure();
+
+                // Apply initial state WITHOUT transitions to avoid visible scale animation
+                if (window.scrollY < 1) {
+                    applyHomeState(true);
+                } else {
+                    applyScrolledState();
+                }
+
+                // Enable transitions on the next frame so the initial state is painted first
+                requestAnimationFrame(function () {
+                    applyTransitions();
+                });
+
+                window.addEventListener('scroll', onScroll, { passive: true });
+                listenerActive = true;
+            });
+        })();
+
+        // Scroll navigation functionality
+        const scrollNavItems = document.querySelectorAll('.scroll-nav-item');
+        const scrollSections = document.querySelectorAll('.scroll-section');
+
+        // Smooth scroll on nav click
+        scrollNavItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = item.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Intersection Observer to track active section
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -60% 0px',
+            threshold: 0
+        };
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const sectionId = entry.target.id;
+
+                    // Update nav active state
+                    scrollNavItems.forEach(item => {
+                        item.classList.remove('active');
+                        if (item.dataset.section === sectionId) {
+                            item.classList.add('active');
+                        }
+                    });
+
+                    // Handle video autoplay
+                    const video = entry.target.querySelector('video');
+                    if (video) {
+                        video.currentTime = 0;
+                        video.play();
+                    }
+                } else {
+                    // Pause video when section leaves viewport
+                    const video = entry.target.querySelector('video');
+                    if (video) {
+                        video.pause();
+                    }
+                }
+            });
+        }, observerOptions);
+
+        scrollSections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Mobile slideshow functionality
+        let previewSlideIndex = 0;
+        let previewSlideshowInterval = null;
+        const previewSlides = document.querySelectorAll('#mobile-slideshow .preview-slide');
+        const totalPreviewSlides = previewSlides.length;
+
+        function showPreviewSlide(index) {
+            previewSlides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextPreviewSlide() {
+            previewSlideIndex = (previewSlideIndex + 1) % totalPreviewSlides;
+            showPreviewSlide(previewSlideIndex);
+        }
+
+        function startPreviewSlideshow() {
+            if (totalPreviewSlides > 0 && !previewSlideshowInterval) {
+                previewSlideshowInterval = setInterval(nextPreviewSlide, 3000);
+            }
+        }
+
+        // Start mobile slideshow when mobile section is in view
+        const mobileSectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startPreviewSlideshow();
+                } else {
+                    if (previewSlideshowInterval) {
+                        clearInterval(previewSlideshowInterval);
+                        previewSlideshowInterval = null;
+                    }
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const mobileSection = document.getElementById('section-mobile-app');
+        if (mobileSection) {
+            mobileSectionObserver.observe(mobileSection);
+        }
+
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Bento card accordion
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const wasExpanded = this.classList.contains('expanded');
+
+                // Collapse all cards
+                document.querySelectorAll('.bento-card').forEach(c => {
+                    c.classList.remove('expanded');
+                });
+
+                // If clicked card wasn't expanded, expand it
+                if (!wasExpanded) {
+                    this.classList.add('expanded');
+                }
+            });
+        });
+
+        // Copy installation code
+        function copyInstallCode() {
+            const code = `<script src="https://app.pavior.com/embed"><\/script>
+<script>
+  Pavior('init', {
+    'teamId': 'YOUR_TEAM_ID',
+    'doTimeTravel': true,
+    'doChat': true,
+  });
+<\/script>`;
+
+            navigator.clipboard.writeText(code).then(() => {
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.classList.add('bg-emerald-500', 'text-white');
+                button.classList.remove('bg-white', 'text-slate-900');
+
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.remove('bg-emerald-500', 'text-white');
+                    button.classList.add('bg-white', 'text-slate-900');
+                }, 3000);
+            });
+        }
+    </script>
+</body>
+</html>
