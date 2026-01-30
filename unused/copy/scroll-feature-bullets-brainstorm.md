@@ -4,6 +4,64 @@ Brainstormed bullet point alternatives for the 9 index-scroll feature sections. 
 
 ---
 
+## Final Selections
+
+### 1. Chat
+1. Talk to customers the moment they land
+2. Send files in-thread
+3. Lightweight embed — no performance hit
+4. Customers see your brand, not ours
+
+### 2. Time Travel (Session Replay)
+1. Pixel-perfect session playback
+2. See exactly where users drop off
+3. No performance impact on your site
+4. Debug issues in seconds, not hours
+
+### 3. Records (Customer CRM)
+1. Every interaction in one profile
+2. Custom fields for any data you need
+3. Auto-linked chat, email, and feedback
+4. No more switching between tools
+
+### 4. Campaigns
+1. Send the right email at the right time
+2. Trigger emails from user actions
+3. Send from your own domain
+4. Emails that feel personal at scale
+
+### 5. Suggest
+1. Turns rage clicks into actionable feedback
+2. Capture context the moment friction happens
+3. Automatic. No button, no widget, no prompt fatigue
+4. Users vent to your product, not your reviews
+
+### 6. Announce
+1. Changelog your users will actually read
+2. Target announcements by user segment
+3. Engagement analytics per announcement
+4. Reduce support tickets with proactive updates
+
+### 7. Website Builder
+1. Build pages without writing code
+2. Fast-loading, optimized pages
+3. Connect your own domain
+4. Global styles for brand consistency
+
+### 8. Help Guide
+1. 24/7 support without adding headcount
+2. Suggest articles in chat automatically
+3. Custom domain for your help center
+4. Full-text search with instant results
+
+### 9. Mobile App
+1. Customer context at your fingertips
+2. Reply to customers from anywhere
+3. Push alerts for new messages
+4. Lightweight and fast on any connection
+
+---
+
 ## 1. Chat
 
 **Current bullets:**
