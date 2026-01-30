@@ -90,7 +90,8 @@
             <section id="section-live-chat" class="scroll-section">
                 <div class="scroll-section-inner scroll-section-left">
                     <div class="scroll-section-preview">
-                        <img src="assets/images/sections/chat-home-screen.svg" alt="Live Chat Interface" class="scroll-preview-image">
+                        <img src="assets/images/sections/chat-home-screen.svg" alt="Chat Home Screen" class="scroll-preview-image chat-home-img">
+                        <img src="assets/images/sections/chat-section-updated.svg" alt="Live Chat Interface" class="scroll-preview-image chat-scrolled-img">
                     </div>
                     <div class="scroll-section-text">
                         <h2 class="scroll-section-title">Chat</h2>
@@ -523,122 +524,51 @@
             var scrollNav = document.querySelector('.scroll-nav');
             if (!chatSection) { body.classList.remove('hero-intro-active'); return; }
 
-            var chatImage = chatSection.querySelector('.scroll-preview-image');
+            var homeImg = chatSection.querySelector('.chat-home-img');
+            var scrolledImg = chatSection.querySelector('.chat-scrolled-img');
             var chatText = chatSection.querySelector('.scroll-section-text');
-            if (!chatImage) { body.classList.remove('hero-intro-active'); return; }
+            if (!homeImg || !scrolledImg) { body.classList.remove('hero-intro-active'); return; }
 
-            // Bail: prefers-reduced-motion — show scrolled state immediately
-            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                chatImage.src = 'assets/images/sections/chat-section-updated.svg';
+            // Bail: prefers-reduced-motion or narrow viewport — show scrolled state immediately
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.innerWidth < 1024) {
+                homeImg.style.opacity = 0;
+                scrolledImg.style.opacity = 1;
                 body.classList.remove('hero-intro-active');
                 return;
             }
 
-            // Bail: narrow viewport (mobile/tablet uses stacked layout)
-            if (window.innerWidth < 1024) {
-                chatImage.src = 'assets/images/sections/chat-section-updated.svg';
-                body.classList.remove('hero-intro-active');
-                return;
-            }
-
-            // Preload both SVGs so src swaps are instant
-            var preloadScrolled = new Image();
-            preloadScrolled.src = 'assets/images/sections/chat-section-updated.svg';
-            var preloadHome = new Image();
-            preloadHome.src = 'assets/images/sections/chat-home-screen.svg';
-
-            var offsetX = 0;
             var state = 'home';
-            var listenerActive = false;
-            var pendingSwapTimer = null;
-            var pendingSwapListener = null;
+            var offsetX = 0;
 
             function measure() {
-                var prev = chatImage.style.transform;
-                chatImage.style.transform = 'none';
-                var rect = chatImage.getBoundingClientRect();
+                // Temporarily clear transform to get natural position
+                var prev = homeImg.style.transform;
+                homeImg.style.transform = 'none';
+                var rect = homeImg.getBoundingClientRect();
                 var imageCenter = rect.left + rect.width / 2;
                 var viewportCenter = window.innerWidth / 2;
                 offsetX = viewportCenter - imageCenter;
-                chatImage.style.transform = prev;
+                homeImg.style.transform = prev;
             }
 
-            function cancelPendingSwap() {
-                if (pendingSwapTimer !== null) {
-                    clearTimeout(pendingSwapTimer);
-                    pendingSwapTimer = null;
-                }
-                if (pendingSwapListener) {
-                    chatImage.removeEventListener('transitionend', pendingSwapListener);
-                    pendingSwapListener = null;
-                }
-            }
-
-            function applyHomeState(immediate) {
-                cancelPendingSwap();
-
-                chatImage.style.transform = 'translateX(' + offsetX + 'px) scale(0.75)';
+            function applyHomeState() {
+                homeImg.style.opacity = 1;
+                homeImg.style.transform = 'translateX(' + offsetX + 'px)';
+                scrolledImg.style.opacity = 0;
                 if (scrollNav) scrollNav.style.opacity = 0;
                 if (chatText) chatText.style.opacity = 0;
                 body.classList.add('hero-intro-active');
                 state = 'home';
-
-                if (immediate) {
-                    chatImage.src = 'assets/images/sections/chat-home-screen.svg';
-                    return;
-                }
-
-                // Deferred swap: wait for transform transition to finish, then swap src
-                var swapped = false;
-                function swapSrc() {
-                    if (swapped) return;
-                    swapped = true;
-                    clearTimeout(pendingSwapTimer);
-                    pendingSwapTimer = null;
-                    if (pendingSwapListener) {
-                        chatImage.removeEventListener('transitionend', pendingSwapListener);
-                        pendingSwapListener = null;
-                    }
-                    if (state !== 'home') return;
-                    chatImage.src = 'assets/images/sections/chat-home-screen.svg';
-                }
-                function onEnd(e) {
-                    if (e.propertyName === 'transform') swapSrc();
-                }
-                pendingSwapListener = onEnd;
-                chatImage.addEventListener('transitionend', onEnd);
-                pendingSwapTimer = setTimeout(swapSrc, 750);
             }
 
             function applyScrolledState() {
-                cancelPendingSwap();
-                chatImage.src = 'assets/images/sections/chat-section-updated.svg';
-                chatImage.style.transform = 'translateX(0px) scale(1)';
+                homeImg.style.opacity = 0;
+                homeImg.style.transform = 'translateX(0px)';
+                scrolledImg.style.opacity = 1;
                 if (scrollNav) scrollNav.style.opacity = 1;
                 if (chatText) chatText.style.opacity = 1;
                 body.classList.remove('hero-intro-active');
                 state = 'scrolled';
-            }
-
-            function teardown() {
-                cancelPendingSwap();
-                chatImage.src = 'assets/images/sections/chat-section-updated.svg';
-                chatImage.style.transform = '';
-                chatImage.style.transition = '';
-                chatImage.style.willChange = '';
-                if (chatText) { chatText.style.opacity = ''; chatText.style.transition = ''; chatText.style.willChange = ''; }
-                if (scrollNav) { scrollNav.style.opacity = ''; scrollNav.style.transition = ''; scrollNav.style.willChange = ''; }
-                body.classList.remove('hero-intro-active');
-                window.removeEventListener('scroll', onScroll);
-                state = 'home';
-                listenerActive = false;
-            }
-
-            function applyTransitions() {
-                chatImage.style.transition = 'transform 0.6s cubic-bezier(0.33,1,0.68,1)';
-                chatImage.style.willChange = 'transform';
-                if (scrollNav) { scrollNav.style.transition = 'opacity 0.6s ease'; scrollNav.style.willChange = 'opacity'; }
-                if (chatText) { chatText.style.transition = 'opacity 0.6s ease'; chatText.style.willChange = 'opacity'; }
             }
 
             function onScroll() {
@@ -651,62 +581,23 @@
                 }
             }
 
-            // Debounced resize handler
-            var resizeTimer;
-            window.addEventListener('resize', function () {
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(function () {
-                    if (window.innerWidth < 1024) {
-                        if (listenerActive) {
-                            teardown();
-                        }
-                        return;
-                    }
+            // Measure and set initial state without transitions
+            measure();
+            if (window.scrollY < 1) {
+                applyHomeState();
+            } else {
+                applyScrolledState();
+            }
 
-                    // Re-initialize if previously torn down
-                    if (!listenerActive) {
-                        measure();
-                        if (window.scrollY < 1) {
-                            applyHomeState(true);
-                        } else {
-                            applyScrolledState();
-                        }
-                        requestAnimationFrame(function () {
-                            applyTransitions();
-                        });
-                        window.addEventListener('scroll', onScroll, { passive: true });
-                        listenerActive = true;
-                        return;
-                    }
-
-                    // Still active, just re-measure and update transform
-                    cancelPendingSwap();
-                    measure();
-                    if (state === 'home') {
-                        chatImage.src = 'assets/images/sections/chat-home-screen.svg';
-                        chatImage.style.transform = 'translateX(' + offsetX + 'px) scale(0.75)';
-                    }
-                }, 150);
+            // Enable transitions on the next frame so the initial state is painted first
+            requestAnimationFrame(function () {
+                homeImg.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                scrolledImg.style.transition = 'opacity 0.6s ease';
+                if (scrollNav) scrollNav.style.transition = 'opacity 0.6s ease';
+                if (chatText) chatText.style.transition = 'opacity 0.6s ease';
             });
 
-            window.addEventListener('load', function () {
-                measure();
-
-                // Apply initial state WITHOUT transitions to avoid visible scale animation
-                if (window.scrollY < 1) {
-                    applyHomeState(true);
-                } else {
-                    applyScrolledState();
-                }
-
-                // Enable transitions on the next frame so the initial state is painted first
-                requestAnimationFrame(function () {
-                    applyTransitions();
-                });
-
-                window.addEventListener('scroll', onScroll, { passive: true });
-                listenerActive = true;
-            });
+            window.addEventListener('scroll', onScroll, { passive: true });
         })();
 
         // Scroll navigation functionality
