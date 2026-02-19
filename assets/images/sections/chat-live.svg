@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 490">
+  <defs>
+    <!-- Left panel gradient: 144deg, light blue → sapphire -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0.59" y2="0.81">
+      <stop offset="0%" stop-color="#29A8FC"/>
+      <stop offset="100%" stop-color="#0067FB"/>
+    </linearGradient>
+    <!-- Right header gradient: 113deg, sapphire → light blue -->
+    <linearGradient id="hd" x1="0" y1="0" x2="0.92" y2="0.39">
+      <stop offset="0%" stop-color="#0067FB"/>
+      <stop offset="100%" stop-color="#29A8FC"/>
+    </linearGradient>
+    <!-- Right panel shadow -->
+    <filter id="ps" x="-6%" y="-4%" width="118%" height="114%">
+      <feDropShadow dx="0" dy="3" stdDeviation="8" flood-color="#1a3a6a" flood-opacity="0.18"/>
+    </filter>
+    <!-- Conversation card shadow -->
+    <filter id="cs" x="-12%" y="-30%" width="124%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <!-- Sent message shadow -->
+    <filter id="ms" x="-4%" y="-12%" width="108%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="1.5" flood-color="#bdc6d0" flood-opacity="0.44"/>
+    </filter>
+    <!-- Received message shadow -->
+    <filter id="mr" x="-4%" y="-12%" width="108%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="1.5" flood-color="#bac3d1" flood-opacity="0.20"/>
+    </filter>
+    <!-- Today chip shadow -->
+    <filter id="ds" x="-20%" y="-30%" width="140%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#bac3d1" flood-opacity="0.37"/>
+    </filter>
+    <!-- Form card shadow -->
+    <filter id="fs" x="-6%" y="-4%" width="112%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+    <!-- Avatar clip paths (centered in left panel) -->
+    <clipPath id="c1"><circle cx="111" cy="80" r="15"/></clipPath>
+    <clipPath id="c2"><circle cx="127" cy="80" r="15"/></clipPath>
+    <clipPath id="c3"><circle cx="143" cy="80" r="15"/></clipPath>
+  </defs>
+  <style>
+    text{font-family:'Open Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+  </style>
+
+  <!-- ===== LEFT PANEL (ConversationsListWindow) ===== -->
+  <g id="left">
+    <rect x="5" y="15" width="245" height="375" rx="8" fill="url(#bg)"/>
+
+    <!-- Pavior logo chevrons (centered) -->
+    <g transform="translate(118,16) scale(0.13)">
+      <path d="M9.85 41.56C0.49 47.27-0.51 56.91 0.17 61.2C0.19 61.32 0.2 61.44 0.2 61.56C0.38 108.04 0.64 201.73 0.2 206.01C-0.22 210.04 3.24 210.28 5.33 209.85C5.59 209.79 5.81 209.69 6.03 209.54C26.45 195.09 67.56 166.09 71.07 163.96C74.6 161.82 75.66 157.53 75.76 155.66V4.33C75.76-0.66 72.12-0.33 70.14 0.51C70.02 0.56 69.92 0.62 69.81 0.69C53.66 11.98 19.31 35.79 9.85 41.56Z" fill="white"/>
+      <path d="M37.75 42.42C28.34 48.32 27.97 58.43 28.25 62.74C28.52 67.05 28.61 111.1 28.17 115.47C27.76 119.58 31.18 119.83 33.26 119.39C33.52 119.34 33.75 119.22 33.96 119.07C54.24 104.32 95.05 74.73 98.54 72.55C102.04 70.37 103.1 65.99 103.19 64.08V4.42C103.19-0.67 99.58-0.34 97.62 0.51C97.5 0.57 97.39 0.63 97.29 0.71C81.25 12.23 47.14 36.53 37.75 42.42Z" fill="rgba(255,255,255,0.92)"/>
+      <path d="M62.11 42.42C52.69 48.32 52.32 58.43 52.6 62.74C52.87 67.05 52.96 111.1 52.52 115.47C52.11 119.58 55.53 119.83 57.61 119.39C57.87 119.34 58.1 119.22 58.31 119.07C78.59 104.32 119.4 74.73 122.89 72.55C126.39 70.37 127.45 65.99 127.54 64.08V4.42C127.54-0.67 123.93-0.34 121.97 0.51C121.85 0.57 121.74 0.63 121.64 0.71C105.6 12.23 71.49 36.53 62.11 42.42Z" fill="rgba(255,255,255,0.92)"/>
+      <path d="M144.43 0.5C146.39-0.36 150-0.68 150 4.41V64.06C149.91 65.98 148.85 70.35 145.35 72.54C142.69 74.2 113.76 95.56 94.62 109.32L75.76 140.02V116.85C75.7 116.5 75.76 112.98 75.76 112.55L75.49 62.19C75.49 57.34 75.15 48.31 84.56 42.4C93.95 36.52 128.06 12.22 144.1 0.69C144.2 0.61 144.31 0.55 144.43 0.5Z" fill="rgba(255,255,255,0.92)"/>
+    </g>
+    <text x="127" y="34" fill="white" font-size="15" font-weight="700" letter-spacing="2" text-anchor="middle">PAVIOR</text>
+
+    <!-- Greeting (centered) -->
+    <text x="127" y="56" fill="white" font-size="11" font-weight="500" text-anchor="middle">How may I help you?</text>
+
+    <!-- 3 team avatars overlapping (drawn back→front: right→left) -->
+    <g>
+      <circle cx="143" cy="80" r="17" fill="white"/>
+      <image x="128" y="65" width="30" height="30" clip-path="url(#c3)" preserveAspectRatio="xMidYMid slice" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAoACgDASIAAhEBAxEB/8QAGwAAAgIDAQAAAAAAAAAAAAAAAAQGBwEDBQL/xAAxEAABBAEDAQYEBQUAAAAAAAABAgMEEQAFEiExBhMiQVFhFBUy8AcWI3GBQpGhwdH/xAAXAQEBAQEAAAAAAAAAAAAAAAACAQME/8QAHBEAAwEAAgMAAAAAAAAAAAAAAAECEQMxEiFB/9oADAMBAAIRAxEAPwCDNvhMZSQk3XN8iv8AWIuqBCuevP2MfjhUhlRRtOwUq1Vxi8mMdn6CAs0OLNknpxWc0tJiaF207k2Qfp/fMLJSEgA3u4v74yZw+xeiv6Mh6brk2PMU4W7DBDYcq6AroPW8hqWioEF9vvW3CmlEgqo1fPGPUVy12eQQVA+ZBPthmpZWytSFpG4Dmv8AuGXNC0N/MXQgJSlwoF1s8h+2bIU99MxBaQ7uStO1JP0m/TGIGnSZs2PCSpKJDxA7pbZSEA/1EnnpzlgRuwukw401/eqWqOwtBdcFJLu02Up8to4vk2T6ZVxp/C+Qh+cnktuvfFomOlNqjuNWEUL3AdARXXIhJ05rUoTurxXFtr8Tj8RTR/STfUL6K9T064xpsycZDcWLCSlchKWlLJsixRPIoD19ryw4vZ5fypOnRoDCWEtLBlPOELfsc0gDgHmrPHGWYzsV3vRTxATsVVi69sM6eu6RK0TUPg5O3oFtLQbC0HofvzwwAOn2IYlSe0Ts14qDkZvagjxHeo1/PF5ZOoupjdlZjbKVt91HWnav6t3mT7km798MM3kjI/2RgMy5z0+QAW2SEpF2FLNn/Ar++TWZKTGhKdrxOeFIrrhhiIVZ+IzjhTojvdBAMOjRs3YNH3o3/OGGGZUvYkf/2Q=="/>
+      <circle cx="127" cy="80" r="17" fill="white"/>
+      <image x="112" y="65" width="30" height="30" clip-path="url(#c2)" preserveAspectRatio="xMidYMid slice" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAoACgDASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAQGBwEDBf/EACsQAAIBAwMCBQMFAAAAAAAAAAECAwAEEQUSITFBBhMUcZFRYdEiMzNCZP/EABcBAAMBAAAAAAAAAAAAAAAAAAIEBQP/xAAeEQEAAgIDAAMAAAAAAAAAAAABAAIDEQQhMRJBkf/aAAwDAQACEQMRAD8A0qMeRbxw7iwjULk98VHqc1Hdu5o3VHK7j7kBky4jQuTwoyayq58R3WoyytJcMYmc7EBwMZ4960PXZ/K0W6wxUtGUBHUE8VjdzaXOmbCx86HOAV/d8d6yvg+ZGMOQNs1bwHahtMubphzK20ewop7wpstfDtojMFZ4w7A8cnmilSoGoGVs5FJygudQaQJL6JFHDkTEkfXAxTMtwqDK3EHuWGKSWDVCNpt7I57G9/CUrNoFxK5d4dPQH/Y+B8JVaofcn32sV8WzXF1pqw2MkUjGTdxIBkDtn3qm2+k6g13HNexu7swVdvKID9PzV7TQNECp68SySBufSNLtHuxwfivXtdE0E7fT5JUg/wA5J6981oprQw8d2ns8+20DUp3aRXh2novmcqO3FFWsrGxGWGT0z1oqbbi0XslA52XXWvyUaGSSIgxseP6npTS3wbieNl+6niiitPYrO3mJIMxbD9x1rk0hJ/UMmiis32HWQku5YCHjnYFem7nHzRRRRG4xUNeT/9k="/>
+      <circle cx="111" cy="80" r="17" fill="white"/>
+      <image x="96" y="65" width="30" height="30" clip-path="url(#c1)" preserveAspectRatio="xMidYMid slice" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAoACgDASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAYDBAcCBf/EAC0QAAIBAwEGBAYDAAAAAAAAAAECAwAEEQUGEiExMUEiMmFxFCNCUYGRF6Gx/8QAFwEBAAMAAAAAAAAAAAAAAAAAAwECBP/EABsRAQADAQEBAQAAAAAAAAAAAAEAAhEDEiEx/9oADAMBAAIRAxEAPwDM72JhhUfHD9e9TPd5G5Eu/nkxqM/Oh4jEgnJyO+a9vZvZ241O3M6x7qvkLmhXyfY9T0/J44SMhWkVChYDmSB7HHQVA0gguZ5YF4R3jiMHe3VJ6ZP6rQf4+WWBfinZnPU7vSlLXtn49DuolErSCVT161BYXJe1Gps6e5WbT8NKnJQQgGCPzRVBbZVs97GDnGCedFXzII7KsYkWOUKxXdGSMda0rZfTLu42ftWtLtoyoOWDEd85x+e9Z8vEjLmReIcdPvTtsLqjy20+nyTMnBYGJz5SD0BHv/tU6nzYnBPWMa7q2vbqzgt471lkOd9gSN+k3bDRZo7SNppvFbLJK75JwMAADPctj+6blspAQfiGEieYuxKoO+B+6Udb2gRdcTEDialZQn59tK3hmP073oOR96OgqTR1QrFSHlpIZxkgde9FSGRJLCR1URxkltwfSCcgCitFq7MNbZKsF3JdzkN4VUE+E49K03ZpNDv7QpaRpFK8e7cQM2WJ+4J6j7Y6UUVPWg02Tzsl53rVhfmDhNqcxtR50CgFlHYsOdIMWnWd9rtnbTXjwQSzlbyYuFRAScFT2AHI57j1ooo+Buxez+SvLCsWmzwiQScOUxh0OVYDPMe9FFFKsCpP/2Q=="/>
+    </g>
+
+    <!-- Card 1: Customer A -->
+    <g filter="url(#cs)">
+      <rect x="15" y="108" width="225" height="54" rx="4" fill="white"/>
+      <circle cx="37" cy="135" r="13" fill="#8BCEF8"/>
+      <g transform="translate(30,128)">
+        <path d="M10 1.5H3C2.4 1.5 2 2 2 2.5V8.5L3.8 6.8H10C10.6 6.8 11 6.3 11 5.8V2.5C11 2 10.6 1.5 10 1.5Z" fill="white"/>
+      </g>
+      <text x="64" y="131" fill="#363739" font-size="11" font-weight="700">Customer A</text>
+      <text x="140" y="131" fill="#BAC3D1" font-size="9.5">6m ago</text>
+      <text x="64" y="147" fill="#7F848D" font-size="10.5">Can you help me with this?</text>
+    </g>
+
+    <!-- Card 2: Pavior -->
+    <g filter="url(#cs)">
+      <rect x="15" y="172" width="225" height="54" rx="4" fill="white"/>
+      <circle cx="37" cy="199" r="13" fill="#0067FB"/>
+      <g transform="translate(30,192)">
+        <path d="M10 1.5H3C2.4 1.5 2 2 2 2.5V8.5L3.8 6.8H10C10.6 6.8 11 6.3 11 5.8V2.5C11 2 10.6 1.5 10 1.5Z" fill="white"/>
+      </g>
+      <text x="64" y="195" fill="#363739" font-size="11" font-weight="700">Pavior</text>
+      <text x="106" y="195" fill="#BAC3D1" font-size="9.5">6m ago</text>
+      <text x="64" y="211" fill="#7F848D" font-size="10.5">Hi! We will get back to yo...</text>
+    </g>
+
+    <!-- Start new conversation (pill button) -->
+    <rect x="47" y="332" width="156" height="30" rx="15" fill="white"/>
+    <text x="125" y="351" fill="#0067FB" font-size="11" font-weight="600" text-anchor="middle">Start new conversation</text>
+  </g>
+
+  <!-- ===== RIGHT PANEL (DuringConversationWindow) ===== -->
+  <g id="right" filter="url(#ps)">
+    <!-- White background -->
+    <rect x="175" y="40" width="315" height="435" rx="8" fill="white"/>
+    <!-- Light body fill -->
+    <rect x="175" y="86" width="315" height="355" fill="#F6F9FC"/>
+
+    <!-- Blue header -->
+    <rect x="175" y="40" width="315" height="48" rx="8" fill="url(#hd)"/>
+    <rect x="175" y="68" width="315" height="20" fill="url(#hd)"/>
+
+    <!-- Back arrow with bg -->
+    <rect x="186" y="52" width="26" height="26" rx="5" fill="rgba(255,255,255,0.2)"/>
+    <g transform="translate(189,56)">
+      <path d="M10 1L3 8.5L10 16" stroke="white" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Header Pavior avatar -->
+    <circle cx="224" cy="65" r="12" fill="rgba(255,255,255,0.15)"/>
+    <circle cx="224" cy="65" r="10" fill="#0067FB"/>
+    <g transform="translate(218,59)">
+      <path d="M8.5 1.5H3C2.5 1.5 2 2 2 2.5V7.8L3.6 6.2H8.5C9 6.2 9.5 5.7 9.5 5.2V2.5C9.5 2 9 1.5 8.5 1.5Z" fill="white"/>
+    </g>
+    <text x="240" y="70" fill="white" font-size="11" font-weight="500">Pavior</text>
+
+    <!-- "Today" chip (white bg with shadow) -->
+    <g filter="url(#ds)">
+      <rect x="310" y="98" width="44" height="22" rx="2" fill="white"/>
+      <text x="332" y="113" fill="#313A6E" font-size="9" text-anchor="middle">Today</text>
+    </g>
+
+    <!-- User message (sent, right-aligned) -->
+    <g filter="url(#ms)">
+      <rect x="246" y="130" width="230" height="36" rx="3" fill="#E8EEF6"/>
+      <text x="258" y="145" fill="#313A6E" font-size="11">Hi, I am interested in Pavior. Can I book a</text>
+      <text x="258" y="159" fill="#313A6E" font-size="11">demo?</text>
+    </g>
+    <text x="460" y="180" fill="#BAC3D1" font-size="9.5" text-anchor="end">4:48 PM</text>
+
+    <!-- Bot avatar -->
+    <circle cx="189" cy="202" r="12" fill="#0067FB"/>
+    <g transform="translate(183,196)">
+      <path d="M8.5 1.5H3C2.5 1.5 2 2 2 2.5V7.8L3.6 6.2H8.5C9 6.2 9.5 5.7 9.5 5.2V2.5C9.5 2 9 1.5 8.5 1.5Z" fill="white"/>
+    </g>
+
+    <!-- Bot response form card -->
+    <g filter="url(#fs)">
+      <rect x="206" y="190" width="270" height="226" rx="3" fill="white"/>
+
+      <text x="218" y="210" fill="#313A6E" font-size="11" font-weight="500">Hello! We need a way to get back to you!</text>
+      <text x="218" y="224" fill="#313A6E" font-size="11" font-weight="500">Please enter your email:</text>
+
+      <!-- Name field -->
+      <text x="218" y="248" fill="#7F848D" font-size="9">Name</text>
+      <rect x="216" y="253" width="250" height="30" rx="5" fill="white" stroke="#D0D5DD" stroke-width="1"/>
+      <text x="226" y="273" fill="#363739" font-size="12">Marcus A</text>
+
+      <!-- Email field -->
+      <text x="218" y="298" fill="#7F848D" font-size="9">Email</text>
+      <rect x="216" y="303" width="250" height="30" rx="5" fill="white" stroke="#D0D5DD" stroke-width="1"/>
+      <text x="226" y="323" fill="#363739" font-size="12">marcus@ahg.com</text>
+
+      <!-- Submit button -->
+      <rect x="278" y="348" width="186" height="34" rx="7" fill="#0067FB"/>
+      <text x="371" y="370" fill="white" font-size="12" font-weight="600" text-anchor="middle">Submit</text>
+    </g>
+
+    <!-- Timestamp -->
+    <text x="460" y="430" fill="#BAC3D1" font-size="9.5" text-anchor="end">4:48 PM</text>
+
+    <!-- Bottom input bar -->
+    <line x1="175" y1="441" x2="490" y2="441" stroke="#E8EEF6" stroke-width="1"/>
+    <rect x="175" y="441" width="315" height="34" fill="white"/>
+    <rect x="175" y="463" width="315" height="12" rx="8" fill="white"/>
+    <text x="199" y="462" fill="#70878E" font-size="11">Type your message...</text>
+
+    <!-- Send/mic icon -->
+    <circle cx="472" cy="458" r="8" fill="#0067FB"/>
+    <path d="M470.5 453.5V457.5C470.5 458.2 471.1 458.8 472 458.8C472.9 458.8 473.5 458.2 473.5 457.5V453.5C473.5 452.8 472.9 452.2 472 452.2C471.1 452.2 470.5 452.8 470.5 453.5Z" fill="white"/>
+    <path d="M469 456.5C469 458 470.2 459.2 472 459.2C473.8 459.2 475 458 475 456.5" stroke="white" stroke-width="0.7" fill="none"/>
+    <line x1="472" y1="459.2" x2="472" y2="460.5" stroke="white" stroke-width="0.7"/>
+  </g>
+</svg>
