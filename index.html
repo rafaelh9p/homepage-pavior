@@ -9,15 +9,66 @@
     <meta property="og:description" content="Live chat, session recordings, CRM, campaigns, and more — all in one dashboard.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pavior.com">
-    <script src="https://app.momentcrm.com/embed"></script>
-    <script>
-      MomentCRM('init', {
-        'teamVanityId': 'pavior',
-        'doChat': true,
-        'doTimeTravel': true,
-        'quadClickForFeedback': true,
-        'shareAuth': true,
-      });
+    <meta property="og:image" content="https://www.pavior.com/assets/images/logo.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Pavior | Modern Support Suite">
+    <meta name="twitter:description" content="Live chat, session recordings, CRM, campaigns, and more — all in one dashboard.">
+    <meta name="twitter:image" content="https://www.pavior.com/assets/images/logo.svg">
+    <link rel="canonical" href="https://www.pavior.com/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Pavior",
+      "url": "https://www.pavior.com",
+      "logo": "https://www.pavior.com/assets/images/logo.svg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-647-896-6479",
+        "email": "hello@pavior.com",
+        "contactType": "sales",
+        "areaServed": "Worldwide"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "222 Finch Ave. West #213",
+        "addressLocality": "Toronto",
+        "addressCountry": "CA",
+        "postalCode": "M2R 1M6"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Pavior",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "description": "Modern customer support platform for SaaS teams. Includes live chat, session replay, help center, CRM, email campaigns, in-app announcements, feedback collection, and website builder. All-in-one tool to manage customer conversations, track interactions, and debug user issues.",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Basic",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Economy",
+          "price": "25",
+          "priceCurrency": "USD",
+          "billingIncrement": "month"
+        },
+        {
+          "@type": "Offer",
+          "name": "Premium",
+          "price": "99",
+          "priceCurrency": "USD",
+          "billingIncrement": "month"
+        }
+      ]
+    }
     </script>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="assets/css/tailwind.css">
@@ -747,6 +798,16 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth', block: 'center' });
             });
         });
+    </script>
+    <script src="https://app.momentcrm.com/embed"></script>
+    <script>
+      MomentCRM('init', {
+        'teamVanityId': 'pavior',
+        'doChat': true,
+        'doTimeTravel': true,
+        'quadClickForFeedback': true,
+        'shareAuth': true,
+      });
     </script>
 </body>
 </html>
