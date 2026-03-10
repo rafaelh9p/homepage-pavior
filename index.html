@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
     <title>Pavior | Modern Support Suite</title>
     <meta name="description" content="Pavior is a modern support platform with live chat, session recordings, CRM, campaigns, and more — all in one dashboard.">
     <meta property="og:title" content="Pavior | Modern Support Suite">
@@ -70,430 +71,434 @@
       ]
     }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="assets/css/tailwind.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body class="hero-gradient min-h-screen new-page">
 
     <!-- Navigation -->
     <nav class="flex items-center justify-between px-8 max-w-7xl mx-auto">
-        <img src="assets/images/logo.svg" alt="Pavior" class="h-8">
-        <div class="flex items-center gap-10">
+        <img src="assets/images/logo.svg" alt="Pavior" class="h-8 w-auto" width="832" height="210">
+        <div class="flex items-center space-x-10">
             <a href="#features" class="hidden md:block text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors">Features</a>
-            <a href="https://pavior.help.guide/v1/user-manual/overview" class="hidden md:block text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors">Docs</a>
+            <a href="https://pavior.help.guide/" class="hidden md:block text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors">Docs</a>
             <a href="#pricing" class="hidden md:block text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors">Pricing</a>
             <a href="https://app.pavior.com/signin" class="text-sm font-semibold text-slate-500 hover:text-blue-600 transition-colors">Sign in</a>
-            <a href="https://app.pavior.com/signup/createteam" class="btn btn-primary">
+            <a href="https://app.pavior.com/signup/createteam" class="btn btn-primary whitespace-nowrap">
                 Get started for free
             </a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="max-w-4xl mx-auto text-center pt-24 pb-20 px-4">
-        <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-blue-100 text-blue-700 rounded-full">
-            Modern Support Platform
-        </span>
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-slate-900 leading-[1.1]">
-            Your entire support suite. <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#01A9FB] to-[#0067FB]">In one place.</span>
-        </h1>
-        <p class="text-lg text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Stop switching tabs. Get live chat, session recordings, CRM insights, and more in a single, lightning-fast dashboard.
-        </p>
-    </header>
+    <main>
+        <!-- Hero Section -->
+        <header class="max-w-4xl mx-auto text-center pt-24 pb-20 px-4">
+            <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-blue-100 text-blue-700 rounded-full">
+                Modern Support Platform
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-slate-900 leading-[1.1]">
+                Your entire support suite. <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#01A9FB] to-[#0067FB]">In one place.</span>
+            </h1>
+            <p class="text-lg text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Stop switching tabs. Get live chat, session recordings, CRM insights, and more in a single, lightning-fast dashboard.
+            </p>
+        </header>
 
-    <!-- Product Preview Frame -->
-    <section id="features" class="max-w-7xl mx-auto px-3 lg:px-6 pb-16">
-        <div class="preview-frame rounded-[32px] overflow-hidden">
-            <!-- Tab bar with chevron navigation -->
-            <div class="tab-bar-container relative">
-                <button class="tab-chevron tab-chevron-left hidden" aria-label="Scroll left">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-                <div class="tab-bar-scroll flex border-b border-slate-100 bg-slate-50 overflow-x-auto scroll-smooth">
-                    <button class="tab-btn px-6 py-4 text-sm font-bold active-tab" data-tab="0">Live chat</button>
-                    <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-400 hover:text-slate-600" data-tab="1">Time travel</button>
-                    <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-400 hover:text-slate-600" data-tab="2">Records</button>
-                    <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-400 hover:text-slate-600" data-tab="3">Campaigns</button>
-                    <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-400 hover:text-slate-600" data-tab="4">Suggest</button>
-                    <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-400 hover:text-slate-600" data-tab="5">Announce</button>
-                    <!-- <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-400 hover:text-slate-600" data-tab="6">Website builder</button> -->
-                    <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-400 hover:text-slate-600" data-tab="7">Help guide</button>
-                    <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-400 hover:text-slate-600" data-tab="8">Mobile app</button>
+        <!-- Product Preview Frame -->
+        <section id="features" class="max-w-7xl mx-auto px-3 lg:px-6 pb-16">
+            <div class="preview-frame rounded-[32px] overflow-hidden">
+                <!-- Tab bar with chevron navigation -->
+                <div class="tab-bar-container relative">
+                    <button class="tab-chevron tab-chevron-left hidden" aria-label="Scroll left">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div class="tab-bar-scroll flex border-b border-slate-100 bg-slate-50 overflow-x-auto scroll-smooth">
+                        <button class="tab-btn px-6 py-4 text-sm font-bold active-tab" data-tab="0">Live chat</button>
+                        <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-500" data-tab="1">Time travel</button>
+                        <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-500" data-tab="2">Records</button>
+                        <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-500" data-tab="3">Campaigns</button>
+                        <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-500" data-tab="4">Suggest</button>
+                        <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-500" data-tab="5">Announce</button>
+                        <!-- <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-500" data-tab="6">Website builder</button> -->
+                        <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-500" data-tab="7">Help guide</button>
+                        <button class="tab-btn px-6 py-4 text-sm font-semibold text-slate-500" data-tab="8">Mobile app</button>
+                    </div>
+                    <button class="tab-chevron tab-chevron-right" aria-label="Scroll right">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
                 </div>
-                <button class="tab-chevron tab-chevron-right" aria-label="Scroll right">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-            </div>
 
-            <!-- Content area - responsive height: 800px on mobile, 500px on desktop -->
-            <div id="content-area" class="p-1 lg:p-2 flex flex-col lg:flex-row gap-2 lg:h-[75vh] lg:max-h-[800px]">
-                <!-- Main content area with tab panels -->
-                <div class="flex-grow bg-slate-50 rounded-2xl relative border border-slate-100 lg:overflow-hidden">
-                    <!-- Tab 0: Chat -->
-                    <div class="tab-content active items-center justify-center" data-tab="0">
-                        <img src="assets/images/sections/chat-unbranded-resized.svg" alt="Chat Interface" class="preview-image">
-                    </div>
-                    <!-- Tab 1: Time travel Video -->
-                    <div class="tab-content items-center justify-center" data-tab="1">
-                        <video class="preview-video preview-video-contain" autoplay loop muted playsinline>
-                            <source src="assets/videos/timetravel.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <!-- Tab 2: Records -->
-                    <div class="tab-content items-center justify-center" data-tab="2">
-                        <img src="assets/images/sections/records-user-page.svg" alt="Records User Page" class="preview-image" loading="lazy">
-                    </div>
-                    <!-- Tab 3: Campaigns -->
-                    <div class="tab-content items-center justify-center" data-tab="3">
-                        <img src="assets/images/sections/campaigns.svg" alt="Campaigns Interface" class="preview-image" loading="lazy">
-                    </div>
-                    <!-- Tab 4: Suggest Video -->
-                    <div class="tab-content items-center justify-center" data-tab="4">
-                        <video class="preview-video preview-video-contain" loop muted playsinline>
-                            <source src="assets/videos/suggest.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <!-- Tab 5: Announce -->
-                    <div class="tab-content items-center justify-center" data-tab="5">
-                        <img src="assets/images/sections/end-user-announcement.svg" alt="Announce Interface" class="preview-image" loading="lazy">
-                    </div>
-                    <!-- Tab 6: Website Builder
-                    <div class="tab-content items-center justify-center" data-tab="6">
-                        <img src="assets/images/sections/website-builder.svg" alt="Website Builder Interface" class="preview-image">
-                    </div>
-                    -->
-                    <!-- Tab 7: Help Guide -->
-                    <div class="tab-content items-center justify-center" data-tab="7">
-                        <img src="assets/images/sections/help-center-article.png" alt="Help Guide Interface" class="preview-image" loading="lazy">
-                    </div>
-                    <!-- Tab 8: Mobile App -->
-                    <div class="tab-content items-center justify-center" data-tab="8">
-                        <div class="phone-frame-preview">
-                            <div class="phone-screen-preview">
-                                <div class="preview-slideshow">
-                                    <div class="preview-slide active">
-                                        <img src="assets/images/mobile/main-menu.svg" alt="Mobile Main Menu" loading="lazy">
-                                    </div>
-                                    <div class="preview-slide">
-                                        <img src="assets/images/mobile/inbox.svg" alt="Mobile Inbox" loading="lazy">
-                                    </div>
-                                    <div class="preview-slide">
-                                        <img src="assets/images/mobile/chat.svg" alt="Mobile Chat" loading="lazy">
+                <!-- Content area - responsive height: 800px on mobile, 500px on desktop -->
+                <div id="content-area" class="p-1 lg:p-2 flex flex-col lg:flex-row gap-2 lg:h-[75vh] lg:max-h-[800px]">
+                    <!-- Main content area with tab panels -->
+                    <div class="flex-grow bg-slate-50 rounded-2xl relative border border-slate-100 lg:overflow-hidden">
+                        <!-- Tab 0: Chat -->
+                        <div class="tab-content active items-center justify-center" data-tab="0">
+                            <img src="assets/images/sections/chat-unbranded-resized.svg" alt="Live chat support tool showing active customer conversations" class="preview-image" width="750" height="650">
+                        </div>
+                        <!-- Tab 1: Time travel Video -->
+                        <div class="tab-content items-center justify-center" data-tab="1">
+                            <video class="preview-video preview-video-contain" autoplay loop muted playsinline preload="none" title="Pavior session replay tool recreating a user's exact browsing experience">
+                                <source src="assets/videos/timetravel.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <!-- Tab 2: Records -->
+                        <div class="tab-content items-center justify-center" data-tab="2">
+                            <img src="assets/images/sections/records-user-page.svg" alt="Customer record page with contact details, notes, and activity timeline" class="preview-image" loading="lazy" width="1280" height="841">
+                        </div>
+                        <!-- Tab 3: Campaigns -->
+                        <div class="tab-content items-center justify-center" data-tab="3">
+                            <img src="assets/images/sections/campaigns.svg" alt="Pavior email campaign builder with automation and scheduling" class="preview-image" loading="lazy" width="1280" height="832">
+                        </div>
+                        <!-- Tab 4: Suggest Video -->
+                        <div class="tab-content items-center justify-center" data-tab="4">
+                            <video class="preview-video preview-video-contain" loop muted playsinline preload="none" title="Rage-click detection triggering instant user feedback collection">
+                                <source src="assets/videos/suggest.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <!-- Tab 5: Announce -->
+                        <div class="tab-content items-center justify-center" data-tab="5">
+                            <img src="assets/images/sections/end-user-announcement.svg" alt="Pavior's in-app announcement widget displaying product updates" class="preview-image" loading="lazy" width="1280" height="832">
+                        </div>
+                        <!-- Tab 6: Website Builder
+                        <div class="tab-content items-center justify-center" data-tab="6">
+                            <img src="assets/images/sections/website-builder.svg" alt="Website Builder Interface" class="preview-image">
+                        </div>
+                        -->
+                        <!-- Tab 7: Help Guide -->
+                        <div class="tab-content items-center justify-center" data-tab="7">
+                            <img src="assets/images/sections/help-center-article.png" alt="Pavior self-service help center showing a documentation article" class="preview-image" loading="lazy" width="1319" height="875">
+                        </div>
+                        <!-- Tab 8: Mobile App -->
+                        <div class="tab-content items-center justify-center" data-tab="8">
+                            <div class="phone-frame-preview">
+                                <div class="phone-screen-preview">
+                                    <div class="preview-slideshow">
+                                        <div class="preview-slide active">
+                                            <img src="assets/images/mobile/main-menu.svg" alt="Mobile app main menu with access to chat, records, and more" loading="lazy" width="390" height="871">
+                                        </div>
+                                        <div class="preview-slide">
+                                            <img src="assets/images/mobile/inbox.svg" alt="Mobile inbox view showing active support conversations" loading="lazy" width="390" height="844">
+                                        </div>
+                                        <div class="preview-slide">
+                                            <img src="assets/images/mobile/chat.svg" alt="Real-time mobile chat between support agent and customer" loading="lazy" width="390" height="844">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Sidebar with feature descriptions -->
-                <div class="w-full lg:w-72 bg-slate-50 rounded-2xl p-6 border border-slate-100 flex flex-col justify-between">
-                    <div>
-                        <!-- Tab 0: Chat Description -->
-                        <div class="sidebar-content active" data-tab="0">
-                            <h3 class="text-lg font-bold text-slate-900 mb-3">Live Chat</h3>
-                            <p class="text-slate-500 text-sm mb-4">Connect with customers in real-time. Beautiful chat that matches your brand.</p>
-                            <ul class="space-y-2 text-sm">
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Real-time messaging</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> File sharing</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Custom branding</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Mobile app support</li>
-                            </ul>
+                    <!-- Sidebar with feature descriptions -->
+                    <div class="w-full lg:w-72 bg-slate-50 rounded-2xl p-6 border border-slate-100 flex flex-col justify-between">
+                        <div>
+                            <!-- Tab 0: Chat Description -->
+                            <div class="sidebar-content active" data-tab="0">
+                                <h3 class="text-lg font-bold text-slate-900 mb-3">Live Chat</h3>
+                                <p class="text-slate-500 text-sm mb-4">Connect with customers in real-time. Beautiful chat that matches your brand.</p>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Real-time messaging</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> File sharing</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Custom branding</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Mobile app support</li>
+                                </ul>
+                            </div>
+                            <!-- Tab 1: Time travel Description -->
+                            <div class="sidebar-content" data-tab="1">
+                                <h3 class="text-lg font-bold text-slate-900 mb-3">Time travel</h3>
+                                <p class="text-slate-500 text-sm mb-4">Watch exactly what your users experienced. Debug issues in seconds, not hours.</p>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Full DOM recording</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Console & network logs</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Click & scroll tracking</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Rage click detection</li>
+                                </ul>
+                            </div>
+                            <!-- Tab 2: Records Description -->
+                            <div class="sidebar-content" data-tab="2">
+                                <h3 class="text-lg font-bold text-slate-900 mb-3">Records</h3>
+                                <p class="text-slate-500 text-sm mb-4">Your full-picture CRM. Manage contacts, organize information, and keep every detail in one place — so nothing falls through the cracks.</p>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Contact & company management</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Activity & interaction history</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Custom fields & filters</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Notes, tasks & follow-ups</li>
+                                </ul>
+                            </div>
+                            <!-- Tab 3: Campaigns Description -->
+                            <div class="sidebar-content" data-tab="3">
+                                <h3 class="text-lg font-bold text-slate-900 mb-3">Campaigns</h3>
+                                <p class="text-slate-500 text-sm mb-4">Grow revenue with campaigns that adapt to what customers do.</p>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Send the right email at the right time</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Trigger emails from user actions</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Send from your own domain</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Emails that feel personal at scale</li>
+                                </ul>
+                            </div>
+                            <!-- Tab 4: Suggest Description -->
+                            <div class="sidebar-content" data-tab="4">
+                                <h3 class="text-lg font-bold text-slate-900 mb-3">Suggest</h3>
+                                <p class="text-slate-500 text-sm mb-4">Catch frustration the moment it happens. Feedback collection with rage-click detection.</p>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Turns rage clicks into actionable feedback</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Capture context the moment friction happens</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Automatic. No button, no widget, no prompt fatigue</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Users vent to your product, not your reviews</li>
+                                </ul>
+                            </div>
+                            <!-- Tab 5: Announce Description -->
+                            <div class="sidebar-content" data-tab="5">
+                                <h3 class="text-lg font-bold text-slate-900 mb-3">Announce</h3>
+                                <p class="text-slate-500 text-sm mb-4">Launch features and make sure people know about them. Targeted, in-app delivery.</p>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Changelog your users will actually read</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Target announcements by user segment</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Engagement analytics per announcement</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Reduce support tickets with proactive updates</li>
+                                </ul>
+                            </div>
+                            <!-- Tab 6: Website Builder Description
+                            <div class="sidebar-content" data-tab="6">
+                                <h3 class="text-lg font-bold text-slate-900 mb-3">Website Builder</h3>
+                                <p class="text-slate-500 text-sm mb-4">Go from idea to live page in minutes. No code, no blockers.</p>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Build pages without writing code</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Fast-loading, optimized pages</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Connect your own domain</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Global styles for brand consistency</li>
+                                </ul>
+                            </div>
+                            -->
+                            <!-- Tab 7: Help Guide Description -->
+                            <div class="sidebar-content" data-tab="7">
+                                <h3 class="text-lg font-bold text-slate-900 mb-3">Help Guide</h3>
+                                <p class="text-slate-500 text-sm mb-4">Give customers answers at 3 AM without staffing a night shift.</p>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> 24/7 support without adding headcount</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Suggest articles in chat automatically</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Custom domain for your help center</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Full-text search with instant results</li>
+                                </ul>
+                            </div>
+                            <!-- Tab 8: Mobile App Description -->
+                            <div class="sidebar-content" data-tab="8">
+                                <h3 class="text-lg font-bold text-slate-900 mb-3">Mobile App</h3>
+                                <p class="text-slate-500 text-sm mb-4">Step away from your desk, not your customers. Full support on mobile.</p>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Customer context at your fingertips</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Reply to customers from anywhere</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Push alerts for new messages</li>
+                                    <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Lightweight and fast on any connection</li>
+                                </ul>
+                            </div>
                         </div>
-                        <!-- Tab 1: Time travel Description -->
-                        <div class="sidebar-content" data-tab="1">
-                            <h3 class="text-lg font-bold text-slate-900 mb-3">Time travel</h3>
-                            <p class="text-slate-500 text-sm mb-4">Watch exactly what your users experienced. Debug issues in seconds, not hours.</p>
-                            <ul class="space-y-2 text-sm">
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Full DOM recording</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Console & network logs</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Click & scroll tracking</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Rage click detection</li>
-                            </ul>
-                        </div>
-                        <!-- Tab 2: Records Description -->
-                        <div class="sidebar-content" data-tab="2">
-                            <h3 class="text-lg font-bold text-slate-900 mb-3">Records</h3>
-                            <p class="text-slate-500 text-sm mb-4">Your full-picture CRM. Manage contacts, organize information, and keep every detail in one place — so nothing falls through the cracks.</p>
-                            <ul class="space-y-2 text-sm">
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Contact & company management</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Activity & interaction history</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Custom fields & filters</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Notes, tasks & follow-ups</li>
-                            </ul>
-                        </div>
-                        <!-- Tab 3: Campaigns Description -->
-                        <div class="sidebar-content" data-tab="3">
-                            <h3 class="text-lg font-bold text-slate-900 mb-3">Campaigns</h3>
-                            <p class="text-slate-500 text-sm mb-4">Grow revenue with campaigns that adapt to what customers do.</p>
-                            <ul class="space-y-2 text-sm">
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Send the right email at the right time</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Trigger emails from user actions</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Send from your own domain</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Emails that feel personal at scale</li>
-                            </ul>
-                        </div>
-                        <!-- Tab 4: Suggest Description -->
-                        <div class="sidebar-content" data-tab="4">
-                            <h3 class="text-lg font-bold text-slate-900 mb-3">Suggest</h3>
-                            <p class="text-slate-500 text-sm mb-4">Catch frustration the moment it happens. Feedback collection with rage-click detection.</p>
-                            <ul class="space-y-2 text-sm">
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Turns rage clicks into actionable feedback</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Capture context the moment friction happens</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Automatic. No button, no widget, no prompt fatigue</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Users vent to your product, not your reviews</li>
-                            </ul>
-                        </div>
-                        <!-- Tab 5: Announce Description -->
-                        <div class="sidebar-content" data-tab="5">
-                            <h3 class="text-lg font-bold text-slate-900 mb-3">Announce</h3>
-                            <p class="text-slate-500 text-sm mb-4">Launch features and make sure people know about them. Targeted, in-app delivery.</p>
-                            <ul class="space-y-2 text-sm">
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Changelog your users will actually read</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Target announcements by user segment</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Engagement analytics per announcement</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Reduce support tickets with proactive updates</li>
-                            </ul>
-                        </div>
-                        <!-- Tab 6: Website Builder Description
-                        <div class="sidebar-content" data-tab="6">
-                            <h3 class="text-lg font-bold text-slate-900 mb-3">Website Builder</h3>
-                            <p class="text-slate-500 text-sm mb-4">Go from idea to live page in minutes. No code, no blockers.</p>
-                            <ul class="space-y-2 text-sm">
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Build pages without writing code</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Fast-loading, optimized pages</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Connect your own domain</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Global styles for brand consistency</li>
-                            </ul>
-                        </div>
-                        -->
-                        <!-- Tab 7: Help Guide Description -->
-                        <div class="sidebar-content" data-tab="7">
-                            <h3 class="text-lg font-bold text-slate-900 mb-3">Help Guide</h3>
-                            <p class="text-slate-500 text-sm mb-4">Give customers answers at 3 AM without staffing a night shift.</p>
-                            <ul class="space-y-2 text-sm">
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> 24/7 support without adding headcount</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Suggest articles in chat automatically</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Custom domain for your help center</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Full-text search with instant results</li>
-                            </ul>
-                        </div>
-                        <!-- Tab 8: Mobile App Description -->
-                        <div class="sidebar-content" data-tab="8">
-                            <h3 class="text-lg font-bold text-slate-900 mb-3">Mobile App</h3>
-                            <p class="text-slate-500 text-sm mb-4">Step away from your desk, not your customers. Full support on mobile.</p>
-                            <ul class="space-y-2 text-sm">
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Customer context at your fingertips</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Reply to customers from anywhere</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Push alerts for new messages</li>
-                                <li class="flex items-center gap-2 text-slate-600"><span class="text-blue-600">&#10003;</span> Lightweight and fast on any connection</li>
-                            </ul>
-                        </div>
+                        <a href="https://app.pavior.com/signup/createteam" class="btn btn-primary self-center mt-6">
+                            Get started for free
+                        </a>
                     </div>
-                    <a href="https://app.pavior.com/signup/createteam" class="btn btn-primary self-center mt-6">
-                        Get started for free
-                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Installation Code Section -->
-    <section class="bg-white border-y border-slate-100 py-24">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-extrabold mb-4">Simple installation</h2>
-            <p class="text-slate-500 mb-12 font-medium">Start using our platform in 6 seconds. No account necessary.</p>
-            <div class="bg-slate-900 rounded-2xl p-8 text-left shadow-2xl overflow-hidden relative">
-                <button onclick="createDemoTeam(this)" class="absolute top-4 right-4 bg-white text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-slate-100 transition-colors">Try it - launch your team</button>
-                <div class="flex space-x-2 mb-6">
-                    <div class="w-3 h-3 rounded-full bg-slate-700"></div>
-                    <div class="w-3 h-3 rounded-full bg-slate-700"></div>
-                    <div class="w-3 h-3 rounded-full bg-slate-700"></div>
-                </div>
-                <pre class="font-mono text-sm leading-loose overflow-x-auto"><code id="install-code"><span class="text-blue-400">&lt;script</span> <span class="text-emerald-400">src</span>=<span class="text-orange-300">"https://app.pavior.com/embed"</span><span class="text-blue-400">&gt;&lt;/script&gt;</span>
+        <!-- Installation Code Section -->
+        <section class="bg-white border-y border-slate-100 py-24">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-4xl font-extrabold mb-4">Simple installation</h2>
+                <p class="text-slate-500 mb-12 font-medium">Start using our platform in 6 seconds. No account necessary.</p>
+                <div class="bg-slate-900 rounded-2xl p-8 text-left shadow-2xl overflow-hidden relative">
+                    <button onclick="createDemoTeam(this)" class="absolute top-4 right-4 bg-white text-slate-900 px-4 py-2 rounded-lg text-sm font-bold hover:bg-slate-100 transition-colors">Try it - launch your team</button>
+                    <div class="flex space-x-2 mb-6">
+                        <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                        <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                        <div class="w-3 h-3 rounded-full bg-slate-700"></div>
+                    </div>
+                    <pre class="font-mono text-sm leading-loose overflow-x-auto"><code id="install-code"><span class="text-blue-400">&lt;script</span> <span class="text-emerald-400">src</span>=<span class="text-orange-300">"https://app.pavior.com/embed"</span><span class="text-blue-400">&gt;&lt;/script&gt;</span>
 <span class="text-blue-400">&lt;script&gt;</span>
-  <span class="text-slate-300">Pavior('init', {</span>
+  <span class="text-slate-200">Pavior('init', {</span>
     <span class="text-emerald-400">'teamId'</span>: <span class="text-orange-300" data-team-id>'YOUR_TEAM_ID'</span>,
     <span class="text-emerald-400">'doTimeTravel'</span>: <span class="text-purple-400">true</span>,
     <span class="text-emerald-400">'doChat'</span>: <span class="text-purple-400">true</span>,
-  <span class="text-slate-300">});</span>
+  <span class="text-slate-200">});</span>
 <span class="text-blue-400">&lt;/script&gt;</span></code></pre>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Pricing Section (3-Card Layout) -->
-    <section id="pricing" class="py-24 max-w-7xl mx-auto px-6">
-        <h2 class="text-4xl font-extrabold text-center mb-4">Simple, transparent pricing</h2>
-        <p class="text-slate-500 text-center mb-12 max-w-xl mx-auto">Choose a plan which works best for you. Start free, upgrade when you're ready.</p>
+        <!-- Pricing Section (3-Card Layout) -->
+        <section id="pricing" class="py-24 max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-center mb-4">Simple, transparent pricing</h2>
+            <p class="text-slate-500 text-center mb-12 max-w-xl mx-auto">Choose a plan which works best for you. Start free, upgrade when you're ready.</p>
 
-        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <!-- Basic Plan -->
-            <div class="pricing-card rounded-[32px] p-8 text-center">
-                <h3 class="text-xl font-extrabold mb-2 text-slate-900">basic</h3>
-                <div class="text-5xl font-extrabold text-slate-900 mb-1">$0</div>
-                <p class="text-slate-500 mb-8">Free forever</p>
-                <ul class="text-left space-y-4 mb-8">
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-slate-600">2 seats</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-slate-600">1k contacts</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-slate-600">100 conversations</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-slate-600">1k session recordings/mo</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-slate-600">Shared email domain</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-slate-600">Community support</span>
-                    </li>
-                </ul>
-                <a href="https://app.pavior.com/signup/createteam" class="btn btn-secondary block w-full">
-                    Start free
-                </a>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="pricing-card rounded-[32px] p-8 text-center">
+                    <h3 class="text-xl font-extrabold mb-2 text-slate-900">basic</h3>
+                    <div class="text-5xl font-extrabold text-slate-900 mb-1">$0</div>
+                    <p class="text-slate-500 mb-8">Free forever</p>
+                    <ul class="text-left space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-600">2 seats</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-600">1k contacts</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-600">100 conversations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-600">1k session recordings/mo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-600">Shared email domain</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-600">Community support</span>
+                        </li>
+                    </ul>
+                    <a href="https://app.pavior.com/signup/createteam" class="btn btn-secondary block w-full">
+                        Start free
+                    </a>
+                </div>
+
+                <!-- Economy Plan (Featured) -->
+                <div class="pricing-card featured rounded-[32px] p-8 text-center relative">
+                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#01A9FB] to-[#0067FB] text-white text-xs font-bold px-4 py-1.5 rounded-full">
+                        Most popular
+                    </span>
+                    <h3 class="text-xl font-extrabold mb-2 text-slate-900 mt-2">economy</h3>
+                    <div class="text-5xl font-extrabold text-slate-900 mb-1">$25<span class="text-xl font-normal text-slate-500">/mo</span></div>
+                    <p class="text-slate-500 mb-8">Best for growing teams</p>
+                    <ul class="text-left space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-600">4 seats</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-600">10k contacts</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-600">Unlimited conversations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-600">10k session recordings/mo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-600">Custom email domain</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-600">Email support</span>
+                        </li>
+                    </ul>
+                    <a href="https://app.pavior.com/signup/createteam?buying=true" class="btn btn-primary block w-full">
+                        Get economy
+                    </a>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="pricing-card rounded-[32px] p-8 text-center">
+                    <h3 class="text-xl font-extrabold mb-2 text-slate-900">premium</h3>
+                    <div class="text-5xl font-extrabold text-slate-900 mb-1">$99<span class="text-xl font-normal text-slate-500">/mo</span></div>
+                    <p class="text-slate-500 mb-8">For scaling businesses</p>
+                    <ul class="text-left space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-600">10 seats</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-600">100k contacts</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-600">Unlimited conversations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-600">50k session recordings/mo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-600">Custom email domain</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-slate-600">Priority support</span>
+                        </li>
+                    </ul>
+                    <a href="https://app.pavior.com/signup/createteam?buying=true" class="btn btn-secondary block w-full">
+                        Get premium
+                    </a>
+                </div>
             </div>
 
-            <!-- Economy Plan (Featured) -->
-            <div class="pricing-card featured rounded-[32px] p-8 text-center relative">
-                <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#01A9FB] to-[#0067FB] text-white text-xs font-bold px-4 py-1.5 rounded-full">
-                    Most popular
-                </span>
-                <h3 class="text-xl font-extrabold mb-2 text-slate-900 mt-2">economy</h3>
-                <div class="text-5xl font-extrabold text-slate-900 mb-1">$25<span class="text-xl font-normal text-slate-500">/mo</span></div>
-                <p class="text-slate-500 mb-8">Best for growing teams</p>
-                <ul class="text-left space-y-4 mb-8">
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-slate-600">4 seats</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-slate-600">10k contacts</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-slate-600">Unlimited conversations</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-slate-600">10k session recordings/mo</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-slate-600">Custom email domain</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-slate-600">Email support</span>
-                    </li>
-                </ul>
-                <a href="https://app.pavior.com/signup/createteam?buying=true" class="btn btn-primary block w-full">
-                    Get economy
-                </a>
-            </div>
+            <p class="text-center text-slate-500 mt-12">
+                Need higher limits or custom features? <a href="#" onclick="event.preventDefault(); window.MomentCRM && window.MomentCRM('open')" class="text-blue-600 hover:underline">Contact sales</a>
+            </p>
+        </section>
 
-            <!-- Premium Plan -->
-            <div class="pricing-card rounded-[32px] p-8 text-center">
-                <h3 class="text-xl font-extrabold mb-2 text-slate-900">premium</h3>
-                <div class="text-5xl font-extrabold text-slate-900 mb-1">$99<span class="text-xl font-normal text-slate-500">/mo</span></div>
-                <p class="text-slate-500 mb-8">For scaling businesses</p>
-                <ul class="text-left space-y-4 mb-8">
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-slate-600">10 seats</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-slate-600">100k contacts</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-slate-600">Unlimited conversations</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-slate-600">50k session recordings/mo</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-slate-600">Custom email domain</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        <span class="text-slate-600">Priority support</span>
-                    </li>
-                </ul>
-                <a href="https://app.pavior.com/signup/createteam?buying=true" class="btn btn-secondary block w-full">
-                    Get premium
-                </a>
-            </div>
-        </div>
-
-        <p class="text-center text-slate-500 mt-12">
-            Need higher limits or custom features? <a href="#" onclick="event.preventDefault(); window.MomentCRM && window.MomentCRM('open')" class="text-blue-600 hover:underline">Contact sales</a>
-        </p>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="border-t border-slate-100 bg-white py-16">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <div>
-                    <img src="assets/images/logo.svg" alt="Pavior" class="h-8 mb-4">
+                    <img src="assets/images/logo.svg" alt="Pavior" class="h-8 mb-4" width="832" height="210">
                     <p class="text-slate-500 text-sm">Modern customer support platform for high velocity teams.</p>
                 </div>
                 <div>
@@ -520,7 +525,7 @@
                     </p>
                 </div>
             </div>
-            <div class="text-center text-slate-400 text-sm pt-8 border-t border-slate-100">
+            <div class="text-center text-slate-500 text-sm pt-8 border-t border-slate-100">
                 &copy; <span id="current-year"></span> Debuggex Inc. All rights reserved.
             </div>
         </div>
@@ -596,10 +601,10 @@
                 // Update tab buttons
                 previewTabs.forEach(t => {
                     t.classList.remove('active-tab', 'font-bold');
-                    t.classList.add('text-slate-400', 'font-semibold');
+                    t.classList.add('text-slate-500', 'font-semibold');
                 });
                 tab.classList.add('active-tab', 'font-bold');
-                tab.classList.remove('text-slate-400', 'font-semibold');
+                tab.classList.remove('text-slate-500', 'font-semibold');
 
                 // Update content panels
                 tabContents.forEach(content => {
@@ -799,15 +804,21 @@
             });
         });
     </script>
-    <script src="https://app.momentcrm.com/embed"></script>
     <script>
-      MomentCRM('init', {
-        'teamVanityId': 'pavior',
-        'doChat': true,
-        'doTimeTravel': true,
-        'quadClickForFeedback': true,
-        'shareAuth': true,
-      });
+      setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://app.momentcrm.com/embed';
+        s.onload = function() {
+          MomentCRM('init', {
+            'teamVanityId': 'pavior',
+            'doChat': true,
+            'doTimeTravel': true,
+            'quadClickForFeedback': true,
+            'shareAuth': true,
+          });
+        };
+        document.body.appendChild(s);
+      }, 3000);
     </script>
 </body>
 </html>
