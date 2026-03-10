@@ -373,9 +373,14 @@ body.new-page .mobile-pricing-card .pricing-badge {
 
 .tab-bar-scroll {
     flex: 1;
-    justify-content: center;
     scrollbar-width: none;
     -ms-overflow-style: none;
+}
+
+@media (min-width: 1024px) {
+    .tab-bar-scroll {
+        justify-content: center;
+    }
 }
 
 .tab-bar-scroll::-webkit-scrollbar {
@@ -383,32 +388,19 @@ body.new-page .mobile-pricing-card .pricing-badge {
 }
 
 .tab-chevron {
-    position: absolute;
-    top: 0;
-    bottom: 0;
     width: 40px;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #F8FAFC;
     color: #64748b;
-    z-index: 10;
     border: none;
     cursor: pointer;
 }
 
 .tab-chevron:hover {
     color: #3B82F6;
-}
-
-.tab-chevron-left {
-    left: 0;
-    background: #F8FAFC;
-}
-
-.tab-chevron-right {
-    right: 0;
-    background: #F8FAFC;
 }
 
 .tab-chevron.hidden {
@@ -430,14 +422,15 @@ body.new-page .mobile-pricing-card .pricing-badge {
     body.new-page nav > div {
         width: 100%;
         justify-content: center;
+        gap: 1.25rem;
     }
 
     body.new-page nav .btn-primary {
-        display: none;
+        display: none !important;
     }
 
     body.new-page nav a.hidden {
-        display: block;
+        display: block !important;
     }
 }
 
